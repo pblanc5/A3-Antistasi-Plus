@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.8
+
+## Additions
+- Cam Lao Nam terrain support
+- RHSPKL terrain (Prei Khmaoch Luong) support
+- Chernarus 2020 terrain newest update support
+- SOGPF support
+- SOGPF + Unsung Redux support
+
+### Changes
+- (CUP) Adjustments of faction templates with the usage of new CUP Vehicles/Units/Weapons mod items
+
 ## 1.7.5
 ### Changes
 - 2.5.2 Community Version merge (garrison corruption fix, multiple small fixes of core systems of Antistasi)
