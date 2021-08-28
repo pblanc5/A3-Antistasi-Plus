@@ -7,7 +7,7 @@
 //	Array of weapons and it's quantity inherited from all parent classes presented in this array.
 //
 // 	How to use: 
-// 	[_weapons] call SCRT_fn_common_geSimilarWeapons;
+// 	[_weapons] call SCRT_fn_common_getSimilarWeapons;
 
 params ["_weapons"];
 
@@ -89,7 +89,7 @@ private _moreThanMinWeaponsArray = [];
 
 private _result = [];
 
-//if some weapon exceeds minimum weapons threshold - grab every class that has same parent and make it pending to infinite on next arsenal tick
+//if some weapon exceeds minimum weapons threshold - grab every class that has same parent and make it pending to unlock on next arsenal tick
 if (count _moreThanMinWeaponsArray > 0) then {
 	{
 		private _baseItem = _x;
