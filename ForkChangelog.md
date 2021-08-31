@@ -10,6 +10,7 @@
 - SOGPF + Unsung Redux support
 
 ### Changes
+- Airbases and milbases will no longer spawn howitzers (mortars will be used instead), they will be only used as support 
 - (CUP) Adjustments of faction templates with the usage of new CUP Vehicles/Units/Weapons mod items
 
 ## 1.7.5
