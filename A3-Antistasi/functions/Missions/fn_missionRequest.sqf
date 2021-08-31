@@ -51,7 +51,7 @@ switch (_type) do {
 
 		if(count _nearbyCities > 0) then {
 			private _policeCityIndex = _nearbyCities findIf {
-				private _policeStations = nearestObjects [getMarkerPos _x, ["Land_zachytka","Land_PoliceStation_01_F","Land_i_Barracks_V2_F"], 800, true];
+				private _policeStations = nearestObjects [getMarkerPos _x, ["Land_vn_i_barracks_v1_f", "Land_vn_barracks_01_dilapidated_f", "Land_vn_barracks_01_grey_f", "Land_vn_barracks_01_camo_f", "Land_vn_i_barracks_v2_f","Land_zachytka","Land_PoliceStation_01_F","Land_i_Barracks_V2_F"], 800, true];
 				_policeStations = _policeStations select {alive _x};
 				count _policeStations > 0
 			};

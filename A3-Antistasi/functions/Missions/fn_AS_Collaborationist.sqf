@@ -24,7 +24,7 @@ private _destinationName = [_markerX] call A3A_fnc_localizar;
 //building occupation
 ////////////
 private _sites = outposts + airportsX + resourcesX + factories + seaports + milbases;
-private _appropriateBuildings = nearestObjects [_positionX, ["Land_zachytka_nov","Land_zachytka","Land_PoliceStation_01_F","Land_i_Barracks_V2_F", "land_gm_euro_office_02"], 1000, true]; 
+private _appropriateBuildings = nearestObjects [_positionX, ["Land_zachytka_nov","Land_zachytka","Land_PoliceStation_01_F","Land_i_Barracks_V2_F", "land_gm_euro_office_02","Land_vn_i_barracks_v1_f", "Land_vn_barracks_01_dilapidated_f", "Land_vn_barracks_01_grey_f", "Land_vn_barracks_01_camo_f", "Land_vn_i_barracks_v2_f"], 1000, true]; 
 
 //we need only intact buildings that are not under some marker
 _appropriateBuildings = _appropriateBuildings select {

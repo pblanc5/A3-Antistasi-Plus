@@ -165,6 +165,7 @@ listMilBld = [
 	"Land_HelipadCivil_F",
 	"Land_HelipadCircle_F",
 	"Land_BludpadCircle",
+	"Land_vn_b_helipad_01",
 	"Land_Posed",
 	"Land_Hlaska",
 	"Land_fortified_nest_small_EP1",
