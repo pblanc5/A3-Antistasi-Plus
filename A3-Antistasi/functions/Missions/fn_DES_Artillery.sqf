@@ -39,7 +39,7 @@ if(_sideX == Occupants) then {
         _artilleryShellClass = vehNATOMRLSMags;
     };
 
-    _mgClass = NATOMG;
+    _mgClass = selectRandom NATOMG;
     _mgCrewClass = staticCrewOccupants call SCRT_fnc_unit_selectInfantryTier;
 } 
 else { 
@@ -51,7 +51,7 @@ else {
         _artilleryShellClass = vehCSATMRLSMags;
     };
 
-    _mgClass = CSATMG;
+    _mgClass = selectRandom CSATMG;
     _mgCrewClass = staticCrewInvaders call SCRT_fnc_unit_selectInfantryTier;
 };
 

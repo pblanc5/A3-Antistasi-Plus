@@ -111,7 +111,7 @@ for "_i" from 0 to (count _buildings) - 1 do
         if (isObjectHidden _building) exitWith {};			// don't put statics on destroyed buildings
         switch (true) do {
             case (_typeB in ["Land_Cargo_Patrol_V1_F", "Land_Cargo_Patrol_V2_F", "Land_Cargo_Patrol_V3_F","Land_Cargo_Patrol_V4_F"]): {
-                private _type = if (_sideX == Occupants) then {NATOMG} else {CSATMG};
+                private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 private _dir = (getDir _building) - 180;
                 private _zpos = AGLToASL (_building buildingPos 1);
                 private _pos = _zpos getPos [1.5, _dir];			// zeroes Z value because BIS
@@ -119,7 +119,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 [_type, _pos, _dir] call _fnc_spawnStatic;
             };
             case (_typeB in ["Land_Hlaska","Land_vn_hlaska"]): {
-                private _type = if (_sideX == Occupants) then {NATOMG} else {CSATMG};
+                private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 private _dir = (getDir _building);
                 private _zpos = AGLToASL (_building buildingPos 1);
                 private _pos = _zpos getPos [0.5, _dir];
@@ -127,7 +127,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 [_type, _pos, _dir] call _fnc_spawnStatic;
             };
             case (_typeB in ["Land_fortified_nest_small_EP1", "Land_BagBunker_Small_F", "Land_BagBunker_01_small_green_F", "Land_fortified_nest_small", "Fort_Nest","Land_vn_bagbunker_01_small_green_f","Land_vn_bagbunker_small_f","Land_vn_o_shelter_05"]): {
-                private _type = if (_sideX == Occupants) then {NATOMG} else {CSATMG};
+                private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 private _dir = (getDir _building) - 180;
                 private _zpos = AGLToASL (_building buildingPos 1);
                 private _pos = _zpos getPos [-1, _dir];
@@ -135,7 +135,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 [_type, _pos, _dir] call _fnc_spawnStatic;
             };
             case (_typeB == "Land_vn_o_tower_02"): {
-                private _type = if (_sideX == Occupants) then {NATOMG} else {CSATMG};
+                private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 private _dir = (getDir _building) - 90;
                 private _zpos = AGLToASL (_building buildingPos 1);
                 private _pos = _zpos getPos [0.5, _dir];
@@ -143,7 +143,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 [_type, _pos, _dir] call _fnc_spawnStatic;
             };
             case (_typeB == "Land_vn_hut_tower_01"): {
-                private _type = if (_sideX == Occupants) then {NATOMG} else {CSATMG};
+                private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 private _dir = (getDir _building) - 180;
                 private _zpos = AGLToASL (_building buildingPos 5);
                 private _pos = _zpos getPos [1, _dir];
@@ -151,7 +151,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 [_type, _pos, _dir] call _fnc_spawnStatic;
             };
             case (_typeB == "Land_vn_b_trench_bunker_04_01"): {
-                 private _type = if (_sideX == Occupants) then {NATOMG} else {CSATMG};
+                 private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                  private _dir = (getDir _building) + 90;
                  private _zpos = AGLToASL (_building buildingPos 4);
                  private _pos = _zpos getPos [-1.5, _dir];
@@ -159,7 +159,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                  [_type, _pos, _dir] call _fnc_spawnStatic;
             };
             case (_typeB in ["Land_vn_o_platform_05", "Land_vn_o_platform_06"]): {
-                private _type = if (_sideX == Occupants) then {NATOMG} else {CSATMG};
+                private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 private _dir = (getDir _building) - 270;
                 private _zpos = AGLToASL (_building buildingPos 5);
                 private _pos = _zpos getPos [0.5, _dir];
@@ -167,7 +167,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 [_type, _pos, _dir] call _fnc_spawnStatic;
             };
             case (_typeB == "Land_ControlTower_02_F"): {
-                private _type = if (_sideX == Occupants) then {NATOMG} else {CSATMG};
+                private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 private _dir = (getDir _building) - 180;
                 private _zpos = AGLToASL (_building buildingPos 15);
                 private _pos = _zpos getPos [0, _dir];
@@ -175,7 +175,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 [_type, _pos, _dir] call _fnc_spawnStatic;
             };
             case (_typeB in ["Land_Cargo_Tower_V1_F","Land_Cargo_Tower_V1_No1_F","Land_Cargo_Tower_V1_No2_F","Land_Cargo_Tower_V1_No3_F","Land_Cargo_Tower_V1_No4_F","Land_Cargo_Tower_V1_No5_F","Land_Cargo_Tower_V1_No6_F","Land_Cargo_Tower_V1_No7_F","Land_Cargo_Tower_V2_F", "Land_Cargo_Tower_V3_F", "Land_Cargo_Tower_V4_F"]): {
-                private _type = if (_sideX == Occupants) then {NATOMG} else {CSATMG};
+                private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 _dir = getDir _building;
                 _zOffset = [0, 0, -0.3]; //fix spawn hight
                 _Tdir = _dir + 90; //relative rotation to building
@@ -228,7 +228,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 [_type, _pos, _dir] call _fnc_spawnStatic;
             };
             case (_typeB in ["land_gm_sandbags_02_bunker_high", "land_gm_woodbunker_01_bags"]): {
-                private _type = if (_sideX == Occupants) then {NATOMG} else {CSATMG};
+                private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 private _dir = getDir _building;
                 private _zpos = AGLToASL (position _building);
                 private _pos = _zpos getPos [0, _dir];
@@ -237,7 +237,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 _static setPos _pos; //for some stupid reason position should be reapplied after everything
             };
             case (_typeB in ["Land_HBarrier_01_big_tower_green_F", "Land_HBarrierTower_F"]): {
-                private _type = if (_sideX == Occupants) then {NATOMG} else {CSATMG};
+                private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 private _dir = (getDir _building) - 180;
                 private _zpos = AGLToASL (position _building);
                 private _zOffset = [0, 0, 2.25];
@@ -248,7 +248,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 _static setPos _pos; //for some stupid reason position should be reapplied after everything
             };
             case (_typeB in ["Land_Fort_Watchtower_EP1", "Land_Fort_Watchtower", "Land_HBarrier_01_tower_green_F", "Land_BagBunker_Tower_F"]): {
-                private _type = if (_sideX == Occupants) then {NATOMG} else {CSATMG};
+                private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 private _dir = (getDir _building) - 180;
                 private _zpos = AGLToASL (position _building);
                 private _zOffset = [0, 0, 2.85];
@@ -259,7 +259,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 _static setPos _pos; //for some stupid reason position should be reapplied after everything
             };
             case (_typeB in ["Land_BagBunker_Large_F", "Land_fortified_nest_big_EP1", "Land_fortified_nest_big", "Land_BagBunker_01_large_green_F"]): {
-                private _type = if (_sideX == Occupants) then {NATOMG} else {CSATMG};
+                private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 private _dir = (getDir _building) - 180;
                 private _zpos = AGLToASL (_building buildingPos 4);
                 private _pos = _zpos getPos [2, _dir];
@@ -268,7 +268,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 _static setPos _pos; //for some stupid reason position should be reapplied after everything
             };
             case (_typeB == "Land_Bunker_01_big_F"): {
-                private _type = if (_sideX == Occupants) then {NATOMG} else {CSATMG};
+                private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 private _dir = (getDir _building) - 180;
                 private _zpos = AGLToASL (_building buildingPos 2);
                 private _pos = _zpos getPos [-1, _dir];
@@ -282,7 +282,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 _static setPos _pos; //for some stupid reason position should be reapplied after everything
             };
             case (_typeB == "Land_Bunker_01_small_F"): {
-                private _type = if (_sideX == Occupants) then {NATOMG} else {CSATMG};
+                private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 private _dir = (getDir _building) - 180;
                 private _zpos = AGLToASL (_building buildingPos 1);
                 private _pos = _zpos getPos [-1, _dir];
@@ -291,7 +291,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 _static setPos _pos; //for some stupid reason position should be reapplied after everything
             };
             case (_typeB == "Land_Bunker_01_tall_F"): {
-                private _type = if (_sideX == Occupants) then {NATOMG} else {CSATMG};
+                private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 private _dir = (getDir _building) - 180;
                 private _zpos = AGLToASL (_building buildingPos 3);
                 private _pos = _zpos getPos [-1.5, _dir];
@@ -311,7 +311,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 _static setPos _pos; //for some stupid reason position should be reapplied after everything
             };
             case (_typeB == "Land_vn_cementworks_01_grey_f"): {
-                private _type = if (_sideX == Occupants) then {staticAAOccupants} else {staticAAInvaders};
+                private _type = if (_sideX == Occupants) then {selectRandom staticAAOccupants} else {selectRandom staticAAInvaders};
                 private _dir = getDir _building;
                 private _zpos = AGLToASL (_building buildingPos 24);
                 private _pos = getPosASL _building;
@@ -319,7 +319,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 [_type, _pos, _dir] call _fnc_spawnStatic;
             };
             case (_typeB == "Land_vn_cementworks_01_brick_f"): {
-                private _type = if (_sideX == Occupants) then {staticAAOccupants} else {staticAAInvaders};
+                private _type = if (_sideX == Occupants) then {selectRandom staticAAOccupants} else {selectRandom staticAAInvaders};
                 private _dir = getDir _building;
                 private _zpos = AGLToASL (_building buildingPos 20);
                 private _pos = getPosASL _building;
@@ -327,7 +327,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 [_type, _pos, _dir] call _fnc_spawnStatic;
             };
             case (_typeB == "Land_vn_a_office01"): {
-                private _type = if (_sideX == Occupants) then {staticAAOccupants} else {staticAAInvaders};
+                private _type = if (_sideX == Occupants) then {selectRandom staticAAOccupants} else {selectRandom staticAAInvaders};
                 private _dir = (getDir _building) + 180;
                 private _zpos = AGLToASL (_building buildingPos 8);
                 private _pos = _zpos getPos [1.5, _dir];
