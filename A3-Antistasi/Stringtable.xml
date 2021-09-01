@@ -2475,6 +2475,29 @@
         <Russian>Почему мы все еще здесь, просто чтобы страдать?</Russian>
         <Czech>Proč jsme pořád tady, jen trpět?</Czech>
       </Key>
+      <Key ID="STR_antistasi_mission_info_rhspkl_mapname_text">
+        <Original>Antistasi Plus - Red War</Original>
+        <English>Antistasi Plus - Red War</English>
+        <French>Antistasi Plus - Guerre rouge</French>
+        <German>Antistasi Plus - Roter Krieg</German>
+        <Russian>Antistasi Plus - Красная Война</Russian>
+        <Czech>Antistasi Plus - Červená válka</Czech>
+      </Key>
+      <Key ID="STR_antistasi_mission_info_rhspkl_mapname_short_text">
+        <Original>Antistasi Plus - Red War</Original>
+        <English>Antistasi Plus - Red War</English>
+        <French>Antistasi Plus - Guerre rouge</French>
+        <German>Antistasi Plus - Roter Krieg</German>
+        <Russian>Antistasi Plus - Красная Война</Russian>
+        <Czech>Antistasi Plus - Červená válka</Czech>
+      </Key>
+      <Key ID="STR_antistasi_mission_info_rhspkl_blurb_text">
+        <Original>Close skirmishes of intense kind.</Original>
+        <German>Enge Scharmützel intensiver Art.</German>
+        <French>Des escarmouches rapprochées de type intense.</French>
+        <Russian>Близкие стычки напряженного характера.</Russian>
+        <Czech>Blízké potyčky intenzivního druhu.</Czech>
+      </Key>
     </Container>
     <Container name="journal_entries">
       <Key ID="STR_antistasi_journal_entry_header_tutorial_1">
