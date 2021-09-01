@@ -89,10 +89,11 @@
 ]] call _fnc_saveToTemplate;
 
 private _initialRebelEquipment = [
-"vn_p38s",
+"vn_p38s", "uns_mkvFlarePistol",
 "vn_m38", "vn_izh54", "vn_izh54_shorty",
 "vn_m_mk2_knife_01","vn_m_axe_01","vn_b_type56","vn_b_sks","vn_b_m38","vn_b_camo_m9130","vn_b_camo_m40a1","vn_b_camo_m14",
-"vn_m127",
+"vn_m127", "vn_40mm_m583_flare_w_mag", "vn_40mm_m662_flare_r_mag", "vn_40mm_m661_flare_g_mag", "vn_40mm_m695_flare_y_mag",
+"vn_40mm_m680_smoke_w_mag", "vn_40mm_m682_smoke_r_mag", "vn_40mm_m715_smoke_g_mag", "vn_40mm_m716_smoke_y_mag",
 "vn_m10_mag","vn_m38_t_mag","vn_m38_mag","vn_t67_grenade_mag","vn_rdg2_mag","vn_molotov_grenade_mag","vn_m127_mag","vn_mine_punji_03_mag", 
 "vn_izh54_mag",
 "vn_c_pack_01",
@@ -128,13 +129,13 @@ rallyPoint = "B_RadioBag_01_wdl_F";
 
 //black market stuff
 shop_UAV = [];
-shop_AA = ["vn_o_wheeled_z157_mg_02_nva65"];
+shop_AA = ["vn_o_wheeled_z157_mg_02_nva65", "vn_o_wheeled_btr40_mg_03_nva65"];
 shop_MRAP = [];
-shop_wheel_apc = ["vn_o_wheeled_btr40_mg_01_nva65", "vn_o_wheeled_btr40_mg_02_nva65", "vn_o_wheeled_btr40_mg_03_nva65"];
+shop_wheel_apc = ["vn_o_wheeled_btr40_mg_01_nva65", "vn_o_wheeled_btr40_mg_02_nva65", "uns_xm706"];
 shop_track_apc = [];
 shop_heli = ["vn_o_air_mi2_04_03"];
-shop_tank = ["vn_i_armor_type63_01", "vn_i_armor_m41_01"];
-shop_plane = [];
+shop_tank = ["uns_t34_76_vc", "vn_i_armor_type63_01", "uns_t54_nva"];
+shop_plane = ["uns_A1H_CAS","uns_Mig21_CAS"];
 
 additionalShopLight = [];
 additionalShopAtgmVehicles = [];
