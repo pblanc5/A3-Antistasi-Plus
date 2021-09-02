@@ -6,14 +6,15 @@
 - Cam Lao Nam terrain support
 - RHSPKL terrain (Prei Khmaoch Luong) support
 - SOG Prairie Fire CDLC support
-- Unsung Redux support as complement mod for SOGPF CDLC
 - Chernarus 2020 terrain newest update support
 
 ### Changes
 - Airbases and milbases will no longer spawn howitzers (mortars will be used instead) when players in proximity, they will be only used as support 
 - Fixed no undercover break on outposts and sea ports
 - Enemy support call timeout increased to 20 minutes
+- Invaders can no longer attack cities in all game modes except Rebels vs Invaders
 - Multiple static MG types support
+- Limited Fast Travel mission parameter is on by default
 - (3CB Factions Cold War, Takistan) Fixed no tribal uniforms issue 
 - (CUP) Adjustments of faction templates with the usage of new CUP Vehicles/Units/Weapons mod items
 

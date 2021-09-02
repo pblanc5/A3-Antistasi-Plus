@@ -90,11 +90,6 @@ A3A_Reb_template = switch(true) do {
             [2, "Using Temperate CHDKZ Template", _filename] call A3A_fnc_log;
         };
     };
-    case (A3A_hasVN && {A3A_hasUR}): {
-        ["Templates\NewTemplates\VN\VN_UR_Reb_KPNLF.sqf", independent] call A3A_fnc_compatibilityLoadFaction;
-        [2, "Using Unsung KPNLF Template", _filename] call A3A_fnc_log;
-        "VN"
-    };
     case (A3A_hasVN): {
         ["Templates\NewTemplates\VN\VN_Reb_KPNLF.sqf", independent] call A3A_fnc_compatibilityLoadFaction;
         [2, "Using KPNLF Template", _filename] call A3A_fnc_log;
@@ -242,11 +237,6 @@ A3A_Occ_template = switch(true) do {
         [2, "Using Aegis EUROFOR Template", _filename] call A3A_fnc_log;
         "Vanilla" //intentionally, as aegis expands vanilla
     };
-    case (A3A_hasVN && {A3A_hasUR}): {
-        ["Templates\NewTemplates\VN\VN_UR_MACV.sqf", west] call A3A_fnc_compatibilityLoadFaction;
-        [2, "Using Unsung VN MACV Template", _filename] call A3A_fnc_log;
-        "VN"
-    };
     case (A3A_hasVN): {
         ["Templates\NewTemplates\VN\VN_MACV.sqf", west] call A3A_fnc_compatibilityLoadFaction;
         [2, "Using VN MACV Template", _filename] call A3A_fnc_log;
@@ -329,11 +319,6 @@ A3A_Inv_template = switch(true) do{
         ["Templates\NewTemplates\Aegis\Aegis_AI_AFRF.sqf", east] call A3A_fnc_compatibilityLoadFaction;
         [2, "Using Aegis Russia Template", _filename] call A3A_fnc_log;
         "Vanilla" //intentionally, as aegis expands vanilla
-    };
-    case (A3A_hasVN && {A3A_hasUR}): {
-        ["Templates\NewTemplates\VN\VN_UR_PAVN.sqf", east] call A3A_fnc_compatibilityLoadFaction;
-        [2, "Using Unsung VN PAVN Template", _filename] call A3A_fnc_log;
-        "VN"
     };
     case (A3A_hasVN): {
         ["Templates\NewTemplates\VN\VN_PAVN.sqf", east] call A3A_fnc_compatibilityLoadFaction;
@@ -472,4 +457,3 @@ if (A3A_hasCup) then {call compileScript ["Templates\NewTemplates\CUP\Cup_Logist
 if (A3A_hasAegis) then {call compileScript ["Templates\NewTemplates\Aegis\Aegis_Logistics_Nodes.sqf"];};
 if (A3A_hasGlobMob) then {call compileScript ["Templates\NewTemplates\GM\GM_Logistics_Nodes.sqf"];};
 if (A3A_hasVN) then {call compile preProcessFileLineNumbers "Templates\NewTemplates\VN\VN_Logistics_Nodes.sqf"};
-if (A3A_hasUR) then {call compile preProcessFileLineNumbers "Templates\NewTemplates\VN_UR\VN_UR_Logistics_Nodes.sqf"};
