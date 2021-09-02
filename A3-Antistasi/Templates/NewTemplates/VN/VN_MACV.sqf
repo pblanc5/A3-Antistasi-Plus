@@ -150,9 +150,11 @@
 ["staticAT", ["vn_b_army_static_tow"]] call _fnc_saveToTemplate;
 ["staticAA", ["vn_b_army_static_m45"]] call _fnc_saveToTemplate;
 ["staticMortars", ["vn_b_army_static_mortar_m2"]] call _fnc_saveToTemplate;
+["staticHowitzers", ["vn_b_sf_static_m101_02"]] call _fnc_saveToTemplate;
 
 ["mortarMagazineHE", "vn_mortar_m2_mag_he_x8"] call _fnc_saveToTemplate;
 ["mortarMagazineSmoke", "vn_mortar_m2_mag_wp_x8"] call _fnc_saveToTemplate;
+["howitzerMagazineHE", "vn_cannon_m101_mag_he_x8"] call _fnc_saveToTemplate;
 
 //Bagged weapon definitions
 ["baggedMGs", [["vn_b_pack_static_base_01","vn_b_pack_static_m2_high_01"]]] call _fnc_saveToTemplate;
@@ -505,7 +507,7 @@ _policeLoadoutData setVariable ["sidearms", [
 ////////////////////////////////
 
 private _militiaLoadoutData = _loadoutData call _fnc_copyLoadoutData;
-_militiaLoadoutData setVariable ["uniforms", ["vn_b_uniform_macv_02_01", "vn_b_uniform_macv_02_07", "vn_b_uniform_macv_01_01"]];
+_militiaLoadoutData setVariable ["uniforms", ["UNS_ARMY_BDU_ROKArmy9thIDipatch"]];
 _militiaLoadoutData setVariable ["vests", ["vn_b_vest_usarmy_02", "vn_b_vest_usarmy_03"]];
 _militiaLoadoutData setVariable ["GLvests", ["vn_b_vest_usarmy_05"]];
 _militiaLoadoutData setVariable ["Snivests", ["vn_b_vest_usarmy_08"]];
