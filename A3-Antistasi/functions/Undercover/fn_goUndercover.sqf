@@ -148,8 +148,8 @@ while {_reason == ""} do
                 if !(_isInRoadblock) then
                 {
                     private _aggro = if (_baseSide == Occupants) then {aggressionOccupants + (tierWar * 10)} else {aggressionInvaders + (tierWar * 10)};
-                    //Probability of being spotted. Unless we're in an airfield or milbase - then we're always spotted.
-                    if (_base in airportsX || _base in milbases || _onDetectionMarker || random 100 < _aggro) then
+                    //Probability of being spotted. Unless we're in an any "military" type outpost - then we're always spotted.
+                    if (_base in (airportsX + milbases + outposts + seaports) || _onDetectionMarker || random 100 < _aggro) then
                     {
                         if (_base in _roadblocks) then
                         {
