@@ -6,12 +6,15 @@
 - Cam Lao Nam terrain support
 - RHSPKL terrain (Prei Khmaoch Luong) support
 - SOG Prairie Fire CDLC support
-- Unsung Redux support as complement mod to SOGPF CDLC
+- Unsung Redux support as complement mod for SOGPF CDLC
 - Chernarus 2020 terrain newest update support
 
 ### Changes
-- Airbases and milbases will no longer spawn howitzers (mortars will be used instead), they will be only used as support 
+- Airbases and milbases will no longer spawn howitzers (mortars will be used instead) when players in proximity, they will be only used as support 
+- Fixed no undercover break on outposts and sea ports
+- Enemy support call timeout increased to 20 minutes
 - Multiple static MG types support
+- (3CB Factions Cold War, Takistan) Fixed no tribal uniforms issue 
 - (CUP) Adjustments of faction templates with the usage of new CUP Vehicles/Units/Weapons mod items
 
 ## 1.7.5
