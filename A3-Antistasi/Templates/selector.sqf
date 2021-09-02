@@ -361,8 +361,13 @@ A3A_Civ_template = switch(true) do {
     case (A3A_has3CBFactions): {
         switch(threecbfOccupantFaction) do {
             case(4): {
-                ["Templates\NewTemplates\3CBF\3CBF_CivCW.sqf", civilian] call A3A_fnc_compatibilityLoadFaction;
-                [2, "Using 3CB Civ template", _filename] call A3A_fnc_log;
+                if(_terrainName == "takistan") then {
+                    ["Templates\NewTemplates\3CBF\3CBF_Civ_Arid.sqf", civilian] call A3A_fnc_compatibilityLoadFaction;
+                    [2, "Using 3CB Civ Temperate template", _filename] call A3A_fnc_log;
+                } else {
+                    ["Templates\NewTemplates\3CBF\3CBF_CivCW.sqf", civilian] call A3A_fnc_compatibilityLoadFaction;
+                    [2, "Using 3CBF CW Civ template", _filename] call A3A_fnc_log;
+                };
             };
             default {
                 switch (true) do {
