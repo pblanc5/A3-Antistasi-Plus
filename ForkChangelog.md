@@ -18,6 +18,9 @@
 - (3CB Factions Cold War, Takistan) Fixed no tribal uniforms issue 
 - (CUP) Adjustments of faction templates with the usage of new CUP Vehicles/Units/Weapons mod items
 
+### Removals
+- (Cold War mode) removed modern variants of AS VAL from Arms Dealer store  
+
 ## 1.7.5
 ### Additions
 - Simplified Chinese translation (provided by GoldJohnKing)

@@ -9569,9 +9569,6 @@ class cfgHALsStore
 			ITEM(UK3CB_MP5N, 650, RIFLE_STOCK);
 
 			ITEM(rhs_weap_asval, 1200, RIFLE_STOCK);
-			ITEM(rhs_weap_asval_grip, 1250, RIFLE_STOCK);
-			ITEM(rhs_weap_asval_grip_npz, 1300, RIFLE_STOCK);
-			ITEM(rhs_weap_asval_npz, 1250, RIFLE_STOCK);
 		};
 
 		class rifles3cbfcw
