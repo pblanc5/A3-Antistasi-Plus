@@ -11,7 +11,8 @@ private _shopLookupArray = [];
 
 switch(_vehicleType) do {
     case("CIV"): {
-        _shopLookupArray = [civCar, civTruck, civHeli, civBoat];
+        private _avaialbleVehs = [civCar, civTruck, civHeli, civBoat] select {_x != "not_supported"};
+        _shopLookupArray = _avaialbleVehs;
     };
     case("MIL"): {
         _shopLookupArray = [vehSDKBike, vehSDKTruck, vehSDKLightUnarmed];
