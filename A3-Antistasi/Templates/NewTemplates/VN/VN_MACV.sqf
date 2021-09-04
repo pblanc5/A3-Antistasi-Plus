@@ -107,7 +107,7 @@
 ["vehiclesAmmoTrucks", ["vn_b_wheeled_m54_ammo"]] call _fnc_saveToTemplate;
 ["vehiclesRepairTrucks", ["vn_b_wheeled_m54_repair"]] call _fnc_saveToTemplate;
 ["vehiclesFuelTrucks", ["vn_b_wheeled_m54_fuel"]] call _fnc_saveToTemplate;
-["vehiclesMedical", []] call _fnc_saveToTemplate;
+["vehiclesMedical", ["vn_b_wheeled_m54_02_sog"]] call _fnc_saveToTemplate;
 ["vehiclesAPCs", ["vn_b_wheeled_m54_mg_03","vn_b_wheeled_m54_mg_01"]] call _fnc_saveToTemplate;
 ["vehiclesTanks", ["vn_b_armor_m41_01_02"]] call _fnc_saveToTemplate;
 ["vehiclesAA", ["vn_b_wheeled_m54_mg_02"]] call _fnc_saveToTemplate;
@@ -186,7 +186,7 @@
 	]
 ] call _fnc_saveToTemplate;
 
-["pvpVehicles", ["B_LSV_01_armed_F", "B_LSV_01_unarmed_F"]] call _fnc_saveToTemplate;
+["pvpVehicles", ["vn_b_wheeled_m151_01", "vn_b_wheeled_m151_mg_02"]] call _fnc_saveToTemplate;
 
 
 
@@ -507,7 +507,7 @@ _policeLoadoutData setVariable ["sidearms", [
 ////////////////////////////////
 
 private _militiaLoadoutData = _loadoutData call _fnc_copyLoadoutData;
-_militiaLoadoutData setVariable ["uniforms", ["UNS_ARMY_BDU_ROKArmy9thIDipatch"]];
+_militiaLoadoutData setVariable ["uniforms", ["vn_b_uniform_macv_02_01", "vn_b_uniform_macv_02_07", "vn_b_uniform_macv_01_01"]];
 _militiaLoadoutData setVariable ["vests", ["vn_b_vest_usarmy_02", "vn_b_vest_usarmy_03"]];
 _militiaLoadoutData setVariable ["GLvests", ["vn_b_vest_usarmy_05"]];
 _militiaLoadoutData setVariable ["Snivests", ["vn_b_vest_usarmy_08"]];

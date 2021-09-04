@@ -113,7 +113,7 @@ if((_side == Invaders) && (gameMode != 3)) then
 //On low level remove cities from target list
 if (gameMode != 4) then
 {
-	if (tierWar < 3 || {_side == Invaders}) then {_possibleTargets = _possibleTargets - citiesX;};
+	if (tierWar < 3) then {_possibleTargets = _possibleTargets - citiesX;};
 }
 else
 {

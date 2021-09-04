@@ -20,10 +20,8 @@ switch(_vehicleType) do {
         };
 
         if (tierWar > 3) then {
-            _shopLookupArray append [vehSDKAT, staticATteamPlayer, staticAAteamPlayer];
-            if (A3A_hasCup || A3A_hasRhs || A3A_has3CBFactions) then {
-                _shopLookupArray pushBack vehSDKAA;
-            };
+            private _avaialbleVehs = [vehSDKAT, vehSDKAA, staticATteamPlayer, staticAAteamPlayer] select {_x != "not_supported"};
+            _shopLookupArray append _avaialbleVehs;
         };
 
         if (tierWar > 4) then {

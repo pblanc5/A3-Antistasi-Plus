@@ -901,9 +901,20 @@ server setVariable [SDKMortar, 2000, true];
 {server setVariable [_x,35000,true]} forEach shop_plane;
 
 if (!(shop_tank isEqualTo [])) then {
-	server setVariable [(shop_tank select 0), 10500, true];
-	server setVariable [(shop_tank select 1), 15000, true];
-	server setVariable [(shop_tank select 2), 17500, true];
+	private _firstTank = shop_tank select 0;
+	if (!isNil "_firstTank") then {
+		server setVariable [_firstTank, 10500, true];
+	};
+
+	private _secondTank = shop_tank select 1;
+	if (!isNil "_secondTank") then {
+		server setVariable [_secondTank, 15000, true];
+	};
+
+	private _thirdTank = shop_tank select 2;
+	if (!isNil "_thirdTank") then {
+		server setVariable [_thirdTank, 17500, true];
+	};
 };
 
 if (!(additionalShopArtillery isEqualTo [])) then {
