@@ -198,7 +198,7 @@ while {true} do
 		_potentials = [];
 		{
 		_markerX = [markersX, _x] call BIS_fnc_nearestPosition;
-		if ((sidesX getVariable [_markerX,sideUnknown] == Occupants) and (spawner getVariable _markerX == 2)) exitWith
+		if ((sidesX getVariable [_markerX,sideUnknown] == _governmentCitySide) and (spawner getVariable _markerX == 2)) exitWith
 			{
 			_potentials pushBack [_markerX,_x];
 			};

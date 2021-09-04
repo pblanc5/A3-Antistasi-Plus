@@ -12,6 +12,7 @@ if (_remainingBases < 1) then {
         publicVariable "areInvadersDefeated";
 
         "CSAT_carrier" setMarkerAlpha 0;
+        "respawn_east" setMarkerAlpha 0;
         private _text = format [
             "<t size='0.6'><t size='0.6' color='#800000'>%1</t> surrendered. Their support corridor will be closed and they will no longer launch any attack on us. Congratulations!</t>", 
             nameInvaders
@@ -24,6 +25,7 @@ if (_remainingBases < 1) then {
         publicVariable "areOccupantsDefeated";
 
         "NATO_carrier" setMarkerAlpha 0;
+        "respawn_west" setMarkerAlpha 0;
         private _text = format [
             "<t size='0.6'><t size='0.6' color='#004d99'>%1</t> surrendered. Their support corridor will be closed and they will no longer launch any attack on us. Congratulations!</t>", 
             nameOccupants

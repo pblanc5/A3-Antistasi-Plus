@@ -472,6 +472,7 @@ if (_varName in _specialVarLoads) then {
 		publicVariable "areOccupantsDefeated";
 		if (areOccupantsDefeated) then {
 			"NATO_carrier" setMarkerAlpha 0;
+			"respawn_west" setMarkerAlpha 0;
 		};
     };
 
@@ -481,6 +482,7 @@ if (_varName in _specialVarLoads) then {
 		publicVariable "areInvadersDefeated";
 		if (areInvadersDefeated) then {
 			"CSAT_carrier" setMarkerAlpha 0;
+			"respawn_east" setMarkerAlpha 0;
 		};
     };
 
