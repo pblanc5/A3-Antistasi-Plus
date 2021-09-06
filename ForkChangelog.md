@@ -7,6 +7,7 @@
 - Cam Lao Nam terrain support
 - RHSPKL terrain (Prei Khmaoch Luong) support
 - Chernarus 2020 terrain newest update support
+- Limited Unsung Redux (SOGPF complement mod) support
 
 ### Changes
 - Airbases and milbases will no longer spawn howitzers (mortars will be used instead) when players in proximity, they will be only used as support 
