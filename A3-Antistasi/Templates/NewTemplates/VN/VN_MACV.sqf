@@ -234,7 +234,6 @@ _loadoutData setVariable ["MGvests", []];
 _loadoutData setVariable ["Offvests", []];
 _loadoutData setVariable ["backpacks", []];
 _loadoutData setVariable ["longRangeRadios", ["vn_b_pack_trp_04_02_m16_pl"]];
-_loadoutData setVariable ["SLbackpacks", []];
 _loadoutData setVariable ["MGbackpacks", []];
 _loadoutData setVariable ["Medbackpacks", []];
 _loadoutData setVariable ["ENGbackpacks", []];
@@ -279,7 +278,6 @@ _sfLoadoutData setVariable ["Engvests", ["vn_b_vest_sog_03"]];
 _sfLoadoutData setVariable ["MGvests", ["vn_b_vest_sog_05"]];
 _sfLoadoutData setVariable ["Offvests", ["vn_b_vest_sog_06"]];
 _sfLoadoutData setVariable ["backpacks", ["vn_b_pack_trp_02", "vn_b_pack_lw_03"]];
-_sfLoadoutData setVariable ["SLbackpacks", ["vn_b_pack_trp_04", "vn_b_pack_trp_04_02", "vn_b_pack_prc77_01", "vn_b_pack_lw_06"]];
 _sfLoadoutData setVariable ["MGbackpacks", ["vn_b_pack_trp_01", "vn_b_pack_trp_01_02"]];
 _sfLoadoutData setVariable ["Medbackpacks", ["vn_b_pack_lw_07", "vn_b_pack_m5_01"]];
 _sfLoadoutData setVariable ["ENGbackpacks", ["vn_b_pack_lw_04", "vn_b_pack_trp_03_02"]];
@@ -348,7 +346,6 @@ _militaryLoadoutData setVariable ["Engvests", ["vn_b_vest_usarmy_12", "vn_b_vest
 _militaryLoadoutData setVariable ["MGvests", ["vn_b_vest_usarmy_06"]];
 _militaryLoadoutData setVariable ["Offvests", ["vn_b_vest_usarmy_09", "vn_b_vest_usarmy_11"]];
 _militaryLoadoutData setVariable ["backpacks", ["vn_b_pack_lw_01", "vn_b_pack_lw_03"]];
-_militaryLoadoutData setVariable ["SLbackpacks", ["vn_b_pack_trp_04_02", "vn_b_pack_prc77_01", "vn_b_pack_lw_06"]];
 _militaryLoadoutData setVariable ["MGbackpacks", ["vn_b_pack_lw_02", "vn_b_pack_lw_05", "vn_b_pack_trp_01_02"]];
 _militaryLoadoutData setVariable ["Medbackpacks", ["vn_b_pack_lw_07", "vn_b_pack_m5_01"]];
 _militaryLoadoutData setVariable ["ENGbackpacks", ["vn_b_pack_lw_04", "vn_b_pack_trp_03_02"]];
@@ -424,7 +421,6 @@ _eliteLoadoutData setVariable ["Engvests", ["vn_b_vest_sog_03"]];
 _eliteLoadoutData setVariable ["MGvests", ["vn_b_vest_sog_05"]];
 _eliteLoadoutData setVariable ["Offvests", ["vn_b_vest_sog_06"]];
 _eliteLoadoutData setVariable ["backpacks", ["vn_b_pack_trp_02", "vn_b_pack_lw_03"]];
-_eliteLoadoutData setVariable ["SLbackpacks", ["vn_b_pack_trp_04", "vn_b_pack_trp_04_02", "vn_b_pack_prc77_01", "vn_b_pack_lw_06"]];
 _eliteLoadoutData setVariable ["MGbackpacks", ["vn_b_pack_trp_01", "vn_b_pack_trp_01_02"]];
 _eliteLoadoutData setVariable ["Medbackpacks", ["vn_b_pack_lw_07", "vn_b_pack_m5_01"]];
 _eliteLoadoutData setVariable ["ENGbackpacks", ["vn_b_pack_lw_04", "vn_b_pack_trp_03_02"]];
@@ -515,7 +511,6 @@ _militiaLoadoutData setVariable ["Medvests", ["vn_o_vest_06"]];
 _militiaLoadoutData setVariable ["MGvests", ["vn_b_vest_usarmy_06"]];
 _militiaLoadoutData setVariable ["Offvests", ["vn_b_vest_usarmy_09"]];
 _militiaLoadoutData setVariable ["backpacks", ["vn_b_pack_lw_01", "vn_b_pack_lw_03"]];
-_militiaLoadoutData setVariable ["SLbackpacks", ["vn_b_pack_trp_04_02", "vn_b_pack_prc77_01", "vn_b_pack_lw_06"]];
 _militiaLoadoutData setVariable ["MGbackpacks", ["vn_b_pack_lw_02", "vn_b_pack_lw_05", "vn_b_pack_trp_01_02"]];
 _militiaLoadoutData setVariable ["Medbackpacks", ["vn_b_pack_lw_07", "vn_b_pack_m5_01"]];
 _militiaLoadoutData setVariable ["ENGbackpacks", ["vn_b_pack_lw_04", "vn_b_pack_trp_03_02"]];
@@ -586,8 +581,6 @@ private _squadLeaderTemplate = {
 	["helmets"] call _fnc_setHelmet;
 	[["SLvests", "vests"] call _fnc_fallback] call _fnc_setVest;
 	["uniforms"] call _fnc_setUniform;
-
-	[["SLbackpacks", "backpacks"] call _fnc_fallback] call _fnc_setBackpack;
 
 	[selectRandom ["grenadeLaunchers", "SLrifles"]] call _fnc_setPrimary;
 	["primary", 8] call _fnc_addMagazines;
