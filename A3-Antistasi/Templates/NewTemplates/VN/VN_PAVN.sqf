@@ -169,17 +169,17 @@
 ["playerDefaultLoadout", []] call _fnc_saveToTemplate;
 ["pvpLoadouts", [
 		//Team Leader
-		["vanilla_blufor_teamLeader"] call A3A_fnc_getLoadout,
+		["vn_opfor"] call A3A_fnc_getLoadout,
 		//Medic
-		["vanilla_blufor_medic"] call A3A_fnc_getLoadout,
+		["vn_opfor"] call A3A_fnc_getLoadout,
 		//Autorifleman
-		["vanilla_blufor_machineGunner"] call A3A_fnc_getLoadout,
+		["vn_opfor"] call A3A_fnc_getLoadout,
 		//Marksman
-		["vanilla_blufor_marksman"] call A3A_fnc_getLoadout,
+		["vn_opfor"] call A3A_fnc_getLoadout,
 		//Anti-tank Scout
-		["vanilla_blufor_AT"] call A3A_fnc_getLoadout,
+		["vn_opfor"] call A3A_fnc_getLoadout,
 		//AT2
-		["vanilla_blufor_rifleman"] call A3A_fnc_getLoadout
+		["vn_opfor"] call A3A_fnc_getLoadout
 	]
 ] call _fnc_saveToTemplate;
 
