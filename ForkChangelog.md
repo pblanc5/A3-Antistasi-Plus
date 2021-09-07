@@ -12,6 +12,7 @@
 ### Changes
 - Airbases and milbases will no longer spawn howitzers (mortars will be used instead) when players in proximity, they will be only used as support 
 - Fixed no undercover break on outposts and sea ports
+- Fixed "Error Type Array, expected String" on some unit spawn
 - Enemy support call timeout increased to 20 minutes
 - Multiple static MG types support
 - Limited Fast Travel mission parameter is on by default

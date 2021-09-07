@@ -349,7 +349,8 @@ for "_i" from 0 to (count _buildings) - 1 do
         if (isObjectHidden _building) exitWith {};            // don't put statics on destroyed buildings
         if     ((_typeB == "Land_vn_o_snipertree_01") or (_typeB == "Land_vn_o_snipertree_02") or (_typeB == "Land_vn_o_snipertree_03") or (_typeB == "Land_vn_o_snipertree_04") or (_typeB == "Land_vn_o_platform_01") or (_typeB == "Land_vn_o_platform_02") or (_typeB == "Land_vn_o_platform_03")) exitWith
         {
-            private _type = if (_sideX == Occupants) then {NATOMarksman} else {CSATMarksman};
+            private _pool = if (_sideX == Occupants) then {NATOMarksman} else {CSATMarksman};
+            private _type = _pool call SCRT_fnc_unit_selectInfantryTier;
             private _dir = (getDir _building) - 180;
             private _zpos = AGLToASL (_building buildingPos 0);
             private _pos = _zpos getPos [0, _dir];            // zeroes Z value because BIS
@@ -371,7 +372,8 @@ for "_i" from 0 to (count _buildings) - 1 do
         if (isObjectHidden _building) exitWith {};            // don't put statics on destroyed buildings
         if     ((_typeB == "Land_vn_b_tower_01")) exitWith
         {
-            private _type = if (_sideX == Occupants) then {NATOGrunt} else {CSATGrunt};
+            private _pool = if (_sideX == Occupants) then {NATOGrunt} else {CSATGrunt};
+            private _type = _pool call SCRT_fnc_unit_selectInfantryTier;
             private _dir = (getDir _building) - 180;
             private _zpos = AGLToASL (_building buildingPos 0);
             private _pos = _zpos getPos [0, _dir];            // zeroes Z value because BIS

@@ -29,7 +29,7 @@ private _radarType = if (_sideX == Occupants) then {NATOAARadar} else {CSATAARad
 private _samType = if (_sideX == Occupants) then {NATOAASam} else {CSATAASam};
 private _aaElements = [_radarType, _samType];
 
-private _heavyVehicles = if (_sideX == Occupants) then { vehNATOAPC + vehNATOTanks + vehNATOAA } else { vehCSATAPC + vehCSATTanks + vehCSATAA };
+private _heavyVehicles = if (_sideX == Occupants) then { vehNATOAPC + vehNATOTanks + vehNATOAA + vehFIATanks } else { vehCSATAPC + vehCSATTanks + vehCSATAA + vehWAMTanks };
 
 
 /////////////////////////////
