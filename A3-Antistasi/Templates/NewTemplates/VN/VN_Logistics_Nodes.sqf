@@ -16,6 +16,10 @@ A3A_logistics_vehicleHardpoints append [
     ,["vn\boat_f_vietnam\ptf\vn_boat_05.p3d",[[1,[1.2,-9.9,-0.3],[]],[1,[1.2,-10.7,-0.3],[]]]] // PTF Nasty Boat (Mortar/ Black)
     ,["vn\boat_f_vietnam\gunboat\vn_boat_04.p3d",[[1,[1,-10.4,-1.63],[]],[1,[1,-11.2,-1.63],[]]]] // Shantou Gunboat (ZPU-4/ Green)
     ,["vn\boat_f_vietnam\gunboat\vn_boat_03.p3d",[[1,[1,-10.4,-1.63],[]],[1,[1,-11.2,-1.63],[]]]] // Shantou Gunboat (V-11M/ Green)
+    ,["vn_c_car_02_01" call A3A_fnc_classNameToModel,[
+        [1,         [0,-0.2,0.15],       []  ],
+        [1,         [0,-0.8,0.15],      []  ]
+    ]]
 ];
 A3A_logistics_attachmentOffset append [
     //Boxes
