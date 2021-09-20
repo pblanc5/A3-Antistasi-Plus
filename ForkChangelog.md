@@ -18,6 +18,7 @@
 - Limited Fast Travel mission parameter is on by default
 - Players will be kicked if they will try to join into PVP slot of defeated faction
 - Faction defeat will hide faction PVP marker
+- Reduced number of cops in Supply mission
 - Lowered recoil of RHS Zu-23 when it is mounted on vehicle
 - (3CB Factions Cold War, Takistan) Fixed no tribal uniforms issue 
 - (CUP) Adjustments of faction templates with the usage of new CUP Vehicles/Units/Weapons mod items
