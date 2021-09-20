@@ -63,7 +63,7 @@ private _squad = if (_side == Invaders) then {CSATSquad} else {NATOSquad};
 _typeGroup = if (random 10 < tierWar) then {
 	_squad call SCRT_fnc_unit_selectInfantryTier
 } else {
-	[policeOfficer,policeGrunt,policeGrunt,policeGrunt,policeGrunt,policeGrunt,policeGrunt,policeGrunt]
+	[policeOfficer,policeGrunt,policeGrunt,policeGrunt]
 };
 _groupX = [_positionX,_side, _typeGroup] call A3A_fnc_spawnGroup;
 _nul = [leader _groupX, _mrk, "SAFE","SPAWNED", "NOVEH2", "NOFOLLOW"] execVM "scripts\UPSMON.sqf";
