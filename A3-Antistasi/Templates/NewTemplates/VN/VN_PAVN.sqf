@@ -328,7 +328,7 @@ _militaryLoadoutData setVariable ["backpacks", ["vn_o_pack_04", "vn_o_pack_01", 
 _militaryLoadoutData setVariable ["SLbackpacks", ["vn_o_pack_t884_01"]];
 _militaryLoadoutData setVariable ["ATbackpacks", ["vn_o_pack_03"]];
 _militaryLoadoutData setVariable ["ENGbackpacks", ["vn_o_pack_05"]];
-_militaryLoadoutData setVariable ["helmets", ["vn_o_helmet_nva_01", "vn_o_helmet_nva_04", "vn_o_helmet_nva_03", "vn_o_helmet_nva_02"]];
+_militaryLoadoutData setVariable ["helmets", ["vn_o_helmet_nva_01", "vn_o_helmet_nva_09", "vn_o_helmet_nva_10", "vn_o_helmet_nva_02"]];
 
 _militaryLoadoutData setVariable ["rifles", [
 ["vn_sks", "", "vn_b_sks", "", ["vn_sks_mag", "vn_sks_mag", "vn_sks_t_mag"], [], ""],
@@ -378,8 +378,7 @@ _eliteLoadoutData setVariable ["backpacks", ["vn_o_pack_04", "vn_o_pack_01", "vn
 _eliteLoadoutData setVariable ["SLbackpacks", ["vn_o_pack_t884_01"]];
 _eliteLoadoutData setVariable ["ATbackpacks", ["vn_o_pack_03"]];
 _eliteLoadoutData setVariable ["ENGbackpacks", ["vn_o_pack_05"]];
-_eliteLoadoutData setVariable ["helmets", ["vn_o_helmet_nva_01", "vn_o_helmet_nva_04", "vn_o_helmet_nva_03", "vn_o_helmet_nva_02"]];
-//["Weapon", "Muzzle", "Rail", "Sight", [], [], "Bipod"];
+_eliteLoadoutData setVariable ["helmets", ["vn_o_helmet_nva_01", "vn_o_helmet_nva_09", "vn_o_helmet_nva_10", "vn_o_helmet_nva_02"]];
 
 _eliteLoadoutData setVariable ["rifles", [
 ["vn_sks", "", "vn_b_sks", "", ["vn_sks_mag", "vn_sks_mag", "vn_sks_t_mag"], [], ""],
