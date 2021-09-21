@@ -63,7 +63,7 @@ private _antennasDeadPositions = [];
 ["maxUnits", maxUnits] call A3A_fnc_setStatVariable;
 ["maxConstructions", maxConstructions] call A3A_fnc_setStatVariable;
 ["nextTick", nextTick - time] call A3A_fnc_setStatVariable;
-["weather",[fogParams,rain]] call A3A_fnc_setStatVariable;
+["weather",[fogParams,overcast]] call A3A_fnc_setStatVariable;
 private _destroyedPositions = destroyedBuildings apply { getPosATL _x };
 ["destroyedBuildings",_destroyedPositions] call A3A_fnc_setStatVariable;
 ["isTraderQuestCompleted", isTraderQuestCompleted] call A3A_fnc_setStatVariable;

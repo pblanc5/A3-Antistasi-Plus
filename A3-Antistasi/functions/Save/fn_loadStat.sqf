@@ -79,7 +79,7 @@ if (_varName in _specialVarLoads) then {
 		// Avoid persisting potentially-broken fog values
 		private _fogParams = _varValue select 0;
 		0 setFog [_fogParams#0, (_fogParams#1) max 0, (_fogParams#2) max 0];
-		0 setRain (_varValue select 1);
+		0 setOvercast (_varValue select 1);
 		forceWeatherChange
 	};
 	if (_varName == 'resourcesFIA') then {server setVariable ["resourcesFIA",_varValue,true]};
