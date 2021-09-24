@@ -5,7 +5,7 @@
 ## Additions
 - SOG Prairie Fire CDLC support
 - Cam Lao Nam terrain support
-- RHSPKL terrain (Prei Khmaoch Luong) support
+- RHSPKL (Prei Khmaoch Luong) terrain support
 - Chernarus 2020 terrain newest update support
 - Limited Unsung Redux (SOGPF complement mod) support
 
