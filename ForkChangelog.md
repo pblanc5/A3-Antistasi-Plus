@@ -5,9 +5,10 @@
 ## Additions
 - SOG Prairie Fire CDLC support
 - Cam Lao Nam terrain support
+- Khe Sanh terrain support
 - RHSPKL (Prei Khmaoch Luong) terrain support
 - Chernarus 2020 terrain newest update support
-- Limited Unsung Redux (SOGPF complement mod) support
+- Unsung Redux (SOGPF complement mod) support
 
 ### Changes
 - Airbases and milbases will no longer spawn howitzers (mortars will be used instead) when players in proximity, they will be only used as support 

@@ -172,6 +172,10 @@ if (gameMode == 1) then
             _mrkCSAT = ["milbase_4", "airport_2", "resource_8", "outpost_12", "outpost_37", "resource_16", "outpost_13", "milbase_6", "control_118", "control_63", "control_120", "control_48", "control_62", "control_49", "control_61", "control_60", "resource_17", "outpost_18", "outpost_19", "control_67", "outpost_14", "control_119", "control_121", "resource_7", "control_114", "control_115", "control_116", "control_110", "control_111", "outpost_29", "resource_18", "control_64", "control_113", "control_47", "control_117", "resource_1", "control_46", "control_44", "control_45", "control_122", "control_81", "control_112", "control_80", "control_79", "control_78","outpost_42", "outpost_43", "outpost_39", "outpost_26", "outpost_25", "outpost_40", "resource_13", "outpost_28"];
             _controlsCSAT = ["control_118", "control_63", "control_120", "control_48", "control_62", "control_49", "control_61", "control_60", "control_67", "control_119", "control_121", "control_114", "control_115", "control_116", "control_110", "control_111", "control_64", "control_113", "control_47", "control_117", "control_46", "control_44", "control_45", "control_122", "control_81", "control_112", "control_80", "control_79", "control_78"];
         };
+		case "vn_khe_sanh": {
+            _mrkCSAT = ["control_45","outpost_10","outpost_9","outpost_3", "control_7", "outpost_1", "outpost_4", "seaport_2", "factory_1","milbase_4", "outpost_7", "control_2", "control_14", "control_30", "outpost_8"];
+            _controlsCSAT = ["control_45","control_7", "control_2", "control_14", "control_30"];
+        };
 		case "rhspkl": {
             _mrkCSAT = ["outpost_1", "resource_2", "control_3", "control_5", "control_6", "control_9", "control_12", "control_14", "outpost_6", "resource_3", "outpost_8", "control_30", "airport_2", "control_31", "control_32", "control_33", "control_34", "control_35", "control_38", "control_39", "control_40", "airport_3", "control_42", "control_43", "control_44", "control_45", "control_46", "control_47", "control_51", "control_57"];
             _controlsCSAT = ["control_3", "control_5", "control_6", "control_9", "control_12", "control_14", "control_30", "control_31", "control_32", "control_33", "control_34", "control_35", "control_38", "control_39", "control_40", "control_42", "control_43", "control_44", "control_45", "control_46", "control_47", "control_51", "control_57"];
@@ -206,7 +210,7 @@ else
 [_mrkCSAT, resourcesX, "loc_rock", "Resources"] call _fnc_initMarker;
 [_mrkCSAT, factories, "u_installation", "Factory"] call _fnc_initMarker;
 [_mrkCSAT, outposts, "loc_bunker", "%1 Outpost", true] call _fnc_initMarker;
-if (toLower worldName isEqualTo "enoch") then {
+if (toLower worldName in ["enoch", "vn_khe_sanh"]) then {
 	[_mrkCSAT, seaports, "b_naval", "River Port"] call _fnc_initMarker;
 } else {
 	[_mrkCSAT, seaports, "b_naval", "Sea Port"] call _fnc_initMarker;
