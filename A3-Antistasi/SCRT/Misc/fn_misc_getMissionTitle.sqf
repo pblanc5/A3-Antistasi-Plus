@@ -55,7 +55,7 @@ switch (toLower worldName) do {
 	};
 	case "vn_khe_sanh":
 	{
-	    _title = localize "STR_antistasi_mission_info_camlaonam_mapname_text";
+	    _title = localize "STR_antistasi_mission_info_khesanh_mapname_text";
 	};
 	case "rhspkl":
 	{

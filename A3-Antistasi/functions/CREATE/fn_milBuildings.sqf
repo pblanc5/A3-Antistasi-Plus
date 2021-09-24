@@ -370,7 +370,7 @@ for "_i" from 0 to (count _buildings) - 1 do
 
     call {
         if (isObjectHidden _building) exitWith {};            // don't put statics on destroyed buildings
-        if     ((_typeB == "Land_vn_b_tower_01")) exitWith
+        if ((_typeB == "Land_vn_b_tower_01")) exitWith
         {
             private _pool = if (_sideX == Occupants) then {NATOGrunt} else {CSATGrunt};
             private _type = _pool call SCRT_fnc_unit_selectInfantryTier;

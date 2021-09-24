@@ -14,7 +14,7 @@ private _filename = "selector.sqf";
 //Map checker
 private _aridMaps = ["altis", "takistan"];
 
-tropicalMaps = ["tanoa", "cam_lao_nam", "rhspkl"]; //global because used by QRF code
+tropicalMaps = ["tanoa", "cam_lao_nam", "vn_khe_sanh", "rhspkl"]; //global because used by QRF code
 
 private _temperateMaps = ["panthera3", "enoch", "vt7", "cup_chernarus_a3", "napf", "abramia", "taviana", "gm_weferlingen_summer", "blud_vidda"];
 //Mod selector
