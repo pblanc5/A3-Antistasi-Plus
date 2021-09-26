@@ -56,45 +56,52 @@ _fnc_initMarker =
 _fnc_initGarrison =
 {
 	params ["_markerArray", "_type"];
-	private ["_side", "_groupsRandom", "_garrNum", "_garrisonOld", "_marker"];
+	private ["_side", "_groupsRandom", "_garrNum", "_garrison", "_marker"];
 	{
 	    _marker = _x;
-			_garrNum = ([_marker] call A3A_fnc_garrisonSize) / 8;
-			_side = sidesX getVariable [_marker, sideUnknown];
-			if(_side != Occupants) then
-			{
-				if(_type != "Airport" && {_type != "Outpost"} && {_type != "MilitaryBase"}) then
-				{
-					private _squads = [_side, "SQUAD"] call SCRT_fnc_unit_getGroupSet;
-					private _fiaSquads = groupsWAMSquad;
-					_groupsRandom = [_squads, _fiaSquads] select ((_marker in outposts) && (gameMode == 4));
-				}
-				else
-				{
-					private _squads = [_side, "SQUAD"] call SCRT_fnc_unit_getGroupSet;
-	 				_groupsRandom = _squads;
-				};
-			}
-			else
-			{
-				if(_type != "Airport" && {_type != "Outpost"} && {_type != "MilitaryBase"}) then
-				{
-					_groupsRandom = groupsFIASquad;
-				}
-				else
-				{
-					private _squads = [_side, "SQUAD"] call SCRT_fnc_unit_getGroupSet;
-	 				_groupsRandom = _squads;
-				};
-			};
-			//Old system, keeping it intact for the moment
-			_garrisonOld = [];
-			for "_i" from 1 to _garrNum do
-			{
-				_garrisonOld append (selectRandom _groupsRandom);
-			};
-			//Old system, keeping it runing for now
-			garrison setVariable [_marker, _garrisonOld, true];
+		_garrNum = [_marker] call A3A_fnc_garrisonSize;
+		_side = sidesX getVariable [_marker, sideUnknown];
+
+		switch (true) do {
+		    case (gameMode == 4 && {_side == Invaders}): {
+                if !(_type in ["Airport", "Outpost", "MilitaryBase"]) then {
+                    private _squads = [_side, "SQUAD"] call SCRT_fnc_unit_getGroupSet;
+                    private _fiaSquads = groupsWAMSquad;
+                    _groupsRandom = _squads + _fiaSquads;
+                }
+                else {
+                    private _squads = [Invaders, "SQUAD"] call SCRT_fnc_unit_getGroupSet;
+                    private _mids = [Invaders, "MID"] call SCRT_fnc_unit_getGroupSet;
+                    _groupsRandom = _squads + _mids;
+                };
+		    };
+		    case (_side != Occupants): {
+                private _squads = [_side, "SQUAD"] call SCRT_fnc_unit_getGroupSet;
+                private _mids = [_side, "MID"] call SCRT_fnc_unit_getGroupSet;
+                _groupsRandom = _squads + _mids;
+            };
+            default {
+                if !(_type in ["Airport", "Outpost", "MilitaryBase"]) then {
+                    private _squads = [Occupants, "SQUAD"] call SCRT_fnc_unit_getGroupSet;
+                    private _fiaSquads = groupsFIASquad;
+                    _groupsRandom = _squads + _fiaSquads;
+                }
+                else {
+                    private _squads = [Occupants, "SQUAD"] call SCRT_fnc_unit_getGroupSet;
+                    private _mids = [Occupants, "MID"] call SCRT_fnc_unit_getGroupSet;
+                    _groupsRandom = _squads + _mids;
+                };
+            };
+		};
+
+
+		_garrison = [];
+		while {count _garrison < _garrNum} do
+		{
+			_garrison append (selectRandom _groupsRandom);
+		};
+		_garrison resize _garrNum;
+		garrison setVariable [_marker, _garrison, true];
 
 	} forEach _markerArray;
 };

@@ -126,7 +126,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 _pos = ASLToATL ([_pos select 0, _pos select 1, _zpos select 2]);
                 [_type, _pos, _dir] call _fnc_spawnStatic;
             };
-            case (_typeB in ["Land_fortified_nest_small_EP1", "Land_BagBunker_Small_F", "Land_BagBunker_01_small_green_F", "Land_fortified_nest_small", "Fort_Nest","Land_vn_bagbunker_01_small_green_f","Land_vn_bagbunker_small_f","Land_vn_o_shelter_05"]): {
+            case (_typeB in ["Land_fortified_nest_small_EP1", "Land_vn_bunker_small_01", "Land_BagBunker_Small_F", "Land_BagBunker_01_small_green_F", "Land_fortified_nest_small", "Fort_Nest","Land_vn_bagbunker_01_small_green_f","Land_vn_bagbunker_small_f","Land_vn_o_shelter_05"]): {
                 private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 private _dir = (getDir _building) - 180;
                 private _zpos = AGLToASL (_building buildingPos 1);
@@ -281,7 +281,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 _static = [_type, _pos, _dir] call _fnc_spawnStatic;
                 _static setPos _pos; //for some stupid reason position should be reapplied after everything
             };
-            case (_typeB == "Land_Bunker_01_small_F"): {
+            case (_typeB in "Land_Bunker_01_small_F"): {
                 private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 private _dir = (getDir _building) - 180;
                 private _zpos = AGLToASL (_building buildingPos 1);

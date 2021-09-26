@@ -40,6 +40,14 @@ if (sidesX getVariable [_markerX,sideUnknown] == teamPlayer) then {
 	[_mrkD,_textX] remoteExec ["setMarkerTextLocal",[teamPlayer,civilian],true];
 }
 else {
+	if (_markerX in citiesX) exitWith {
+		_mrkD setMarkerText "";
+		if (gameMode != 4) then {
+		    _mrkD setMarkerColor ([colorOccupants, "ColorBlack"] select (_markerX in destroyedSites));
+		} else {
+		    _mrkD setMarkerColor ([colorInvaders, "ColorBlack"] select (_markerX in destroyedSites));
+		};
+	};
 	if (sidesX getVariable [_markerX,sideUnknown] == Occupants) then {
 		switch(true) do {
 			case(_markerX in airportsX): {

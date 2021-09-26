@@ -31,7 +31,7 @@ private _squads = [_sideX, "SQUAD"] call SCRT_fnc_unit_getGroupSet;
 private _infantrySquadArray = selectRandom _squads;
 
 if(_sideX == Occupants) then { 
-    if (NATOHowitzer != "") then {
+    if (NATOHowitzer != "not_supported") then {
         _artilleryClass = NATOHowitzer;
         _artilleryShellClass = NATOHowitzerMagazineHE;
     } else {
@@ -43,7 +43,7 @@ if(_sideX == Occupants) then {
     _mgCrewClass = staticCrewOccupants call SCRT_fnc_unit_selectInfantryTier;
 } 
 else { 
-    if (CSATHowitzer != "") then {
+    if (CSATHowitzer != "not_supported") then {
         _artilleryClass = CSATHowitzer;
         _artilleryShellClass = CSATHowitzerMagazineHE;
     } else {

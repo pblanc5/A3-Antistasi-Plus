@@ -12,7 +12,7 @@ if(isNil "_type") then {
 };
 if (isNil "_type" or leader group petros != petros) exitWith { A3A_missionRequestInProgress = nil };
 if (_type in A3A_activeTasks) exitWith {
-	if (!_silent) then {[petros,"globalChat","I already gave you a mission of this type"] remoteExec ["A3A_fnc_commsMP",_requester]};
+	if (!_silent) then {[petros,"globalChat","I already gave you a mission of this type."] remoteExec ["A3A_fnc_commsMP",_requester]};
 	A3A_missionRequestInProgress = nil;
 };
 
@@ -63,8 +63,8 @@ switch (_type) do {
 
 		if (count _possibleMarkers == 0) then {
 			if (!_silent) then {
-				[petros,"globalChat","I have no assasination missions for you. Move our HQ closer to the enemy"] remoteExec ["A3A_fnc_commsMP",_requester];
-				[petros,"hint","Assasination Missions require cities, Patrolled Jungles or Airports closer than 4Km from your HQ.", "Missions"] remoteExec ["A3A_fnc_commsMP",_requester];
+				[petros,"globalChat","I have no assassination missions for you. Move our HQ closer to the enemy."] remoteExec ["A3A_fnc_commsMP",_requester];
+				[petros,"hint","Assassination Missions require cities, patrolled Jungles or Airports closer than 4Km from your HQ.", "Missions"] remoteExec ["A3A_fnc_commsMP",_requester];
 			};
 		} else {
 			private _site = selectRandom _possibleMarkers;
@@ -136,7 +136,7 @@ switch (_type) do {
 
 		if (count _possibleMarkers == 0) then {
 			if (!_silent) then {
-				[petros,"globalChat","I have no destroy missions for you. Move our HQ closer to the enemy"] remoteExec ["A3A_fnc_commsMP",_requester];
+				[petros,"globalChat","I have no destroy missions for you. Move our HQ closer to the enemy."] remoteExec ["A3A_fnc_commsMP",_requester];
 				[petros,"hint","Destroy Missions require Airbases or Radio Towers closer than 4Km from your HQ.", "Missions"] remoteExec ["A3A_fnc_commsMP",_requester];
 			};
 		} else {
@@ -180,7 +180,7 @@ switch (_type) do {
 
 		if (count _possibleMarkers == 0) then {
 			if (!_silent) then {
-				[petros,"globalChat","I have no logistics missions for you. Move our HQ closer to the enemy"] remoteExec ["A3A_fnc_commsMP",_requester];
+				[petros,"globalChat","I have no logistics missions for you. Move our HQ closer to the enemy."] remoteExec ["A3A_fnc_commsMP",_requester];
 				[petros,"hint","Logistics Missions require Outposts, Seaports or Banks closer than 4Km from your HQ.", "Missions"] remoteExec ["A3A_fnc_commsMP",_requester];
 			};
 		} else {
@@ -223,7 +223,7 @@ switch (_type) do {
 
 		if (count _possibleMarkers == 0) then {
 			if (!_silent) then {
-				[petros,"globalChat","I have no support missions for you. Move our HQ closer to the enemy"] remoteExec ["A3A_fnc_commsMP",_requester];
+				[petros,"globalChat","I have no support missions for you. Move our HQ closer to the enemy."] remoteExec ["A3A_fnc_commsMP",_requester];
 				[petros,"hint","Support Missions require Cities closer than 4Km from your HQ.", "Missions"] remoteExec ["A3A_fnc_commsMP",_requester];
 			};
 		} else {
@@ -242,7 +242,7 @@ switch (_type) do {
 
 		if (count _possibleMarkers == 0) then {
 			if (!_silent) then {
-				[petros,"globalChat","I have no rescue missions for you. Move our HQ closer to the enemy"] remoteExec ["A3A_fnc_commsMP",_requester];
+				[petros,"globalChat","I have no rescue missions for you. Move our HQ closer to the enemy."] remoteExec ["A3A_fnc_commsMP",_requester];
 				[petros,"hint","Rescue Missions require Cities or Airports closer than 4Km from your HQ.", "Missions"] remoteExec ["A3A_fnc_commsMP",_requester];
 			};
 		} else {
@@ -285,7 +285,7 @@ switch (_type) do {
 	case "CONVOY": {
 		if (bigAttackInProgress) exitWith {
 			if (!_silent) then {
-				[petros,"globalChat","There is a big battle around, I don't think the enemy will send any convoy"] remoteExec ["A3A_fnc_commsMP",_requester];
+				[petros,"globalChat","There is a big battle around, I don't think the enemy will send any convoy."] remoteExec ["A3A_fnc_commsMP",_requester];
 				[petros,"hint","Convoy Missions require a calmed status around the island, and now it is not the proper time.", "Missions"] remoteExec ["A3A_fnc_commsMP",_requester];
 			};
 		};
@@ -308,7 +308,7 @@ switch (_type) do {
 		if (count _possibleMarkers == 0) then
 		{
 			if (!_silent) then {
-				[petros,"globalChat","I have no Convoy missions for you. Move our HQ closer to the enemy"] remoteExec ["A3A_fnc_commsMP",_requester];
+				[petros,"globalChat","I have no Convoy missions for you. Move our HQ closer to the enemy."] remoteExec ["A3A_fnc_commsMP",_requester];
 				[petros,"hint","Convoy Missions require nearby enemy facilities, with a road route to an idle base within 3km.", "Missions"] remoteExec ["A3A_fnc_commsMP",_requester];
 			};
 		} else {
@@ -318,12 +318,12 @@ switch (_type) do {
 	};
 
 	default {
-		[1, format ["%1 is not an accepted task type", _type], "missionRequest"] call A3A_fnc_log;
+		[1, format ["%1 is not an accepted task type.", _type], "missionRequest"] call A3A_fnc_log;
 	};
 };
 
 if (count _possibleMarkers > 0) then {
-	if (!_silent) then {[petros,"globalChat","I have a mission for you"] remoteExec ["A3A_fnc_commsMP",_requester]};
+	if (!_silent) then {[petros,"globalChat","I have a mission for you!"] remoteExec ["A3A_fnc_commsMP",_requester]};
 	sleep 3;			// delay lockout until the mission is registered
 };
 A3A_missionRequestInProgress = nil;

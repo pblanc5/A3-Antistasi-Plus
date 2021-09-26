@@ -11,6 +11,8 @@
 - Unsung Redux (SOGPF complement mod) support
 
 ### Changes
+- 2.5.3 Community Version integration (multiple fixes of core systems of Antistasi, player scaling)
+- Invader Punishment mission is returned back
 - Airbases and milbases will no longer spawn howitzers (mortars will be used instead) when players in proximity, they will be only used as support 
 - Fixed no undercover break on outposts and sea ports
 - Fixed "Error Type Array, expected String" on some unit spawn

@@ -25,6 +25,13 @@ class Params
         texts[] = {""};
         default = "";
     };
+    class howTo3
+    {
+        title = "Note that this page does NOT know the saved values";
+        values[] = {""};
+        texts[] = {""};
+        default = "";
+    };
     class howToSpacer
     {
         title = "";
@@ -353,14 +360,14 @@ class Params
      {
         title = "Allow S.O.G. PRAIRIE FIRE DLC?";
         values[] = {9999,1,0};
-        texts[] =  {"Default (No)","Yes","No"};
+        texts[] =  {"Load From Save (Default - No)","Yes","No"};
         default = 9999;
      };
      class GlobMob
      {
         title = "Allow Items and Vehicles from Global Mobilization DLC?";
         values[] = {9999,1,0};
-        texts[] = {"Default (No)","Yes","No"};
+        texts[] = {"Load From Save (Default - No)","Yes","No"};
         default = 9999;
      };
 

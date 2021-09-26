@@ -137,7 +137,7 @@ if (_isLarge && _isComputer) then {
 	private _isTrap = (random 100 < (20 + (4 * tierWar)));
 	if(_isTrap) then
 	{
-		[3, format ["Large intel on %1 is selected as trap, spawning explosives", _marker], _fileName, true] call A3A_fnc_log;
+		[3, format ["Large intel on %1 is selected as trap, spawning explosives", _marker, true], _fileName, true] call A3A_fnc_log;
 		private _bomb = "DemoCharge_F" createVehicle [0,0,0];
 		_bomb setVectorDirAndUp [(vectorDir _intel), [0,0,-1]];
 		_bomb setPosWorld ((getPosWorld _intel) vectorAdd [0,0,-0.2]);

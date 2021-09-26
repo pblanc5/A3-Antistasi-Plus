@@ -1831,7 +1831,7 @@
         <Korean>저항세력의 지도자가 되고 영웅이 되십시오.</Korean>
       </Key>
       <Key ID="STR_antistasi_credits_generic_version_text">
-        <Original>2.5.2</Original>
+        <Original>2.5.3</Original>
       </Key>
       <Key ID="STR_antistasi_plus_credits_generic_version_text">
         <Original>1.8</Original>
@@ -3929,8 +3929,8 @@
         <Chinesesimp>可用任务</Chinesesimp>
         <Russian>Доступные миссии</Russian>
       </Key>
-      <Key ID="STR_antistasi_dialogs_mission_menu_assasination_missions">
-        <Original>Assasination Mission</Original>
+      <Key ID="STR_antistasi_dialogs_mission_menu_assassination_missions">
+        <Original>Assassination Mission</Original>
         <Chinesesimp>刺杀任务</Chinesesimp>
         <Russian>Миссия на убийство</Russian>
       </Key>

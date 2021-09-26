@@ -246,10 +246,21 @@ if (A3A_hasTFAR) then
 [2,"Creating civilians",_fileName] call A3A_fnc_log;
 
 //No real reason we initialise this on the server right now...
-private _arrayCivs = ["C_man_polo_1_F","C_man_polo_1_F_asia","C_man_polo_1_F_euro"];
-if (toLower worldName isEqualTo "tanoa") then {
-	_arrayCivs pushBack "C_man_sport_1_F_tanoan";
+private _arrayCivs = [];
+
+switch (true) do {
+	case (toLower worldName in ["cam_lao_nam", "vn_khe_sanh"]): {
+		_arrayCivs append ["vn_c_men_22", "vn_c_men_01"];
+	};
+	case (toLower worldName in tropicalMaps): {
+		_arrayCivs append ["C_man_sport_1_F_tanoan","C_man_polo_1_F_asia"];
+	};
+	default {
+		_arrayCivs append ["C_man_polo_1_F","C_man_polo_1_F_asia","C_man_polo_1_F_euro"];
+	};
+	//TODO: Africans when some Africa terrain will be supported
 };
+
 DECLARE_SERVER_VAR(arrayCivs, _arrayCivs);
 
 //money magazines
@@ -793,7 +804,7 @@ DECLARE_SERVER_VAR(vehAA, _vehAA);
 private _vehMRLS = [vehCSATMRLS, vehNATOMRLS];
 DECLARE_SERVER_VAR(vehMRLS, _vehMRLS);
 
-private _vehArmor = [vehTanks,vehAA,vehMRLS] + vehAPCs;
+private _vehArmor = vehTanks + vehAA + vehMRLS + vehAPCs;
 DECLARE_SERVER_VAR(vehArmor, _vehArmor);
 
 private _vehTransportAir = vehNATOTransportHelis + vehCSATTransportHelis + vehNATOTransportPlanes + vehCSATTransportPlanes;

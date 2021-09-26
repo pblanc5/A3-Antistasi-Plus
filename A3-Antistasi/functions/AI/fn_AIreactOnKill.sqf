@@ -15,7 +15,6 @@ Public: Yes
 Dependencies:
     <ARRAY> allMachineGuns
     <BOOL> haveNV
-    <BOOL> hasIFA
     <ARRAY> squadLeaders
 
 Example:

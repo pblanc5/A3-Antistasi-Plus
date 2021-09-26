@@ -19,8 +19,8 @@ if (_typeX == "rem") then {
 	if ((count _garrison == 0) and {!(_watchpostFIA) || !(_roadblockFIA) || !(_aapostFIA) || !(_atpostFIA)}) exitWith {
 		[
 			"FAIL",
-			"Disband",  
-			parseText "This place has no garrisoned troops to remove.", 
+			"Disband",
+			parseText "This place has no garrisoned troops to remove.",
 			30
 		] spawn SCRT_fnc_ui_showMessage;
 	};
@@ -33,7 +33,7 @@ if (_typeX == "rem") then {
 			_hr = 0;
 			{
 				_costs = _costs + (server getVariable [_x,0]);
-				_hr = _hr + 1; 
+				_hr = _hr + 1;
 			} forEach groupsSDKSniper;
 			_costs = round (_costs * 0.75);
 		};
@@ -50,7 +50,7 @@ if (_typeX == "rem") then {
 			_costs = [staticAAteamPlayer] call A3A_fnc_vehiclePrice; //AA
 			_hr = 1; //static gunner
 			{
-				_costs = _costs + (server getVariable [_x,0]); 
+				_costs = _costs + (server getVariable [_x,0]);
 				_hr = _hr +1;
 			} forEach [SDKSL,SDKMG,SDKGL,SDKMil,SDKMil];
 			_costs = round (_costs * 0.75);
@@ -59,7 +59,7 @@ if (_typeX == "rem") then {
 			_costs = [staticATteamPlayer] call A3A_fnc_vehiclePrice; //AT
 			_hr = 1; //static gunner
 			{
-				_costs = _costs + (server getVariable [_x,0]); 
+				_costs = _costs + (server getVariable [_x,0]);
 				_hr = _hr +1;
 			} forEach groupsSDKAT;
 			_costs = round (_costs * 0.75);
@@ -68,7 +68,7 @@ if (_typeX == "rem") then {
 			_costs = [SDKMortar] call A3A_fnc_vehiclePrice; //Mortar
 			_hr = 1; //static gunner
 			{
-				_costs = _costs + (server getVariable [_x,0]); 
+				_costs = _costs + (server getVariable [_x,0]);
 				_hr = _hr +1;
 			} forEach [SDKSL,SDKMG,SDKMil,SDKMil,SDKMedic];
 			_costs = round (_costs * 0.75);
@@ -77,7 +77,7 @@ if (_typeX == "rem") then {
 			_costs = [SDKMGStatic] call A3A_fnc_vehiclePrice; //HMG
 			_hr = 1; //static gunner
 			{
-				_costs = _costs + (server getVariable [_x,0]); 
+				_costs = _costs + (server getVariable [_x,0]);
 				_hr = _hr +1;
 			} forEach [SDKSL,SDKMG,SDKMil,SDKMil,SDKATman,SDKMedic];
 			_costs = round (_costs * 0.75);
@@ -152,8 +152,8 @@ if (_typeX == "rem") then {
 
 	[
 		"SUCCESS",
-		"Disband",  
-		parseText format ["Garrison removed.<br/>Recovered Money: %1 €<br/>Recovered HR: %2",_costs,_hr], 
+		"Disband",
+		parseText format ["Garrison removed.<br/>Recovered Money: %1 €<br/>Recovered HR: %2",_costs,_hr],
 		30
 	] spawn SCRT_fnc_ui_showMessage;
 } else {
