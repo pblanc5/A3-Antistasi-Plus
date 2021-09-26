@@ -356,6 +356,21 @@ class HR_GRG_VehicleSelect
             size = TEXT_SIZE_MEDIUM;
         };
 
+        
+        // Additional controls
+        class STR_HR_GRG_Generic_Sell: HR_GRG_RscButton
+        {
+            idc = HR_GRG_IDC_Sell;
+            text = $STR_HR_GRG_Generic_Sell;
+            x = SCREEN_RIGHT - 39 * GRID_NOUISCALE_W;
+            y = SCREEN_BOTTOM - 7 * GRID_NOUISCALE_H;
+            w = 39 * GRID_NOUISCALE_W;
+            h = 7 * GRID_NOUISCALE_H;
+            action = "[] call HR_GRG_fnc_sell;";
+            tooltip = $STR_HR_GRG_Generic_Sell_Tooltip;
+            sizeEx = TEXT_SIZE_LARGE;
+        };
+
         // Camera controls hint
         class HR_GRG_KeyBindHint: HR_GRG_RscStructuredText
         {

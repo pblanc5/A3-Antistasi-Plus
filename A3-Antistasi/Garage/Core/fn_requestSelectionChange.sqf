@@ -26,7 +26,11 @@
 FIX_LINE_NUMBERS()
 params ["_UID", "_catIndex", "_vehUID", "_player", "_client"];
 Trace_3("Vehicle change requested | UID: %1 | Cat: %2 | Vehicle ID: %3", _UID, _catIndex, _vehUID);
-private _exit = { [true] remoteExecCall ["HR_GRG_fnc_toggleConfirmBttn", _client]; false};
+private _exit = { 
+    [true] remoteExecCall ["HR_GRG_fnc_toggleConfirmBttn", _client];
+    [true] remoteExecCall ["HR_GRG_fnc_toggleSellBttn", _client];
+    false
+};
 if (!isServer) exitWith _exit;
 if (_UID isEqualTo "") exitWith _exit;
 if (-1 in [_catIndex, _vehUID]) exitWith _exit;

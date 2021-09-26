@@ -56,6 +56,7 @@ if (_isPlayer) then {
         ) then { [] call HR_GRG_fnc_reloadPylons };
     };
     [true] call HR_GRG_fnc_toggleConfirmBttn;
+    [true] call HR_GRG_fnc_toggleSellBttn;
 };
 [_isPlayer] call HR_GRG_fnc_reloadExtras;
 

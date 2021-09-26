@@ -19,7 +19,7 @@
     License: APL-ND
 */
 #include "defines.inc"
-FIX_LINE_NUMBERS()//temp for trace
+FIX_LINE_NUMBERS() //temp for trace
 params ["_ctrl"];
 private _curSel = lbCurSel _ctrl;
 if (_curSel isEqualTo -1) exitWith {};
@@ -34,5 +34,6 @@ if (_cat != -1) then {
 };
 HR_GRG_SelectedChanged = true;
 [false] call HR_GRG_fnc_toggleConfirmBttn;
+[false] call HR_GRG_fnc_toggleSellBttn;
 
 [HR_GRG_PlayerUID, _newCat, _newVehUID, player, clientOwner] remoteExecCall ["HR_GRG_fnc_requestSelectionChange",2];

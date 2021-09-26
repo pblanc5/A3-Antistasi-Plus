@@ -3643,6 +3643,16 @@
             <Original>(Un)Lock</Original>
             <English>(Un)Lock</English>
         </Key>
+        <Key ID="STR_HR_GRG_Generic_Sell">
+            <Original>Sell</Original>
+            <English>Sell</English>
+            <Chinesesimp>出售</Chinesesimp>
+        </Key>
+        <Key ID="STR_HR_GRG_Generic_Sell_Tooltip">
+            <Original>Sells current selected vehicle. This action is irreversible.</Original>
+            <English>Sells current selected vehicle. This action is irreversible.</English>
+            <Chinesesimp>出售</Chinesesimp>
+        </Key>
         <Key ID="STR_HR_GRG_Generic_Confirm">
             <Original>Confirm</Original>
             <English>Confirm</English>

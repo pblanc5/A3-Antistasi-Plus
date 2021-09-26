@@ -64,11 +64,20 @@ HR_GRG_fnc_vehInit = {
 HR_GRG_onOpenEvent = { 
     //hide Antistasi's top information string as it has no use in the Garage
     ["GARAGE", true] call A3A_fnc_disableInfoBar; 
+    //hide sell button if player is not a commander
+    if (player != theBoss) then {
+        [false] call HR_GRG_fnc_toggleSellBttnVisibility;
+    };
     player setCaptive false; 
 };
 HR_GRG_onCloseEvent = { 
     //show Antistasi's top information string
     ["GARAGE", false] call A3A_fnc_disableInfoBar; 
+};
+
+HR_GRG_onSellEvent = {
+    //Executes additional code when selected vehicle is sold.
+    systemChat "selling!";
 };
 
 //CBA settings

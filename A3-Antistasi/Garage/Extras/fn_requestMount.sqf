@@ -42,4 +42,5 @@ if (_nodes isEqualType 0) exitWith { ["STR_HR_GRG_Feedback_requestMount_Denied"]
 
 HR_GRG_ReloadMounts = true;
 [false] call HR_GRG_fnc_toggleConfirmBttn;
+[false] call HR_GRG_fnc_toggleSellBttn;
 [HR_GRG_PlayerUID, _vehUID, _newIconIndex, clientOwner, player] remoteExecCall ["HR_GRG_fnc_findMount",2];

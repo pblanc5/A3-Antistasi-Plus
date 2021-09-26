@@ -6,6 +6,7 @@ class HR_GRG
         file = "Garage\Core";
         class addUser {};
         class broadcast {};
+        class sell {};
         class confirm {};
         class confirmPlacement {};
         class declairSources {};
@@ -25,6 +26,8 @@ class HR_GRG
         class selectionChange {};
         class switchCategory {};
         class toggleConfirmBttn {};
+        class toggleSellBttn {};
+        class toggleSellBttnVisibility {};
         class toggleLock {};
         class updateCamPos {};
         class validateGarage {};
