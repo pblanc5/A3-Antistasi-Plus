@@ -227,7 +227,7 @@ if (isServer) then {
 			_dmrk = createMarker [format ["Dum%1",_x], _pos];
 			_dmrk setMarkerShape "ICON";
 			_dmrk setMarkerType "b_naval";
-			if (toLower worldName isEqualTo "enoch") then {
+			if (toLower worldName in ["enoch", "vn_khe_sanh"]) then {
 				_dmrk setMarkerText "River Port";
 			} else {
 				_dmrk setMarkerText "Sea Port";

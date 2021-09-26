@@ -137,6 +137,23 @@ switch (toLower worldName) do {
         ["phoduc",100],["baove",100],["ngatu",100],["binhyen",100],["bosong",100],["marble",180],["niemtin",100],
         ["krosang",100],["banlen",100],["comngon",100],["saigonport",100],["cauhai",100]];
     };
+	case "vn_khe_sanh": {
+        {server setVariable [_x select 0,_x select 1]} forEach
+        [["Khesanhvil",800],["Tanloan",100],["Axau",50],["Xiso",40],["XiMi",38],["Xino",60],["PalienKhun",74],
+        ["Koso",60],["KoWe",38],["BanNeme",50],["Avau",35],["ToRout",80],["RoRo",100],["ABung",45],
+        ["Tavouac",15],["Palo",125],["Thanh",80],["AHo",20],["XingEa",75],["Xingwe",175],["ACoi",25],["Dan",100],
+        ["Bahy",100],["HaiPhuc",50],["HaiTan",30],["Donque",125],["Hamy",78],["BichNam",40],["Raoha",70],
+        ["NhiHa",17],["GioHai",86],["AnMy",100],["Kok",60],["HopTac",50],["CoSo",12],["Cola",90],["Seina",130],
+        ["Viski",21],["LiemCong",79],["NamHung",130],["ThaiLai",222],["Lako",90],["pagnouy",76],["Sadoun",64],
+        ["Salen",71],["Lousalia",19],["Paxiou",12],["Khoyamep",50],["Gnavay",60],["Gnavet",114],["Napang",100],
+        ["Xok",8],["Soy",100],["AnDinh",30],["Nabo",150],["Tuan",40],["Naxok",52],["Koanphan",113],
+		["Phonsang",32],["Louang",100],["Phonsi",101],["Pomkhoun",100],["Doy",15],["Nase",30],["Nadou",100],
+		["Cukty",30],["HoaThanh",100],["CuYang",100],["Ploy",100],["Thongxa",60],["Kang",43],["Lapoung",100],["Lukdong",70],
+		["Pakpong",20],["Donxat",35],["Vangkoy",100],["Xeku",20],["Nalao",14],["Kengkep",100],
+		["Nasano",43],["Naxuak",47],["Dantete",60],["Donvay",56],["Nonghano",10],["Nongno",40],["Tansoum",65],["Hindam",50],
+		["Phailom",30],["Saoven",100],["Prao",140],["Talu",60]
+		];
+    };
 	case "rhspkl": {
         {server setVariable [_x select 0,_x select 1]} forEach
         [["DefaultKeyPoint1",40],["DefaultKeyPoint4",200],["DefaultKeyPoint32",50],["DefaultKeyPoint34",100],
@@ -167,6 +184,15 @@ switch (toLower worldName) do {
             ""nhenden"", ""soctrang"", ""mekongdelta"", ""tampep"", ""segbegat"", ""che"", ""tandi"", ""lahot"", ""alieng"", ""thiengling"",
             ""phaonoi"", ""timho"", ""quyen"", ""caloi"", ""thuphac"", ""diemdang"", ""bandao"", ""mantau"",""dongxa"", ""tauphabang"", ""horgoat"",
             ""samsong"", ""muylai"", ""caymo"", ""docon"", ""paradiseisland"", ""mien"", ""giuaho"", ""daotrai""])"
+           configClasses (configfile >> "CfgWorlds" >> worldName >> "Names");
+    };
+
+	case "vn_khe_sanh": {
+        _cityConfigs = "(getText (_x >> ""type"") in [""NameCityCapital"", ""NameCity"", ""NameVillage"", ""CityCenter""]) &&
+           !(getText (_x >> ""Name"") isEqualTo """") &&
+           !((configName _x) in [""KoNo"", ""Paca"", ""MuTa"", ""Kouthi"", ""Kate"", ""Hinlap"", 
+		   ""Avian"", ""That"", ""XomBau"",""Paxia"", ""Chanulangchanh"", ""Xomcon"", ""Xombatu"", ""Xombolou"", 
+		   ""Bolieu"", ""VinhTu"", ""SonGiang"", ""SonXuan""])"
            configClasses (configfile >> "CfgWorlds" >> worldName >> "Names");
     };
 

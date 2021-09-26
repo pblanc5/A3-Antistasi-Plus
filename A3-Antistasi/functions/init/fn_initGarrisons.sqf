@@ -173,7 +173,7 @@ if (gameMode == 1) then
             _controlsCSAT = ["control_118", "control_63", "control_120", "control_48", "control_62", "control_49", "control_61", "control_60", "control_67", "control_119", "control_121", "control_114", "control_115", "control_116", "control_110", "control_111", "control_64", "control_113", "control_47", "control_117", "control_46", "control_44", "control_45", "control_122", "control_81", "control_112", "control_80", "control_79", "control_78"];
         };
 		case "vn_khe_sanh": {
-            _mrkCSAT = ["control_45","outpost_10","outpost_9","outpost_3", "control_7", "outpost_1", "outpost_4", "seaport_2", "factory_1","milbase_4", "outpost_7", "control_2", "control_14", "control_30", "outpost_8"];
+            _mrkCSAT = ["outpost_14","airport_1","control_45","outpost_10","outpost_9","outpost_3", "control_7", "outpost_1", "outpost_4", "seaport_2", "factory_1","milbase_4", "outpost_7", "control_2", "control_14", "control_30", "outpost_8"];
             _controlsCSAT = ["control_45","control_7", "control_2", "control_14", "control_30"];
         };
 		case "rhspkl": {
