@@ -252,7 +252,7 @@ switch (true) do {
 	case (toLower worldName in ["cam_lao_nam", "vn_khe_sanh"]): {
 		_arrayCivs append ["vn_c_men_22", "vn_c_men_01"];
 	};
-	case (toLower worldName in tropicalMaps): {
+	case (toLower worldName in ["tanoa","rhspkl"]): {
 		_arrayCivs append ["C_man_sport_1_F_tanoan","C_man_polo_1_F_asia"];
 	};
 	default {
