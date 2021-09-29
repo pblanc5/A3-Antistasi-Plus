@@ -1,5 +1,5 @@
 if (!isServer and hasInterface) exitWith{};
-private ["_markerX","_vehiclesX","_groups","_soldiers","_positionX","_pos","_size","_frontierX","_sideX","_cfg","_isFIA","_garrison","_antenna","_radiusX","_buildings","_mrk","_countX","_typeGroup","_groupX","_typeUnit","_typeVehX","_veh","_unit","_flagX","_boxX","_roads","_mrkMar","_vehicle","_vehCrew","_groupVeh","_dist","_road","_roadCon","_dirVeh","_bunker","_dir","_posF"];
+private ["_typeVehX","_markerX","_vehiclesX","_groups","_soldiers","_positionX","_pos","_size","_frontierX","_sideX","_cfg","_isFIA","_garrison","_antenna","_radiusX","_buildings","_mrk","_countX","_typeGroup","_groupX","_typeUnit","_veh","_unit","_flagX","_boxX","_roads","_mrkMar","_vehicle","_vehCrew","_groupVeh","_dist","_road","_roadCon","_dirVeh","_bunker","_dir","_posF"];
 _markerX = _this select 0;
 
 //Not sure if that ever happens, but it reduces redundance
@@ -301,17 +301,21 @@ else
 
 _spawnParameter = [_markerX, "Vehicle"] call A3A_fnc_findSpawnPosition;
 if (_spawnParameter isEqualType []) then {
-	_typeVehX = if !(_isFIA) then {
+	private _truckTypes = [];
+	
+	if !(_isFIA) then {
 		if (_sideX == Occupants) then {
 			private _types = vehNATOTrucks + vehNATOCargoTrucks;
+			_types = _types select { _x in vehCargoTrucks };
 			if (_frontierX) then {_types = _types + vehNATOArmed};
 			if (_types isEqualTo []) then {_types = vehNATOTrucks + vehNATOCargoTrucks};
-			_types;
+			_truckTypes = _types;
 		} else {
 			private _types = vehCSATTrucks + vehCSATCargoTrucks;
+			_types = _types select { _x in vehCargoTrucks };
 			if (_frontierX) then {_types = _types + vehCSATLightArmed};
 			if (_types isEqualTo []) then {_types = vehCSATTrucks + vehCSATCargoTrucks};
-			_types;
+			_truckTypes = _types;
 		};
 	} else {
 		if (_sideX == Occupants) then {
@@ -319,17 +323,25 @@ if (_spawnParameter isEqualType []) then {
 			_types = _types select { _x in vehCargoTrucks };
 			if (_frontierX) then {_types = _types + vehFIAArmedCars};
 			if (_types isEqualTo []) then {_types = vehFIATrucks};
-			_types;
+			_truckTypes = _types;
 		} else {
 			private _types = vehWAMTrucks;
 			_types = _types select { _x in vehCargoTrucks };
 			if (_frontierX) then {_types = _types + vehWAMArmedCars};
 			if (_types isEqualTo []) then {_types = vehWAMTrucks};
-			_types;
+			_truckTypes = _types;
 		};
 	};
 
-	_veh = createVehicle [selectRandom _typeVehX, (_spawnParameter select 0), [], 0, "NONE"];
+	if (_truckTypes isEqualTo []) then {
+		if (_sideX == Occupants) then {
+			_truckTypes = vehNATOTrucks + vehNATOCargoTrucks + vehFIATrucks + vehFIAArmedCars;
+		} else {
+			_truckTypes = vehCSATTrucks + vehCSATCargoTrucks + vehWAMTrucks + vehWAMArmedCars;
+		};
+	};
+ 
+	_veh = createVehicle [selectRandom _truckTypes, (_spawnParameter select 0), [], 0, "NONE"];
 	_veh setDir (_spawnParameter select 1);
 	_vehiclesX pushBack _veh;
 	_nul = [_veh, _sideX] call A3A_fnc_AIVEHinit;
