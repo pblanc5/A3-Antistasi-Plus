@@ -1,10 +1,13 @@
+params ["_markerX"];
+ 
 //Mission: Logistic supplies
 if (!isServer and hasInterface) exitWith{};
-private ["_markerX","_difficultX","_leave","_contactX","_groupContact","_tsk","_posHQ","_citiesX","_city","_radiusX","_positionX","_posHouse","_nameDest","_timeLimit","_dateLimit","_dateLimitNum","_pos","_truckX","_countX", "_holdTime"];
-
-_markerX = _this select 0;
+private ["_difficultX","_leave","_contactX","_groupContact","_tsk","_posHQ","_citiesX","_city","_radiusX","_positionX","_posHouse","_nameDest","_timeLimit","_dateLimit","_dateLimitNum","_pos","_truckX","_countX", "_holdTime"];
 
 private _side = if (gameMode == 4) then {Invaders} else {Occupants};
+private _isEnemyMarker = (sidesX getVariable [_markerX,sideUnknown] != teamPlayer);
+
+private _groups = [];
 
 _difficultX = if (random 10 < tierWar) then {true} else {false};
 _leave = false;
@@ -60,14 +63,20 @@ _mrk setMarkerBrushLocal "DiagGrid";
 _mrk setMarkerAlphaLocal 0;
 
 private _squad = if (_side == Invaders) then {CSATSquad} else {NATOSquad};
-_typeGroup = if (random 10 < tierWar) then {
+private _typeGroup = if (random 10 < tierWar) then {
 	_squad call SCRT_fnc_unit_selectInfantryTier
 } else {
 	[policeOfficer,policeGrunt,policeGrunt,policeGrunt]
 };
-_groupX = [_positionX,_side, _typeGroup] call A3A_fnc_spawnGroup;
-_nul = [leader _groupX, _mrk, "SAFE","SPAWNED", "NOVEH2", "NOFOLLOW"] execVM "scripts\UPSMON.sqf";
-{[_x,""] call A3A_fnc_NATOinit} forEach units _groupX;
+
+//preventing spawned units from killing garrison on friendly city
+if (_isEnemyMarker) then {
+	private _groupX = [_positionX,_side, _typeGroup] call A3A_fnc_spawnGroup;
+	_nul = [leader _groupX, _mrk, "SAFE","SPAWNED", "NOVEH2", "NOFOLLOW"] execVM "scripts\UPSMON.sqf";
+	{[_x,""] call A3A_fnc_NATOinit} forEach units _groupX;
+
+	_groups pushBack _groupX;
+};
 
 waitUntil {
     sleep 1;
@@ -78,6 +87,7 @@ waitUntil {
 [2, "Rebels in area, spawning additional group.", "LOG_Supplies", true] call A3A_fnc_log; 
 private _group2Position = [_positionX, 650, 1000, 0, 0] call BIS_fnc_findSafePos;
 _groupX2 = [_group2Position, _side, _typeGroup] call A3A_fnc_spawnGroup;
+_groups pushBack _groupX2;
 
 private _groupX2WP = _groupX2 addWaypoint [(position _truckX), 5];
 _groupX2WP setWaypointType "MOVE";
@@ -171,8 +181,9 @@ deleteVehicle _truckX;
 _emptybox = "Land_Pallet_F" createVehicle _ecpos;
 [_emptybox] spawn A3A_fnc_postmortem;
 
-[_groupX] spawn A3A_fnc_groupDespawner;
-[_groupX2] spawn A3A_fnc_groupDespawner;
+{
+    [_x] spawn A3A_fnc_groupDespawner
+} forEach _groups;
 
 deleteMarkerLocal _mrk;
 

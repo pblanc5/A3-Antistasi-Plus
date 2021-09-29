@@ -22,9 +22,10 @@
 - Limited Fast Travel mission parameter is on by default
 - Players will be kicked if they will try to join into PVP slot of defeated faction
 - Faction defeat will hide faction PVP marker
+- Enemy will no longer spawn in the middle of friendly town on Deliver Supplies missions
 - Reduced number of cops in Supply mission
 - Persistent weather variable uses overcast instead of rain
-- Lowered recoil of RHS Zu-23 when it is mounted on vehicle
+- (RHS) Lowered recoil of Zu-23 when it is mounted on vehicle
 - (3CB Factions Cold War, Takistan) Fixed no tribal uniforms issue 
 - (CUP) Adjustments of faction templates with the usage of new CUP Vehicles/Units/Weapons mod items
 
