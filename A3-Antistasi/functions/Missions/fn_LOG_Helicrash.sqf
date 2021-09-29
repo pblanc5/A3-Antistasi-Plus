@@ -442,7 +442,7 @@ if(_cargoVehicle distance _box < 50 && {alive _cargoVehicle} && {!isNull (driver
     if(({alive _x} count units _cargoVehicleGroup) > 3 && {alive _cargoVehicle}) then {
         [3, "Putting ammobox inside truck", _filename] call A3A_fnc_log;
 
-        private _return = [_vehicle, _cargo] call A3A_fnc_logistics_canLoad;
+        private _return = [_cargoVehicle, _cargo] call A3A_fnc_logistics_canLoad;
         if !(_return isEqualType 0) exitWith {
             _return remoteExec ["A3A_fnc_logistics_load", 2];
         };
