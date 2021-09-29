@@ -42,13 +42,13 @@ private _outposts = { sidesX getVariable [_x, sideUnknown] == Occupants } count 
 private _seaports = { sidesX getVariable [_x, sideUnknown] == Occupants } count seaports;
 
 private _airCap = _occScale * _balanceScale * (4 + _airbases*2);
-private _groundCap = _occScale * _balanceScale * (4 + _airbases + milbases + _outposts*0.5);
+private _groundCap = _occScale * _balanceScale * (4 + _airbases + _milbases + _outposts*0.5);
 private _increase = _occScale * _balanceScale * _timeInHours;
 
 [[staticATOccupants], 1.0, _groundCap, _increase] call _fnc_economics;
 [staticAAOccupants, 1.0, _groundCap, _increase] call _fnc_economics;
 [vehNATOAPC, 1.8, _groundCap, _increase] call _fnc_economics;
-[vehNATOTank, 0.6, _groundCap, _increase] call _fnc_economics;
+[vehNATOTanks, 0.6, _groundCap, _increase] call _fnc_economics;
 [vehNATOAA, 0.6, _groundCap, _increase] call _fnc_economics;
 [[vehNATOMRLS], 0.3, _groundCap, _increase] call _fnc_economics;           // not used atm?
 [[vehNATOBoat], 1.0, _balanceScale * (2 + _seaports*2), _increase] call _fnc_economics;
@@ -58,7 +58,7 @@ private _increase = _occScale * _balanceScale * _timeInHours;
 [vehNATOTransportHelis - [vehNATOPatrolHeli], 2.5, _airCap, _increase] call _fnc_economics;
 [vehNATOAttackHelis, 1.2, _airCap, _increase] call _fnc_economics;
 
-private _natoArray = flatten [staticATOccupants, staticAAOccupants, vehNATOAPC, vehNATOTank, vehNATOAA, vehNATOBoat, vehNATOPlane, vehNATOPlaneAA, vehNATOTransportPlanes, (vehNATOTransportHelis - [vehNATOPatrolHeli]), vehNATOAttackHelis, vehNATOMRLS];
+private _natoArray = flatten [staticATOccupants, staticAAOccupants, vehNATOAPC, vehNATOTanks, vehNATOAA, vehNATOBoat, vehNATOPlane, vehNATOPlaneAA, vehNATOTransportPlanes, (vehNATOTransportHelis - [vehNATOPatrolHeli]), vehNATOAttackHelis, vehNATOMRLS];
 _natoArray = _natoArray apply { [_x, timer getVariable [_x, 0]] };
 [3, format ["Occupants arsenal: %1", str _natoArray], _fileName] call A3A_fnc_log;
 
@@ -69,13 +69,13 @@ _outposts = { sidesX getVariable [_x, sideUnknown] == Invaders } count outposts;
 _seaports = { sidesX getVariable [_x, sideUnknown] == Invaders } count seaports;
 
 _airCap = _invScale * _balanceScale * (4 + _airbases*2);
-_groundCap = _invScale * _balanceScale * (4 + _airbases + milbases + _outposts*0.5);
+_groundCap = _invScale * _balanceScale * (4 + _airbases + _milbases + _outposts*0.5);
 _increase = _invScale * _balanceScale * _timeInHours;
 
 [[staticATInvaders], 1.0, _groundCap, _increase] call _fnc_economics;
 [staticAAInvaders, 1.0, _groundCap, _increase] call _fnc_economics;
 [vehCSATAPC, 1.8, _groundCap, _increase] call _fnc_economics;
-[vehCSATTank, 0.6, _groundCap, _increase] call _fnc_economics;
+[vehCSATTanks, 0.6, _groundCap, _increase] call _fnc_economics;
 [vehCSATAA, 0.6, _groundCap, _increase] call _fnc_economics;
 [[vehCSATMRLS], 0.3, _groundCap, _increase] call _fnc_economics;           // not used atm?
 [[vehCSATBoat], 1.0, _balanceScale * (2 + _seaports*2), _increase] call _fnc_economics;
@@ -85,6 +85,6 @@ _increase = _invScale * _balanceScale * _timeInHours;
 [vehCSATTransportHelis - [vehCSATPatrolHeli], 2.5, _airCap, _increase] call _fnc_economics;
 [vehCSATAttackHelis, 1.2, _airCap, _increase] call _fnc_economics;
 
-private _csatArray = flatten [staticATInvaders, staticAAInvaders, vehCSATAPC, vehCSATTank, vehCSATAA, vehCSATBoat, vehCSATPlane, vehCSATPlaneAA, vehCSATTransportPlanes, (vehCSATTransportHelis - [vehCSATPatrolHeli]), vehCSATAttackHelis, vehCSATMRLS];
+private _csatArray = flatten [staticATInvaders, staticAAInvaders, vehCSATAPC, vehCSATTanks, vehCSATAA, vehCSATBoat, vehCSATPlane, vehCSATPlaneAA, vehCSATTransportPlanes, (vehCSATTransportHelis - [vehCSATPatrolHeli]), vehCSATAttackHelis, vehCSATMRLS];
 _csatArray = _csatArray apply { [_x, timer getVariable [_x, 0]] };
 [3, format ["Invaders arsenal: %1", str _csatArray], _fileName] call A3A_fnc_log;
