@@ -53,12 +53,12 @@ private _increase = _occScale * _balanceScale * _timeInHours;
 [[vehNATOMRLS], 0.3, _groundCap, _increase] call _fnc_economics;           // not used atm?
 [[vehNATOBoat], 1.0, _balanceScale * (2 + _seaports*2), _increase] call _fnc_economics;
 [vehNATOPlane, 0.25, _airCap, _increase] call _fnc_economics;             // only used for major attacks
-[vehNATOPlaneAA, 0.25, _airCap, _increase] call _fnc_economics;           // only used for major attacks
+[vehNATOPlanesAA, 0.25, _airCap, _increase] call _fnc_economics;           // only used for major attacks
 [vehNATOTransportPlanes, 1.5, _airCap, _increase] call _fnc_economics;
 [vehNATOTransportHelis - [vehNATOPatrolHeli], 2.5, _airCap, _increase] call _fnc_economics;
 [vehNATOAttackHelis, 1.2, _airCap, _increase] call _fnc_economics;
 
-private _natoArray = flatten [staticATOccupants, staticAAOccupants, vehNATOAPC, vehNATOTanks, vehNATOAA, vehNATOBoat, vehNATOPlane, vehNATOPlaneAA, vehNATOTransportPlanes, (vehNATOTransportHelis - [vehNATOPatrolHeli]), vehNATOAttackHelis, vehNATOMRLS];
+private _natoArray = flatten [staticATOccupants, staticAAOccupants, vehNATOAPC, vehNATOTanks, vehNATOAA, vehNATOBoat, vehNATOPlanes, vehNATOPlanesAA, vehNATOTransportPlanes, (vehNATOTransportHelis - [vehNATOPatrolHeli]), vehNATOAttackHelis, vehNATOMRLS];
 _natoArray = _natoArray apply { [_x, timer getVariable [_x, 0]] };
 [3, format ["Occupants arsenal: %1", str _natoArray], _fileName] call A3A_fnc_log;
 
@@ -79,12 +79,12 @@ _increase = _invScale * _balanceScale * _timeInHours;
 [vehCSATAA, 0.6, _groundCap, _increase] call _fnc_economics;
 [[vehCSATMRLS], 0.3, _groundCap, _increase] call _fnc_economics;           // not used atm?
 [[vehCSATBoat], 1.0, _balanceScale * (2 + _seaports*2), _increase] call _fnc_economics;
-[vehCSATPlane, 0.25, _airCap, _increase] call _fnc_economics;             // only used for major attacks
-[vehCSATPlaneAA, 0.25, _airCap, _increase] call _fnc_economics;           // only used for major attacks
+[vehCSATPlanes, 0.25, _airCap, _increase] call _fnc_economics;             // only used for major attacks
+[vehCSATPlanesAA, 0.25, _airCap, _increase] call _fnc_economics;           // only used for major attacks
 [vehCSATTransportPlanes, 1.5, _airCap, _increase] call _fnc_economics;
 [vehCSATTransportHelis - [vehCSATPatrolHeli], 2.5, _airCap, _increase] call _fnc_economics;
 [vehCSATAttackHelis, 1.2, _airCap, _increase] call _fnc_economics;
 
-private _csatArray = flatten [staticATInvaders, staticAAInvaders, vehCSATAPC, vehCSATTanks, vehCSATAA, vehCSATBoat, vehCSATPlane, vehCSATPlaneAA, vehCSATTransportPlanes, (vehCSATTransportHelis - [vehCSATPatrolHeli]), vehCSATAttackHelis, vehCSATMRLS];
+private _csatArray = flatten [staticATInvaders, staticAAInvaders, vehCSATAPC, vehCSATTanks, vehCSATAA, vehCSATBoat, vehCSATPlanes, vehCSATPlanesAA, vehCSATTransportPlanes, (vehCSATTransportHelis - [vehCSATPatrolHeli]), vehCSATAttackHelis, vehCSATMRLS];
 _csatArray = _csatArray apply { [_x, timer getVariable [_x, 0]] };
 [3, format ["Invaders arsenal: %1", str _csatArray], _fileName] call A3A_fnc_log;
