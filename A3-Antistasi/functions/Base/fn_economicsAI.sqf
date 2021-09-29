@@ -52,7 +52,7 @@ private _increase = _occScale * _balanceScale * _timeInHours;
 [vehNATOAA, 0.6, _groundCap, _increase] call _fnc_economics;
 [[vehNATOMRLS], 0.3, _groundCap, _increase] call _fnc_economics;           // not used atm?
 [[vehNATOBoat], 1.0, _balanceScale * (2 + _seaports*2), _increase] call _fnc_economics;
-[vehNATOPlane, 0.25, _airCap, _increase] call _fnc_economics;             // only used for major attacks
+[vehNATOPlanes, 0.25, _airCap, _increase] call _fnc_economics;             // only used for major attacks
 [vehNATOPlanesAA, 0.25, _airCap, _increase] call _fnc_economics;           // only used for major attacks
 [vehNATOTransportPlanes, 1.5, _airCap, _increase] call _fnc_economics;
 [vehNATOTransportHelis - [vehNATOPatrolHeli], 2.5, _airCap, _increase] call _fnc_economics;
