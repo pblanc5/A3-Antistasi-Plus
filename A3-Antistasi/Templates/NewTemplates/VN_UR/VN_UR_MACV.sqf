@@ -516,7 +516,7 @@ _militiaLoadoutData setVariable ["longRangeRadios", ["uns_simc_MC_rajio_base"]];
 
 _militiaLoadoutData setVariable ["rifles", [
 ["uns_m1garand", "", "", "", ["uns_m1garandmag", "uns_m1garandmag", "uns_m1garandmag_T"], [], ""],
-["uns_m1garand", "", "uns_m1garandmag", "", ["uns_m1garandmag", "uns_m1garandmag", "uns_m1garandmag_T"], [], ""],
+["uns_m1garand", "", "uns_b_m1", "", ["uns_m1garandmag", "uns_m1garandmag", "uns_m1garandmag_T"], [], ""],
 ["uns_m1903", "", "", "", ["uns_springfieldmag", "uns_springfieldmag", "uns_springfieldmag_T"], [], ""],
 ["uns_m1903", "", "uns_b_m1", "", ["uns_springfieldmag", "uns_springfieldmag", "uns_springfieldmag_T"], [], ""]
 ]];
@@ -546,7 +546,7 @@ _militiaLoadoutData setVariable ["machineGuns", [
 ]];
 _militiaLoadoutData setVariable ["marksmanRifles", [
 ["uns_m1garand", "", "", "uns_o_M84", ["uns_m1garandmag", "uns_m1garandmag", "uns_m1garandmag_T"], [], ""],
-["uns_m1garand", "", "uns_m1garandmag", "uns_o_M84", ["uns_m1garandmag", "uns_m1garandmag", "uns_m1garandmag_T"], [], ""]
+["uns_m1garand", "", "uns_b_m1", "uns_o_M84", ["uns_m1garandmag", "uns_m1garandmag", "uns_m1garandmag_T"], [], ""]
 ]];
 _militiaLoadoutData setVariable ["sniperRifles", [
 ["uns_m1903", "", "", "uns_o_Unertl8x", ["uns_springfieldmag", "uns_springfieldmag", "uns_springfieldmag_T"], [], ""]
