@@ -258,7 +258,7 @@ for "_i" from 0 to (count _buildings) - 1 do
                 private _static = [_type, _pos, _dir] call _fnc_spawnStatic;
                 _static setPos _pos; //for some stupid reason position should be reapplied after everything
             };
-            case (_typeB in ["Land_BagBunker_Large_F", "Land_fortified_nest_big_EP1", "Land_fortified_nest_big", "Land_BagBunker_01_large_green_F"]): {
+            case (_typeB in ["Land_BagBunker_Large_F", "Land_fortified_nest_big_EP1", "Land_fortified_nest_big", "Land_BagBunker_01_large_green_F", "Land_vn_bunker_big_01"]): {
                 private _type = if (_sideX == Occupants) then {selectRandom NATOMG} else {selectRandom CSATMG};
                 private _dir = (getDir _building) - 180;
                 private _zpos = AGLToASL (_building buildingPos 4);

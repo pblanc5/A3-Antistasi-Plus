@@ -488,6 +488,9 @@ _militiaLoadoutData setVariable ["SMGs", [
 ["vn_ppsh41", "", "", "", ["vn_ppsh41_71_mag", "vn_ppsh41_71_mag", "vn_ppsh41_71_t_mag"], [], ""]
 ]];
 _militiaLoadoutData setVariable ["grenadeLaunchers", [
+["uns_type99_gl", "", "", "", ["uns_type99mag", "uns_type99mag", "uns_type99mag_T"], ["Uns_1Rnd_30mm_FRAG", "Uns_1Rnd_30mm_FRAG", "Uns_1Rnd_30mm_FRAG"], ""],
+["vn_m4956_gl", "", "", "", ["vn_m4956_10_mag", "vn_m4956_10_mag", "vn_m4956_10_t_mag"], ["vn_22mm_he_mag", "vn_22mm_m9_heat_mag", "vn_22mm_lume_mag", "vn_22mm_m22_smoke_mag"], ""],
+["vn_m4956_gl", "", "", "", ["vn_m4956_10_mag", "vn_m4956_10_mag", "vn_m4956_10_t_mag"], ["vn_22mm_he_mag", "vn_22mm_m9_heat_mag", "vn_22mm_lume_mag", "vn_22mm_m19_wp_mag"], ""],
 ["vn_sks_gl", "", "", "", ["vn_sks_mag", "vn_sks_mag", "vn_sks_t_mag"], ["vn_22mm_m60_frag_mag", "vn_22mm_m19_wp_mag", "vn_22mm_m60_heat_mag", "vn_22mm_m22_smoke_mag"], ""],
 ["vn_sks_gl", "", "", "", ["vn_sks_mag", "vn_sks_mag", "vn_sks_t_mag"], ["vn_22mm_m60_frag_mag", "vn_22mm_m22_smoke_mag", "vn_22mm_lume_mag"], ""]
 ]];

@@ -52,8 +52,8 @@ _reinfTargets sort false;
 
 private _fnc_pickSquadType = {
 	params ["_count", "_side"];
-	if (_numTroops == 8) exitWith { selectRandom ([groupsNATOSquad, groupsCSATSquad] select (_side == Invaders))};
-	selectRandom ([groupsNATOmid, groupsCSATmid] select (_side == Invaders));
+	if (_numTroops == 8) exitWith { selectRandom ([_side, "SQUAD"] call SCRT_fnc_unit_getGroupSet)};
+	selectRandom ([_side, "MID"] call SCRT_fnc_unit_getGroupSet);
 };
 
 while {_totalReinf > 0} do
