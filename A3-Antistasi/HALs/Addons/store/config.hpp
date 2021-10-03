@@ -13,9 +13,9 @@ __________________________________________________________________*/
 	};
 
 #define MAGAZINE_STOCK 200
-#define LAUNCHER_STOCK 10
-#define PISTOL_STOCK 20
-#define RIFLE_STOCK 15
+#define LAUNCHER_STOCK 15
+#define PISTOL_STOCK 50
+#define RIFLE_STOCK 30
 #define MZ_STOCK 50
 #define NN_STOCK 50
 #define PN_STOCK 25
@@ -11146,7 +11146,7 @@ class cfgHALsStore
 		
 		class riflesvn
 		{
-			displayName = "Rifles, carbines";
+			displayName = "Rifles, Carbines";
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
 
 			ITEM(vn_m1carbine, 200, RIFLE_STOCK);
@@ -11666,7 +11666,7 @@ class cfgHALsStore
 		
 		class riflesvnur
 		{
-			displayName = "Rifles, carbines";
+			displayName = "Rifles, Carbines";
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
 
 			ITEM(vn_m1carbine, 200, RIFLE_STOCK);
