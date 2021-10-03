@@ -28,7 +28,11 @@ publicVariable "traderMarker";
 } forEach nearestTerrainObjects [_position, [], 60, false, true];
 
 //trader prop objects
-_traderTent = createVehicle ["Land_MedicalTent_01_wdl_generic_open_F", _position];
+_traderTent = if (A3A_hasVN) then { 
+	createVehicle ["Land_MedicalTent_01_wdl_generic_inner_F", _position]; 
+} else {
+	createVehicle ["Land_MedicalTent_01_wdl_generic_open_F", _position];
+};
 _traderTent allowDamage false;
 _buildingPositions = _traderTent buildingPos -1;
 
