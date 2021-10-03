@@ -44,6 +44,7 @@
 ["vehicleCivTruck", "vn_b_wheeled_m54_01_airport"] call _fnc_saveToTemplate;
 ["vehicleCivHeli", "not_supported"] call _fnc_saveToTemplate;
 ["vehicleCivBoat", "vn_c_boat_08_01"] call _fnc_saveToTemplate;
+["vehicleCivSupply", "vn_b_wheeled_m54_repair_airport"] call _fnc_saveToTemplate;
 
 ["staticMG", "vn_i_static_m1919a4_high"] call _fnc_saveToTemplate; 					//this line determines static MGs -- Example: ["staticMG", ["B_HMG_01_high_F"]] -- Array, can contain multiple assets
 ["staticAT", "vn_o_vc_static_type56rr"] call _fnc_saveToTemplate; 					//this line determinesstatic ATs -- Example: ["staticAT", ["B_static_AT_F"]] -- Array, can contain multiple assets

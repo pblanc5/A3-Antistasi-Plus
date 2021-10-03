@@ -27,6 +27,7 @@
 ["vehicleCivTruck", "CUP_C_Ural_Open_Civ_03"] call _fnc_saveToTemplate;
 ["vehicleCivHeli", "CUP_C_Mi17_Civilian_RU"] call _fnc_saveToTemplate;
 ["vehicleCivBoat", "CUP_C_Fishing_Boat_Chernarus"] call _fnc_saveToTemplate;
+["vehicleCivSupply", "C_Van_01_box_F"] call _fnc_saveToTemplate;
 
 ["staticMG", "CUP_I_DSHKM_TK_GUE"] call _fnc_saveToTemplate; 					
 ["staticAT", "CUP_I_SPG9_NAPA"] call _fnc_saveToTemplate; 					

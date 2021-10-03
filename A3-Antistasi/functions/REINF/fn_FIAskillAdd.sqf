@@ -42,12 +42,6 @@ publicVariable "skillFIA";
 server setVariable ["resourcesFIA",_resourcesFIA,true];
 [] spawn A3A_fnc_statistics;
 
-{
-    private _costs = server getVariable _x;
-    _costs = round (_costs + (_costs * (skillFIA/560)));
-    server setVariable [_x,_costs,true];
-} forEach soldiersSDK;
-
 private _display = findDisplay 60000;
 if !(str (_display) == "no display") then {
     private _title = _display displayCtrl 3102;

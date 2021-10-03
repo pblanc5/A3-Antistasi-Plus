@@ -20,6 +20,7 @@
 - Fixed Rescue Prisoners _houseX error
 - Fixed unintended ability to get second Find the Arms Dealer task if task was persistently saved 
 - Enemy support call timeout increased to 20 minutes
+- Increased Arms Dealer stocks - rifle stock (15->30), pistol stock (20-50), launcher stock (10->15)
 - Helicrash mission undefined variable fix
 - Multiple static MG types support
 - Limited Fast Travel mission parameter is on by default
@@ -28,6 +29,7 @@
 - Enemy will no longer spawn in the middle of friendly town on Deliver Supplies missions
 - Reduced number of cops in Supply mission
 - Persistent weather variable uses overcast instead of rain
+- Rebel Troops Training no longer increases infantry price
 - (GM, SOGPF) Items from Global Mobilization may appear in loot boxes when SOGPF DLC is used and "Allow items from Global Mobilization" option is turned on
 - (RHS) Lowered recoil of Zu-23 when it is mounted on vehicle
 - (3CB Factions Cold War, Takistan) Fixed no tribal uniforms issue 

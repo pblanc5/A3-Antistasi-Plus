@@ -19,11 +19,13 @@ if !((vehicle player getVariable "SA_Tow_Ropes") isEqualTo objNull) exitWith {
 if (count hcSelected player > 1) exitWith {
 	["Fast Travel", "You can select one group only to Fast Travel"] call SCRT_fnc_misc_showDeniedActionHint;
 };
+
+if (count hcSelected player == 1) then {_groupX = hcSelected player select 0; _esHC = true} else {_groupX = group player};
+
 if (({isPlayer _x} count units _groupX > 1) and (_esHC)) exitWith {
     ["Fast Travel", "You cannot Fast Travel groups commanded by players."] call A3A_fnc_customHint;
 };
 
-if (count hcSelected player == 1) then {_groupX = hcSelected player select 0; _esHC = true} else {_groupX = group player};
 _checkForPlayer = false;
 if ((!_esHC) and limitedFT) then {_checkForPlayer = true};
 _boss = leader _groupX;

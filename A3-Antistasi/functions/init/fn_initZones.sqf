@@ -135,7 +135,7 @@ switch (toLower worldName) do {
         ["baria2",100],["anhoa",100],["binhminh",100],["buoisang",100],["hoalien",100],["lacmy",100],["cacan",100],["tanhop",100],
         ["hanoi2",300],["gansong",100],["zokcarbora",100],["banhtrung",100],["yentinh",100],["thunglungcao",100],["baibiendep",100],
         ["phoduc",100],["baove",100],["ngatu",100],["binhyen",100],["bosong",100],["marble",180],["niemtin",100],
-        ["krosang",100],["banlen",100],["comngon",100],["saigonport",100],["cauhai",100], 
+        ["krosang",100],["banlen",100],["comngon",100],["saigonport",100],["cauhai",100],["daotrai", 100], 
 		["nhenden", 50]];
     };
 	case "vn_khe_sanh": {
@@ -184,7 +184,7 @@ switch (toLower worldName) do {
             ""sangha"", ""hoxanx"", ""congtroi"", ""boave"", ""longhai"", ""honba"", ""kiemtra"", ""baibiendiep"", ""nuocbun"", ""cantho"", ""tampep"", ""segbegat"", ""che"", ""lahot"", ""alieng"", ""thiengling"",
 			""soctrang"", ""mekongdelta"",
             ""phaonoi"", ""timho"", ""quyen"", ""caloi"", ""thuphac"", ""diemdang"", ""bandao"", ""mantau"",""dongxa"", ""tauphabang"", ""horgoat"",
-            ""samsong"", ""muylai"", ""caymo"", ""docon"", ""paradiseisland"", ""mien"", ""giuaho"", ""daotrai""])"
+            ""samsong"", ""muylai"", ""caymo"", ""docon"", ""paradiseisland"", ""mien"", ""giuaho""])"
            configClasses (configfile >> "CfgWorlds" >> worldName >> "Names");
     };
 
