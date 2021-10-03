@@ -30,6 +30,7 @@
 - Reduced number of cops in Supply mission
 - Persistent weather variable uses overcast instead of rain
 - Rebel Troops Training no longer increases infantry price
+- Big guard towers will be occupied 
 - (GM, SOGPF) Items from Global Mobilization may appear in loot boxes when SOGPF DLC is used and "Allow items from Global Mobilization" option is turned on
 - (RHS) Lowered recoil of Zu-23 when it is mounted on vehicle
 - (3CB Factions Cold War, Takistan) Fixed no tribal uniforms issue 

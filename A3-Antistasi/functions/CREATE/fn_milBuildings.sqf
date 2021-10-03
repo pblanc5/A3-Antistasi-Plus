@@ -370,16 +370,29 @@ for "_i" from 0 to (count _buildings) - 1 do
 
     call {
         if (isObjectHidden _building) exitWith {};            // don't put statics on destroyed buildings
-        if ((_typeB == "Land_vn_b_tower_01")) exitWith
-        {
-            private _pool = if (_sideX == Occupants) then {NATOGrunt} else {CSATGrunt};
-            private _type = _pool call SCRT_fnc_unit_selectInfantryTier;
-            private _dir = (getDir _building) - 180;
-            private _zpos = AGLToASL (_building buildingPos 0);
-            private _pos = _zpos getPos [0, _dir];            // zeroes Z value because BIS
-            _pos = ASLToATL ([_pos select 0, _pos select 1, _zpos select 2]);
-            private _unit = [_type, _pos, _dir] call _fnc_spawnStaticUnit;
-            [2,format ["Grunt spawned | Unit: %1 | Pos: %2", _unit, _pos],_fileName] call A3A_fnc_log;
+
+        switch (true) do {
+            case (_typeB == "Land_vn_b_tower_01"): {
+                private _pool = if (_sideX == Occupants) then {NATOGrunt} else {CSATGrunt};
+                private _type = _pool call SCRT_fnc_unit_selectInfantryTier;
+                private _dir = (getDir _building) - 180;
+                private _zpos = AGLToASL (_building buildingPos 0);
+                private _pos = _zpos getPos [0, _dir];
+                _pos = ASLToATL ([_pos select 0, _pos select 1, _zpos select 2]);
+                private _unit = [_type, _pos, _dir] call _fnc_spawnStaticUnit;
+                [3,format ["Grunt spawned | Unit: %1 | Pos: %2", _unit, _pos],_fileName] call A3A_fnc_log;
+            };
+            case (_typeB in ["Land_GuardTower_01_F", "Land_vn_guardtower_01_f"]): {
+                private _pool = if (_sideX == Occupants) then {NATOGrunt} else {CSATGrunt};
+                private _type = _pool call SCRT_fnc_unit_selectInfantryTier;
+                private _positionNumber = floor (random 6);
+                private _dir = (getDir _building) - 180;
+                private _zpos = AGLToASL (_building buildingPos _positionNumber);
+                private _pos = _zpos getPos [0, _dir];            // zeroes Z value because BIS
+                _pos = ASLToATL ([_pos select 0, _pos select 1, _zpos select 2]);
+                private _unit = [_type, _pos, _dir] call _fnc_spawnStaticUnit;
+                [3,format ["Grunt spawned | Unit: %1 | Pos: %2", _unit, _pos],_fileName] call A3A_fnc_log;
+            };
         };
     };
 };
