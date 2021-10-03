@@ -129,7 +129,7 @@ switch (toLower worldName) do {
     case "cam_lao_nam": {
         {server setVariable [_x select 0,_x select 1]} forEach
         [["haiphong",500],["hanoi",1000],["hue",2000],["saigon",700],["sihanoukville",200],["nodallho",100],["bru",100],["attapeu",100],
-        ["dakrong",100],["tandi",50],["lumphat",100],["cuchi",100],["baria",100],["danang",600],["kenglat",100],["laichau",100],["paknoi",100],
+        ["dakrong",100],["tandi",100],["lumphat",100],["cuchi",100],["baria",100],["danang",600],["kenglat",100],["laichau",100],["paknoi",100],
         ["phuan",100],["xomram",120],["xomgia",100],["tongmoo",100],["donlac",100],["cangon",100],["nalai",100],["baichai",100],
         ["bachdang",100],["ketthuc",100],["vongxo",100],["banbon",100],["nongkhiaw",100],["horhog",100],["langmau",100],
         ["baria2",100],["anhoa",100],["binhminh",100],["buoisang",100],["hoalien",100],["lacmy",100],["cacan",100],["tanhop",100],
