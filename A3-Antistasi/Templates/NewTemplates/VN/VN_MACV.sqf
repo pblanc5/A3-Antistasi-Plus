@@ -84,7 +84,7 @@
 //////////////////////////
 
 ["ammobox", "B_supplyCrate_F"] call _fnc_saveToTemplate;
-["surrenderCrate", "Box_IND_Wps_F"] call _fnc_saveToTemplate; //Changeing this from default will require you to define logistics attachement offset for the box type
+["surrenderCrate", "vn_o_ammobox_04"] call _fnc_saveToTemplate; //Changeing this from default will require you to define logistics attachement offset for the box type
 ["equipmentBox", "Box_NATO_Equip_F"] call _fnc_saveToTemplate; //Changeing this from default will require you to define logistics attachement offset for the box type
 
 // All fo bellow are optional overrides
@@ -317,8 +317,9 @@ _sfLoadoutData setVariable ["grenadeLaunchers", [
 _sfLoadoutData setVariable ["machineGuns", [
 ["vn_m60", "", "", "", [], [], ""],
 ["vn_m60_shorty_camo", "", "", "", [], [], ""],
-["vn_m63a_lmg", "", "", "", ["vn_m63a_100_mag", "vn_m63a_100_mag", "vn_m63a_100_t_mag"], [], ""],
-["vn_rpd", "", "", "", [], [], ""]
+["vn_rpd", "", "", "", [], [], ""],
+["vn_m63a_cdo", "", "", "", ["vn_m63a_150_mag", "vn_m63a_150_mag", "vn_m63a_150_t_mag"], [], ""],
+["vn_m63a_lmg", "", "", "", ["vn_m63a_100_mag", "vn_m63a_100_mag", "vn_m63a_100_t_mag"], [], ""]
 ]];
 _sfLoadoutData setVariable ["marksmanRifles", [
 ["vn_m16_camo", "vn_s_m16", "", "vn_o_9x_m16", ["vn_m16_40_mag", "vn_m16_40_mag", "vn_m16_40_t_mag"], [], ""],

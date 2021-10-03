@@ -62,11 +62,11 @@ if (_typeGroup isEqualType []) then {
 
 } else {
 	_costs = _costs + (2*(server getVariable staticCrewTeamPlayer)) + ([_typeGroup] call A3A_fnc_vehiclePrice);
+	if (_typeGroup == staticAAteamPlayer) then { _costs = _costs + ([vehSDKTruck] call A3A_fnc_vehiclePrice) };
     _formatX = [staticCrewTeamPlayer,staticCrewTeamPlayer];
 	_costHR = 2;
 
 	if ((_typeGroup == SDKMortar) or (_typeGroup == SDKMGStatic)) exitWith { _isInfantry = true };
-	_costs = _costs + ([vehSDKTruck] call A3A_fnc_vehiclePrice)
 };
 
 if (_hr < _costHR) then {_exit = true; ["Recruit Squad", format ["You do not have enough HR for this request (%1 required).",_costHR]] call A3A_fnc_customHint;};
@@ -133,8 +133,8 @@ private _vehiclePlacementMethod = if (getMarkerPos respawnTeamPlayer distance pl
 if (!_isInfantry) exitWith { [_vehType, "HCSquadVehicle", [_formatX, _idFormat, _special], _mounts] call _vehiclePlacementMethod };
 
 private _vehCost = [_vehType] call A3A_fnc_vehiclePrice;
-if ((_costs + _vehCost) > server getVariable "resourcesFIA") exitWith {
-    ["Recruit Squad", format ["You do not have enough money for this request (%1 € required).",_vehCost]] call A3A_fnc_customHint;
+if (_isInfantry and (_costs + _vehCost) > server getVariable "resourcesFIA") exitWith {
+    ["Recruit Squad", format ["No money left to buy a transport vehicle (%1 € required), creating barefoot squad.",_vehCost]] call A3A_fnc_customHint;
     [_formatX, _idFormat, _special, objNull] spawn A3A_fnc_spawnHCGroup;
 };
 
@@ -145,7 +145,7 @@ private _display = findDisplay 100;
 
 if (str (_display) != "no display") then {
 	private _ChildControl = _display displayCtrl 104;
-	_ChildControl  ctrlSetTooltip format ["Buy a vehicle for this squad for %1 €.",_costs];
+	_ChildControl  ctrlSetTooltip format ["Buy a vehicle for this squad for %1 €.", _vehCost];
 	_ChildControl = _display displayCtrl 105;
 	_ChildControl  ctrlSetTooltip "Barefoot Infantry";
 };

@@ -17,15 +17,9 @@
 ["toolKits", ["vn_b_item_toolkit"]] call _fnc_saveToTemplate;  // Relies on autodetection.
 ["itemMaps", ["vn_b_item_map"]] call _fnc_saveToTemplate;  // Relies on autodetection.
 
-["diveGear", ["vn_b_uniform_seal_09_01", "vn_b_acc_seal_01"]] call _fnc_saveToTemplate;
-
-["diveBP", ["vn_b_pack_seal_01"]] call _fnc_saveToTemplate;
+["diveGear", ["vn_b_uniform_seal_09_01", "vn_b_acc_seal_01", "vn_b_vest_seal_01"]] call _fnc_saveToTemplate;
 
 ["flyGear", ["vn_b_uniform_heli_01_01"]] call _fnc_saveToTemplate;
-
-// This should be replaced by static loot lists.
-["addDiveGear",false] call _fnc_saveToTemplate;
-["addFlightGear",false] call _fnc_saveToTemplate;
 
 //////////////////////////
 //       Vehicles       //
@@ -101,7 +95,7 @@ private _initialRebelEquipment = [
 "vn_m38", "vn_izh54", "vn_izh54_shorty",
 "vn_m_mk2_knife_01","vn_m_axe_01","vn_b_type56","vn_b_sks","vn_b_m38","vn_b_camo_m9130","vn_b_camo_m40a1","vn_b_camo_m14",
 "vn_m127", "vn_mc10_mag", "vn_mc10_t_mag",
-"vn_m10_mag","vn_m38_t_mag","vn_m38_mag","vn_rdg2_mag","vn_molotov_grenade_mag","vn_m127_mag","vn_mine_punji_03_mag", 
+"vn_m10_mag","vn_m38_t_mag","vn_m38_mag","vn_rdg2_mag","vn_molotov_grenade_mag","vn_m127_mag","vn_mine_punji_03_mag",
 "vn_izh54_mag",
 "B_FieldPack_khk",
 "vn_o_vest_05","vn_b_vest_usarmy_01",

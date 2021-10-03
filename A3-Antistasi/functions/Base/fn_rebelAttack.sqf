@@ -166,11 +166,6 @@ private _availableTargets = [];
             _distance = _distance - (300 * (count _nearbyFriendlyMarkers));
             if (_distance < 0) then {_distance = 0};
 
-            if(count _nearbyFriendlyMarkers >= 5 && {!(_target in citiesX)}) then
-            {
-                [3, format ["%1 is surrounded by us, considering easy target", _target], _fileName] call A3A_fnc_log;
-                _easyTargets pushBack _target;
-            };
 
             //If in killzones, double the distance
             if (_target in _killZones) then
@@ -215,7 +210,7 @@ if (count _availableTargets == 0) exitWith
         case (_target in resourcesX): {_targetMultiplier = 0.35};
         case (_target in factories): {_targetMultiplier = 0.5};
         case (_target in seaports): {_targetMultiplier = 0.7};
-        case (_target in citiesX): {_targetMultiplier = 2};
+        case (_target in citiesX): {_targetMultiplier = [2, 0.5] select (_side == Invaders)};
         //If I have missed something, multiplier stays the same
         default {_targetMultiplier = 1};
     };
@@ -233,12 +228,6 @@ if (count _availableTargets == 0) exitWith
     private _nearbyStatics = staticsToSave select {(_x distance2D (getMarkerPos _target)) < distanceSPWN};
     _targetPoints = _targetPoints + (10 * (count _garrison) + (50 * (count _nearbyStatics)));
 
-    if((count _garrison <= 8) && (_targetSide == teamPlayer) && {(count _nearbyStatics <= 2) && {!(_target in citiesX)}}) then
-    {
-        //Only minimal garrison, consider it an easy target
-        [3, format ["%1 has only minimal garrison, considering easy target", _target], _fileName] call A3A_fnc_log;
-        _easyTargets pushBackUnique _target;
-    };
 
     //Apply the new points to the base array
     _baseArray = _baseArray apply {[_x select 0, ((_x select 1) + _targetPoints) * _targetMultiplier]};
@@ -271,6 +260,8 @@ private _fnc_flipMarker =
     [_soldiers,_side,_marker,0] remoteExec ["A3A_fnc_garrisonUpdate",2];
 };
 
+
+// JJ: Easy targets currently disabled due to overspawning/ineffectiveness
 if(count _easyTargets >= 4) then
 {
     //We got four easy targets, attacking them now
@@ -406,24 +397,25 @@ else
     _finalTarget params ["_attackOrigin", "_attackPoints", "_attackTarget"];
 
     //Select the number of waves based on the points as higher points mean higher difficulty
+    // JJ: Nope, degenerate behaviour with target distance. Revert to a dumb version for the moment.
     private _waves =
-		_attackPoints / 2500
-		+ ([0, 1] select (_attackTarget in airportsX))
-        + ([0, 1] select (_attackTarget in milbases))
-		+ (count allPlayers / 20)
-		+ (tierWar / 5);
+		0.5 + random 1 +
+        + ([0, 1.5] select (_attackTarget in airportsX))
+        + ([0, 1.25] select (_attackTarget in milbases))
+        + ([0, 0.5] select (_attackTarget in outposts))
+        + ([0, 0.5] select (_side == Invaders))
+        + (tierWar / 10);
 
     //three waves max
     if(_waves > 3) then {
         _waves = 3;
     };
 
-	_waves = round _waves;
-    if(_waves < 1) then {_waves = 1};
+	_waves = 1 max (round _waves);
 
     //Send the actual attacks
     switch (true) do {
-        case (gameMode == 4 && {sidesX getVariable [_attackOrigin, sideUnknown] == Invaders}): { 
+        case (gameMode == 4 && {sidesX getVariable [_attackOrigin, sideUnknown] == Invaders}): {
             private _nearPlayers = allPlayers findIf {(getMarkerPos (_attackTarget) distance2D _x) < 1500};
             if((_nearPlayers != -1) || ((spawner getVariable _attackTarget) != 2) || (sidesX getVariable _attackTarget == teamPlayer) || (_attackTarget in citiesX)) then {
                 //Sending real attack, execute the fight
@@ -440,7 +432,8 @@ else
             };
         };
 
-        case (sidesX getVariable [_attackOrigin, sideUnknown] == Occupants || {!(_attackTarget in citiesX)}): { 
+        case (!(_attackTarget in citiesX));
+        case (sidesX getVariable [_attackOrigin, sideUnknown] == Occupants): {
             private _nearPlayers = allPlayers findIf {(getMarkerPos (_attackTarget) distance2D _x) < 1500};
             if((_nearPlayers != -1) || ((spawner getVariable _attackTarget) != 2) || (sidesX getVariable _attackTarget == teamPlayer) || (_attackTarget in citiesX)) then {
                 //Sending real attack, execute the fight

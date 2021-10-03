@@ -199,9 +199,7 @@ private _otherEquipmentArrayNames = [
 	"invaderBackpackDevice",
 	"occupantBackpackDevice",
 	"rebelBackpackDevice",
-	"civilianBackpackDevice",
-	"diveGear",
-	"flyGear"
+	"civilianBackpackDevice"
 ];
 
 DECLARE_SERVER_VAR(otherEquipmentArrayNames, _otherEquipmentArrayNames);
@@ -814,6 +812,7 @@ private _vehUnlimited = vehNATONormal + vehCSATNormal + [vehNATORBoat,vehNATOPat
 DECLARE_SERVER_VAR(vehUnlimited, _vehUnlimited);
 
 private _vehFIA = [vehSDKBike,vehSDKAT,vehSDKLightArmed,SDKMGStatic,vehSDKLightUnarmed,vehSDKTruck,vehSDKBoat,SDKMortar,staticATteamPlayer,staticAAteamPlayer,vehSDKRepair,vehSDKFuel,vehSDKPlane,vehSDKPayloadPlane];
+if (vehSDKAA != "not_supported") then { _vehFIA pushBack vehSDKAA };
 DECLARE_SERVER_VAR(vehFIA, _vehFIA);
 
 private _vehCargoTrucks = (vehTrucks + vehNATOCargoTrucks + vehCSATCargoTrucks) select { [_x] call A3A_fnc_logistics_getVehCapacity > 1 };

@@ -83,9 +83,7 @@
     "vn_o_uniform_vc_05_01",
     "vn_o_uniform_vc_02_05",
     "vn_o_uniform_vc_04_03",
-    "vn_o_uniform_vc_03_03",
-	"UNS_Simc_TCU_mk3_jean",
-	"UNS_Simc_TCU_mk3_jean_trop"
+    "vn_o_uniform_vc_03_03"
 ]] call _fnc_saveToTemplate;
 
 ["headgear", [

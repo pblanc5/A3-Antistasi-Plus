@@ -19,6 +19,7 @@ if (isServer) then {
 	} ];
 };
 
+removeAllActions _oldUnit;
 _nul = [_oldUnit] spawn A3A_fnc_postmortem;
 
 _oldUnit setVariable ["incapacitated",false,true];
