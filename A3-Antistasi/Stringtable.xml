@@ -120,6 +120,16 @@
         <Czech>Velitel družstva</Czech>
         <Chinesesimp>班长</Chinesesimp>
       </Key>
+      <Key ID="STR_antistasi_dialogs_demolitionist_title">
+        <Original>Demolitionist</Original>
+        <English>Demolitionist</English>
+        <French>Démolisseur</French>
+        <Russian>Подрывник</Russian>
+        <German>Sprengmeister</German>
+        <Czech>Demolitionist</Czech>
+        <Chinesesimp>拆迁人</Chinesesimp>
+        <Korean>철거업자</Korean>
+      </Key>
     </Container>
     <Container name="simple_menu_dialogs">
       <Key ID="STR_antistasi_dialogs_rounds_quantity_title">
@@ -1688,12 +1698,12 @@
         <Korean>공병 모집</Korean>
       </Key>
       <Key ID="STR_antistasi_dialogs_unit_recruit_explosive_text">
-        <Original>Recruit Bomb Specialist</Original>
-        <English>Recruit Bomb Specialist</English>
+        <Original>Recruit Demolitionist</Original>
+        <English>Recruit Demolitionist</English>
         <French>Recruter un Expert en Démolition</French>
         <Russian>Подрывник</Russian>
-        <German>Sprengstoffspezialist rekrutieren</German>
-        <Czech>Specialista na výbušniny</Czech>
+        <German>Rekrutiere Sprengmeister</German>
+        <Czech>Recruit Demolitionist</Czech>
         <Chinesesimp>招募炸弹专家</Chinesesimp>
         <Korean>폭탄 전문가 모집</Korean>
       </Key>
