@@ -86,13 +86,6 @@ if (_varName in _specialVarLoads) then {
 	if (_varName == 'destroyedSites') then {destroyedSites = +_varValue; publicVariable "destroyedSites"};
 	if (_varName == 'skillFIA') then {
 		skillFIA = _varValue; publicVariable "skillFIA";
-		{
-			_costs = server getVariable _x;
-			for "_i" from 1 to _varValue do {
-				_costs = round (_costs + (_costs * (_i/280)));
-			};
-			server setVariable [_x,_costs,true];
-		} forEach soldiersSDK;
 	};
 	if (_varName == 'maxConstructions') then {maxConstructions=_varValue; publicVariable "maxConstructions"};
     if (_varname == "HR_Garage") then {
