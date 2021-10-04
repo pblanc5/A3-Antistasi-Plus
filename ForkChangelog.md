@@ -11,14 +11,14 @@
 - Unsung Redux (SOGPF complement mod) support
 
 ### Changes
-- 2.5.3 Community Version integration (multiple fixes of core systems of Antistasi, player scaling)
-- Invader Punishment mission is returned back
+- 2.5.3 Community Version integration (multiple fixes of core systems of Antistasi, player balance scaling)
+- Invader Punishment mission is back
 - Airbases and milbases will no longer spawn howitzers (mortars will be used instead) when players in proximity, they will be only used as support 
 - Fixed no undercover break on outposts and sea ports
 - Fixed "Error Type Array, expected String" on some unit spawn
 - Fixed overlapping annoucement text
 - Fixed Rescue Prisoners _houseX error
-- Fixed unintended ability to get second Find the Arms Dealer task if task was persistently saved 
+- Fixed unintended ability to get second Find the Arms Dealer task if task was persistently saved but not completed
 - Enemy support call timeout increased to 20 minutes
 - Increased Arms Dealer stocks - rifle stock (15->30), pistol stock (20-50), launcher stock (10->15)
 - Helicrash mission undefined variable fix
@@ -31,13 +31,16 @@
 - Persistent weather variable uses overcast instead of rain
 - Rebel Troops Training no longer increases infantry price
 - Big guard towers will be occupied 
+- Deliver Supplies timer will no longer reset
+- Ability to override Demolitionist loadout in Rebel Loadouts
 - (GM, SOGPF) Items from Global Mobilization may appear in loot boxes when SOGPF DLC is used and "Allow items from Global Mobilization" option is turned on
 - (RHS) Lowered recoil of Zu-23 when it is mounted on vehicle
 - (3CB Factions Cold War, Takistan) Fixed no tribal uniforms issue 
 - (CUP) Adjustments of faction templates with the usage of new CUP Vehicles/Units/Weapons mod items
 
 ### Removals
-- (Cold War mode) removed modern variants of AS VAL from Arms Dealer store  
+- (GM Cold War Mode) Removed HK69 grenade launcher from Bundeswehr weapon pool
+- (Cold War mode) removed unintentional modern variants of AS VAL from Arms Dealer store  
 
 ## 1.7.5
 ### Additions
