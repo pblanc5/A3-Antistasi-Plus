@@ -1,5 +1,6 @@
 private ["_roads","_pos","_positionX","_groupX"];
 
+private _checkX = false;
 private _distanceX = 250;
 
 private _markersX = markersX + [respawnTeamPlayer];
@@ -88,8 +89,6 @@ if(fastTravelIndividualEnemyCheck) then {
 if (_isEnemiesNearby) exitWith {
 	["Fast Travel", "You cannot Fast Travel with enemies near the group"] call SCRT_fnc_misc_showDeniedActionHint;
 };
-
-private _checkX = false;
 
 if(fastTravelIndividualEnemyCheck) then {
 	if ((vehicle player != player) and ((isNull (driver vehicle player)) or (!canMove vehicle player) or (vehicle player isKindOf "Boat"))) then {
