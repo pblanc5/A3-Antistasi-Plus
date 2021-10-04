@@ -17,10 +17,9 @@ else {
 };
 
 if (random 100 < _chance) then {
-
     {
         if !(side _x in [Occupants, Invaders]) then { continue };
-        [leader _x, [_mortarX, 4]] remoteExec ["reveal", leader _x];
+        [leader _x, [_artillery, 4]] remoteExec ["reveal", leader _x];
     } forEach allGroups;
 
     if (_artillery distance posHQ < 300) then {
