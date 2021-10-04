@@ -143,14 +143,14 @@
 ["staticMGs", ["vn_o_nva_static_dshkm_high_01", "vn_o_nva_static_pk_high", "vn_o_nva_static_rpd_high"]] call _fnc_saveToTemplate;
 ["staticAT", ["vn_o_vc_static_type56rr"]] call _fnc_saveToTemplate;
 ["staticAA", ["vn_o_nva_static_zpu4"]] call _fnc_saveToTemplate;
-["staticMortars", ["vn_o_nva_65_static_mortar_type63"]] call _fnc_saveToTemplate;
+["staticMortars", ["vn_o_nva_static_mortar_type53"]] call _fnc_saveToTemplate;
 ["staticHowitzers", ["vn_o_nva_static_d44_01"]] call _fnc_saveToTemplate;
 
 ["uavsAttack", ["not_supported"]] call _fnc_saveToTemplate;
 ["uavsPortable", ["not_supported"]] call _fnc_saveToTemplate;
 
-["mortarMagazineHE", "vn_mortar_type63_mag_he_x8"] call _fnc_saveToTemplate;
-["mortarMagazineSmoke", "vn_mortar_type63_mag_wp_x8"] call _fnc_saveToTemplate;
+["mortarMagazineHE", "vn_mortar_type53_mag_he_x8"] call _fnc_saveToTemplate;
+["mortarMagazineSmoke", "vn_mortar_type53_mag_wp_x8"] call _fnc_saveToTemplate;
 ["howitzerMagazineHE", "vn_cannon_d44_mag_he_x12"] call _fnc_saveToTemplate;
 
 //Bagged weapon definitions

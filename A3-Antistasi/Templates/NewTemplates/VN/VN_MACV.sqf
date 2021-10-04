@@ -149,18 +149,18 @@
 ["staticMGs", ["vn_b_army_static_m1919a4_high", "vn_b_army_static_m2_high", "vn_b_army_static_m60_high"]] call _fnc_saveToTemplate;
 ["staticAT", ["vn_b_army_static_tow"]] call _fnc_saveToTemplate;
 ["staticAA", ["vn_b_army_static_m45"]] call _fnc_saveToTemplate;
-["staticMortars", ["vn_b_army_static_mortar_m2"]] call _fnc_saveToTemplate;
+["staticMortars", ["vn_b_army_static_mortar_m29"]] call _fnc_saveToTemplate;
 ["staticHowitzers", ["vn_b_sf_static_m101_02"]] call _fnc_saveToTemplate;
 
-["mortarMagazineHE", "vn_mortar_m2_mag_he_x8"] call _fnc_saveToTemplate;
-["mortarMagazineSmoke", "vn_mortar_m2_mag_wp_x8"] call _fnc_saveToTemplate;
+["mortarMagazineHE", "vn_mortar_m29_mag_he_x8"] call _fnc_saveToTemplate;
+["mortarMagazineSmoke", "vn_mortar_m29_mag_wp_x8"] call _fnc_saveToTemplate;
 ["howitzerMagazineHE", "vn_cannon_m101_mag_he_x8"] call _fnc_saveToTemplate;
 
 //Bagged weapon definitions
 ["baggedMGs", [["vn_b_pack_static_base_01","vn_b_pack_static_m2_high_01"]]] call _fnc_saveToTemplate;
 ["baggedAT", [["vn_b_pack_static_base_01","vn_b_pack_static_tow"]]] call _fnc_saveToTemplate;
 ["baggedAA", [[]]] call _fnc_saveToTemplate;
-["baggedMortars", [["vn_b_pack_static_base_01","vn_b_pack_static_m2_01"]]] call _fnc_saveToTemplate;
+["baggedMortars", [["vn_b_pack_static_base_01","vn_b_pack_static_m29_01"]]] call _fnc_saveToTemplate;
 
 //Minefield definition
 //CFGVehicles variant of Mines are needed "ATMine", "APERSTripMine", "APERSMine"
