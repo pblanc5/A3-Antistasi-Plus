@@ -101,7 +101,8 @@ if ((dateToNumber date > _dateLimitNum) or (isNull _truckX)) then {
 	[5*_bonus,-5*_bonus,_positionX] remoteExec ["A3A_fnc_citySupportChange",2];
 	[-10*_bonus,theBoss] call A3A_fnc_playerScoreAdd;
 } else {
-	_countX = 120*_bonus;
+	private _countX = 120*_bonus;
+
 	{
 		_friendX = _x;
 		if (captive _friendX) then {
@@ -134,8 +135,8 @@ if ((dateToNumber date > _dateLimitNum) or (isNull _truckX)) then {
 			sleep 1;
 			_countX = _countX - 1;
 		};
+
 		if (_countX > 0) then {
-			_countX = 120*_bonus;//120
 			if (((_truckX distance _positionX > 40) 
 				or (not([80,1,_truckX,teamPlayer] call A3A_fnc_distanceUnits)) 
 				or ({(side _x == _side) and (_x distance _truckX < 50)} count allUnits != 0)) and (alive _truckX)) 
@@ -152,6 +153,7 @@ if ((dateToNumber date > _dateLimitNum) or (isNull _truckX)) then {
 				and (_x distance _truckX < 50)} count allUnits == 0)) or (dateToNumber date > _dateLimitNum) or (isNull _truckX)
 			};
 		};
+		
 		if (_countX < 1) exitWith {};
 	};
 
