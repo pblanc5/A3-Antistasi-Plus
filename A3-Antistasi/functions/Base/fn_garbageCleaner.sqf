@@ -14,6 +14,7 @@ private _fnc_distCheck = {
 
 
 { deleteVehicle _x } forEach allDead;
+{ deleteVehicle _x } forEach allUnits select {(_x getVariable ["surrendered", false]) == true};
 { deleteVehicle _x } forEach (allMissionObjects "WeaponHolder");
 { deleteVehicle _x } forEach (allMissionObjects "WeaponHolderSimulated");
 { if (isNull attachedTo _x) then { [_x, distanceSPWN1] call _fnc_distCheck } } forEach (allMissionObjects NATOSurrenderCrate);// Surrender boxes NATO
