@@ -393,6 +393,13 @@ if(isDiscordRichPresenceActive) then {
 	}];
 };
 
+if (A3A_hasACE) then {
+    ["ace_explosives_place", {
+        params ["_explosive","_dir","_pitch","_unit"];
+		if (_unit == player) then { player setCaptive false };
+    }] call CBA_fnc_addEventHandler;
+};
+
 call A3A_fnc_initUndercover;
 
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;//Exec on client
