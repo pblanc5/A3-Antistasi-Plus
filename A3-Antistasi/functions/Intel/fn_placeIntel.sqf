@@ -34,7 +34,7 @@ private _size = markerSize _marker;
 private _radius = sqrt ((_size select 0) * (_size select 0) + (_size select 1) * (_size select 1));
 
 private _listStaticHQ = ["Land_Cargo_HQ_V1_F", "Land_Cargo_HQ_V2_F", "Land_Cargo_HQ_V3_F"];
-private _listRadarComplexHq = ["Land_Radar_01_HQ_F"];
+private _listRadarComplexHq = ["Land_Radar_01_HQ_F", "Land_vn_radar_01_hq_f"];
 private _listGuardhouse = ["Land_GuardHouse_02_F", "Land_GuardHouse_02_grey_F"];
 private _listBarracks = ["Land_i_Barracks_V1_F", "Land_i_Barracks_V2_F", "Land_u_Barracks_V2_F", "Land_Barracks_01_dilapidated_F", "Land_Barracks_01_grey_F", "Land_Barracks_01_camo_F"];
 private _listBarracksLivonia = ["Land_Barracks_06_F"];

@@ -301,35 +301,37 @@ else
 
 _spawnParameter = [_markerX, "Vehicle"] call A3A_fnc_findSpawnPosition;
 if (_spawnParameter isEqualType []) then {
-	private _truckTypes = [];
-	
-	if !(_isFIA) then {
-		if (_sideX == Occupants) then {
+	private _truckTypes = switch (true) do {
+		case (!_isFIA && {_sideX == Occupants}): {
 			private _types = vehNATOTrucks + vehNATOCargoTrucks;
 			_types = _types select { _x in vehCargoTrucks };
-			if (_frontierX) then {_types = _types + vehNATOArmed};
+			if (_frontierX) then {_types append vehNATOLightArmed};
 			if (_types isEqualTo []) then {_types = vehNATOTrucks + vehNATOCargoTrucks};
-			_truckTypes = _types;
-		} else {
-			private _types = vehCSATTrucks + vehCSATCargoTrucks;
-			_types = _types select { _x in vehCargoTrucks };
-			if (_frontierX) then {_types = _types + vehCSATLightArmed};
-			if (_types isEqualTo []) then {_types = vehCSATTrucks + vehCSATCargoTrucks};
-			_truckTypes = _types;
+			_types;
 		};
-	} else {
-		if (_sideX == Occupants) then {
+		case (_isFIA && {_sideX == Occupants}): {
 			private _types = vehFIATrucks;
 			_types = _types select { _x in vehCargoTrucks };
-			if (_frontierX) then {_types = _types + vehFIAArmedCars};
+			if (_frontierX) then {_types append vehFIAArmedCars};
 			if (_types isEqualTo []) then {_types = vehFIATrucks};
-			_truckTypes = _types;
-		} else {
+			_types;
+		};
+		case (!_isFIA && {_sideX == Invaders}): {
+			private _types = vehCSATTrucks + vehCSATCargoTrucks;
+			_types = _types select { _x in vehCargoTrucks };
+			if (_frontierX) then {_types append vehCSATLightArmed};
+			if (_types isEqualTo []) then {_types = vehCSATTrucks + vehCSATCargoTrucks};
+			_types;
+		};
+		case (_isFIA && {_sideX == Invaders}): {
 			private _types = vehWAMTrucks;
 			_types = _types select { _x in vehCargoTrucks };
-			if (_frontierX) then {_types = _types + vehWAMArmedCars};
+			if (_frontierX) then {_types append vehWAMArmedCars};
 			if (_types isEqualTo []) then {_types = vehWAMTrucks};
-			_truckTypes = _types;
+			_types;
+		};
+		default {
+			[];
 		};
 	};
 

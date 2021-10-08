@@ -20,7 +20,7 @@
 - Fixed Rescue Prisoners _houseX error
 - Fixed unintended ability to get second Find the Arms Dealer task if task was persistently saved but not completed
 - Enemy support call timeout increased to 20 minutes
-- Increased Arms Dealer stocks - rifle stock (15->30), pistol stock (20-50), launcher stock (10->15)
+- Increased Arms Dealer stocks - rifle stock (15->20), pistol stock (20-50), launcher stock (10->15)
 - Helicrash mission undefined variable fix
 - Multiple static MG types support
 - Limited Fast Travel mission parameter is on by default
@@ -30,6 +30,7 @@
 - Reduced number of cops in Supply mission
 - Persistent weather variable uses overcast instead of rain
 - Rebel Troops Training no longer increases infantry price
+- Surrendered units will be removed by garbage cleaner
 - Big guard towers will be occupied 
 - Deliver Supplies timer will no longer reset
 - Ability to override Demolitionist loadout in Rebel Loadouts
