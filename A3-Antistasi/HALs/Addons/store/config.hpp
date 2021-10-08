@@ -15,7 +15,7 @@ __________________________________________________________________*/
 #define MAGAZINE_STOCK 200
 #define LAUNCHER_STOCK 15
 #define PISTOL_STOCK 50
-#define RIFLE_STOCK 30
+#define RIFLE_STOCK 20
 #define MZ_STOCK 50
 #define NN_STOCK 50
 #define PN_STOCK 25

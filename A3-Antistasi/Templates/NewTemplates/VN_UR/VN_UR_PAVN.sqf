@@ -136,7 +136,7 @@
 ["vehiclesMilitiaTrucks", ["vn_o_wheeled_z157_01_nva65"]] call _fnc_saveToTemplate;
 ["vehiclesMilitiaCars", ["vn_o_wheeled_btr40_01_nva65"]] call _fnc_saveToTemplate;
 ["vehiclesMilitiaApcs", ["vn_o_wheeled_btr40_mg_01"]] call _fnc_saveToTemplate;
-["vehiclesMilitiaTanks", ["uns_ot34_85_nva", "uns_t34_76_vc", "uns_t34_85_nva"]] call _fnc_saveToTemplate;
+["vehiclesMilitiaTanks", ["uns_ot34_85_nva", "uns_t34_85_nva"]] call _fnc_saveToTemplate;
 
 ["vehiclesPolice", ["vn_i_wheeled_m151_02_mp"]] call _fnc_saveToTemplate;
 
