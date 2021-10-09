@@ -5351,15 +5351,6 @@
       </Key>
     </Container>
     <Container name="surrender_actions">
-      <Key ID="STR_interrogate_action">
-        <Original>Interrogate</Original>
-        <English>Interrogate</English>
-        <French>Interroger</French>
-        <Russian>Допросить</Russian>
-        <German>Abfragen</German>
-        <Czech>Vyslýchat</Czech>
-        <Chinesesimp>审问</Chinesesimp>
-      </Key>
       <Key ID="STR_release_action">
         <Original>Release</Original>
         <English>Release</English>
@@ -5715,4 +5706,12 @@
       <Chinesesimp>还需要 %1¢。</Chinesesimp>
     </Key>
   </Package>
+  <Package name="Arsenal">
+		<Container name="Actions">
+			<Key ID="STR_JNA_ACT_CONTAINER_OPEN">
+				<Original>Select vehicle to open arsenal for it</Original>
+        <Russian>Выбрать технику и открыть арсенал для неё</Russian>
+			</Key>
+		</Container>
+	</Package>
 </Project>

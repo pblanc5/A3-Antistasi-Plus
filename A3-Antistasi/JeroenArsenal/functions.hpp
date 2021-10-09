@@ -1,5 +1,26 @@
 
 class JN {
+	class Common {
+		file = "JeroenArsenal\Common";
+		class common_addActionSelect {};
+		class common_addActionCancel {};
+		class common_updateActionCancel {};
+		class common_removeActionCancel {};
+		class common_getActionCanceled {};
+	};
+	
+	class Common_Vehicle {
+		file = "JeroenArsenal\Common\vehicle";
+		class common_vehicle_getSeatNames {};
+		class common_vehicle_getVehicleType {};
+	};
+
+	class Common_Array {
+		file = "JeroenArsenal\Common\array";
+		class common_array_add {};
+		class common_array_remove {};
+	};
+
 	class JNA {
 		file = "JeroenArsenal\JNA";
 		class arsenal {};

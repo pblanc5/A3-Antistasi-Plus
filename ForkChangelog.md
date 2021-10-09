@@ -9,6 +9,7 @@
 - RHSPKL (Prei Khmaoch Luong) terrain support
 - Chernarus 2020 terrain newest update support
 - Unsung Redux (SOGPF complement mod) support
+- Load to Vehicle action (Arsenal backport, replaces Vehicle Arsenal action)
 
 ### Changes
 - 2.5.3 Community Version integration (multiple fixes of core systems of Antistasi, player balance scaling)
@@ -34,6 +35,7 @@
 - Big guard towers will be occupied 
 - Deliver Supplies timer will no longer reset
 - Ability to override Demolitionist loadout in Rebel Loadouts
+- Arsenal action icon (Arsenal backport)  
 - (GM, SOGPF) Items from Global Mobilization may appear in loot boxes when SOGPF DLC is used and "Allow items from Global Mobilization" option is turned on
 - (RHS) Lowered recoil of Zu-23 when it is mounted on vehicle
 - (3CB Factions Cold War, Takistan) Fixed no tribal uniforms issue 
