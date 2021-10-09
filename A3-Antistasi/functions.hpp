@@ -152,7 +152,6 @@ class A3A
         class help {};
         class hideInBuilding {};
         class inmuneConvoy {};
-        class interrogate {};
         class isBuildingPosition {};
         class landThreatEval {};
         class liberaterefugee {};
