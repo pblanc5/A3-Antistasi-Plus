@@ -392,13 +392,6 @@ class Params
         texts[] = {"Load From Save (Default - Info)", "Error", "Info", "Debug"};
         default = 9999;
      };
-     class SystemChatLogMessages
-     {
-          title = "Post Log Messages to systemChat (Debug)";
-          values[] = {9999, 1, 0};
-          texts[] = {"Load From Save (Default - No)", "Yes", "No"};
-          default = 9999;
-     };
      class SupportOptions
      {
           title = "SUPPORT OPTIONS";

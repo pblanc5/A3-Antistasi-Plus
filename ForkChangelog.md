@@ -45,6 +45,7 @@
 - (GM Cold War Mode) Removed HK69 grenade launcher from Bundeswehr weapon pool
 - (Cold War mode) removed unintentional modern variants of AS VAL from Arms Dealer store  
 - Removed Interrogate action on enemy surrendered units
+- Removed Post Log Messages to systemChat (Debug) mission parameter
 
 ## 1.7.5
 ### Additions

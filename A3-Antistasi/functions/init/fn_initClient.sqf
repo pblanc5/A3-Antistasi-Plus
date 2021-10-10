@@ -5,7 +5,6 @@ private _fileName = "initClient.sqf";
 //Make sure logLevel is always initialised.
 //This should be overridden by the server, as appropriate. Hence the nil check.
 if (isNil "logLevel") then { logLevel = 2 };
-if (isNil "isSystemChatPostingAllowed") then {isSystemChatPostingAllowed = false};
 scriptName "initClient.sqf";
 
 

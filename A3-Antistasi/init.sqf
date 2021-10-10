@@ -7,7 +7,6 @@ private _fileName = "init.sqf";
 scriptName "init.sqf";
 
 if (isNil "logLevel") then {logLevel = 2};
-if (isNil "isSystemChatPostingAllowed") then {isSystemChatPostingAllowed = false};
 Info("Init SQF started");
 
 //Singleplayer is no longer supported

@@ -316,12 +316,17 @@ if (A3A_hasCup) then {
 	];
 };
 
-flaresPool = if (A3A_hasCup) then {
-	["CUP_F_40mm_Star_White", "CUP_F_40mm_Star_Red"]
-} else {
-	if (A3A_hasRhs) then {
-		["rhsusf_40mm_white", "rhsusf_40mm_green", "rhs_mag_m662_red"]
-	} else {
+flaresPool = switch (true) do {
+	case (A3A_hasVN): {
+		["vn_shell_81mm_m301a3_lume_ammo"];
+	};
+	case (A3A_hasCup): {
+		["CUP_F_40mm_Star_White", "CUP_F_40mm_Star_Red"];
+	};
+	case (A3A_hasRhs): {
+		["rhsusf_40mm_white", "rhsusf_40mm_green", "rhs_mag_m662_red"];
+	};
+	default {
 		["F_40mm_white", "F_40mm_Red", "F_40mm_Yellow"]
 	};
 };
