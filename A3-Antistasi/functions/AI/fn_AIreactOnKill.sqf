@@ -19,6 +19,7 @@ Dependencies:
 
 Example:
 [_group, _killer] spawn A3A_fnc_AIreactOnKill;
+//(_x getVariable "unitType") in squadLeaders
 */
 
 params ["_group", "_killer"];
@@ -126,6 +127,7 @@ if(_group getVariable ["canCallSupportAt", -1] < dateToNumber date) then
                             [_x,_enemy] spawn A3A_fnc_useFlares;
                         } else {
                             if ((random 100) < 35) then {
+                                
                                 [_x,_x,_enemy] spawn A3A_fnc_chargeWithSmoke;
                             };
                         };
