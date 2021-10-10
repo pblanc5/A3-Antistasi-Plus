@@ -11180,13 +11180,13 @@ class cfgHALsStore
 			displayName = "Launchers";
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\secondaryWeapon_ca.paa";
 
-			ITEM(vn_m72, 250, 50);
+			ITEM(vn_m72, 250, 15);
 
-			ITEM(vn_rpg2, 500, 50);
+			ITEM(vn_rpg2, 500, 15);
 			ITEM(vn_rpg7, 750, 15);
 
-			ITEM(vn_sa7, 1300, 50);
-			ITEM(vn_sa7b, 1600, 50);
+			ITEM(vn_sa7, 1300, 15);
+			ITEM(vn_sa7b, 1600, 15);
 		};
 
 		class launchermagazinesvn
@@ -11722,15 +11722,15 @@ class cfgHALsStore
 			displayName = "Launchers";
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\secondaryWeapon_ca.paa";
 
-			ITEM(vn_m72, 250, 50);
+			ITEM(vn_m72, 250, 15);
 
-			ITEM(uns_m20_bazooka, 350, 50);
+			ITEM(uns_m20_bazooka, 350, 15);
 
-			ITEM(vn_rpg2, 500, 50);
+			ITEM(vn_rpg2, 500, 15);
 			ITEM(vn_rpg7, 750, 15);
 
-			ITEM(vn_sa7, 1300, 50);
-			ITEM(vn_sa7b, 1600, 50);
+			ITEM(vn_sa7, 1300, 15);
+			ITEM(vn_sa7b, 1600, 15);
 		};
 
 		class launchermagazinesvnur

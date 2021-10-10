@@ -144,7 +144,7 @@ shop_MRAP = [];
 shop_wheel_apc = ["vn_o_wheeled_btr40_mg_01_nva65", "vn_o_wheeled_btr40_mg_02_nva65", "vn_o_wheeled_btr40_mg_03_nva65"];
 shop_track_apc = [];
 shop_heli = ["vn_o_air_mi2_04_03"];
-shop_tank = ["uns_t34_85_vc", "vn_i_armor_type63_01", "vn_i_armor_m41_01"];
+shop_tank = ["uns_t34_85_nva", "vn_i_armor_type63_01", "vn_i_armor_m41_01"];
 shop_plane = ["uns_A1H_CAS"];
 
 additionalShopLight = [];

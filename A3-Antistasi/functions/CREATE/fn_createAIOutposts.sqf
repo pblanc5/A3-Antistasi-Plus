@@ -90,9 +90,6 @@ if (count _additionalGarrison > 0) then {
 };
 
 _garrison = garrison getVariable [_markerX,[]];
-if (count _garrison > 60) then {
-	_garrison resize 60;
-};
 _garrison = _garrison call A3A_fnc_garrisonReorg;
 
 _radiusX = count _garrison;
