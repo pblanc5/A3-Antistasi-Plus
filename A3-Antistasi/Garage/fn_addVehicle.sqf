@@ -37,9 +37,9 @@ if (_player isNotEqualTo vehicle _player) exitWith { ["STR_HR_GRG_Feedback_addVe
 if (_player distance _vehicle > 25) exitWith {["STR_HR_GRG_Feedback_addVehicle_Distance"] remoteExec ["HR_GRG_fnc_Hint", _client]; false };
 
     //Valid area
-private _friendlyMarkers = (["Synd_HQ"] +outposts + seaports + airportsX + factories + resourcesX) select {sidesX getVariable [_x,sideUnknown] == teamPlayer}; //rebel locations with a flag
-private _inArea = (_friendlyMarkers findIf { count ([_player, _vehicle] inAreaArray _x) > 1 } != -1);
-private _isTraderNear = if (!isNil "traderX" && {_player distance2d traderX < 50}) then {
+private _friendlyMarkers = (["Synd_HQ"] +outposts + seaports + airportsX + factories + milbases + resourcesX) select {sidesX getVariable [_x,sideUnknown] == teamPlayer}; //rebel locations with a flag
+private _inArea = _friendlyMarkers findIf { count ([_player, _vehicle] inAreaArray _x) > 1 } != -1;
+if (!_inArea && {!isNil "traderX" && {_player distance2d traderX < 50}}) then {
     _inArea = true;
 };
 

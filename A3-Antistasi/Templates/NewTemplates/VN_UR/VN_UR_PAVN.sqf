@@ -119,7 +119,7 @@
 ["vehiclesGunBoats", ["vn_o_boat_04_02"]] call _fnc_saveToTemplate;
 ["vehiclesAmphibious", []] call _fnc_saveToTemplate;
 
-["vehiclesPlanesCAS", ["uns_Mig21_BMB", "uns_Mig21_CAS", "uns_Mig21_HCAS", "uns_Mig21_HBMB"]] call _fnc_saveToTemplate;
+["vehiclesPlanesCAS", ["uns_Mig21_CAS", "uns_Mig21_HCAS", "uns_Mig21_HBMB"]] call _fnc_saveToTemplate;
 ["vehiclesPlanesAA", ["uns_Mig21_CAP"]] call _fnc_saveToTemplate;
 ["vehiclesPlanesTransport", []] call _fnc_saveToTemplate;
 

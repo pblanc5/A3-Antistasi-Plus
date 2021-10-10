@@ -121,7 +121,7 @@
 ["vehiclesAmphibious", []] call _fnc_saveToTemplate;
 
 ["vehiclesPlanesCAS", ["vn_b_air_f4c_hcas", "uns_A4E_skyhawk_CAS", "uns_A6_Intruder_CAS", "uns_A7N_CAS"]] call _fnc_saveToTemplate;
-["vehiclesPlanesAA", ["vn_b_air_f4c_cap","uns_A4E_skyhawk_CAP", "uns_A7N_CAP", "uns_f100b_CAP", "uns_f105F_BMB"]] call _fnc_saveToTemplate;
+["vehiclesPlanesAA", ["vn_b_air_f4c_cap","uns_A4E_skyhawk_CAP", "uns_A7N_CAP", "uns_f100b_CAP", "uns_f105D_CAP"]] call _fnc_saveToTemplate;
 ["vehiclesPlanesTransport", ["uns_C130_H"]] call _fnc_saveToTemplate;
 
 ["vehiclesHelisLight", ["vn_b_air_ch34_01_01"]] call _fnc_saveToTemplate;
