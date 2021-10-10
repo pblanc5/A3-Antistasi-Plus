@@ -318,7 +318,7 @@ if (A3A_hasCup) then {
 
 flaresPool = switch (true) do {
 	case (A3A_hasVN): {
-		["vn_shell_81mm_m301a3_lume_ammo"];
+		["vn_40mm_m583_flare_w_ammo", "vn_40mm_m661_flare_g_ammo", "vn_40mm_m662_flare_r_ammo", "vn_40mm_m695_flare_y_ammo"];
 	};
 	case (A3A_hasCup): {
 		["CUP_F_40mm_Star_White", "CUP_F_40mm_Star_Red"];
