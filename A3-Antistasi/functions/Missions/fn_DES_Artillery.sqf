@@ -57,7 +57,7 @@ else {
 
 if (isNil "_artilleryClass" || {isNil "_artilleryShellClass"} || {isNil "_mgClass"} || {isNil "_infantrySquadArray"} || {isNil "_mgCrewClass"}) 
 exitWith {
-	["DES"] remoteExecCall ["A3A_fnc_missionRequest",2];
+	["DES"] remoteExec ["A3A_fnc_missionRequest",2];
 	[1, format ["Problems with unit templates, rerequesting new destroy mission."], _filename] call A3A_fnc_log;
 };
 

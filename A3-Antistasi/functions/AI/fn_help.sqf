@@ -30,7 +30,7 @@ if (_medicX != _unit) then {
 		["Medical", format ["%1 is on the way to help you.",name _medicX]] call A3A_fnc_customHint;
 	};
 	_enemy = _medicX findNearestEnemy _unit;
-	if ((random 100) < 60) then {
+	if ((random 100) < 50) then {
 		[_medicX,_unit,_enemy] call A3A_fnc_chargeWithSmoke;
 	};
 
@@ -191,7 +191,7 @@ if (_medicX != _unit) then {
 		sleep 15;
 	};
 } else {
-	if ((random 100) < 60) then {
+	if ((random 100) < 50) then {
 		[_medicX,_medicX] call A3A_fnc_chargeWithSmoke;
 	};
 	if ([_medicX] call A3A_fnc_canFight) then {

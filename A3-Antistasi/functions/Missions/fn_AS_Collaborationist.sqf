@@ -34,7 +34,7 @@ _appropriateBuildings = _appropriateBuildings select {
 
 if(count _appropriateBuildings < 1) exitWith {
     [1, "Can't find suitable house for mission, resetting mission request.", _fileName] call A3A_fnc_log;
-    ["AS"] remoteExecCall ["A3A_fnc_missionRequest",2];
+    ["AS"] remoteExec ["A3A_fnc_missionRequest",2];
 };
 
 _building = selectRandom _appropriateBuildings;

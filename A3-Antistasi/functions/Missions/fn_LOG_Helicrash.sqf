@@ -102,7 +102,7 @@ if (isNil "_pilotClass" ||
     {isNil "_infantrySquadArray"} ||
     {isNil "_specOpsArray"}) 
 exitWith {
-	["LOG"] remoteExecCall ["A3A_fnc_missionRequest",2];
+	["LOG"] remoteExec ["A3A_fnc_missionRequest",2];
 	[1, format ["Problems with unit templates, rerequesting new logistics mission."], _filename] call A3A_fnc_log;
 };
 

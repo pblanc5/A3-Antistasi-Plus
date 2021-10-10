@@ -146,7 +146,7 @@ class Params
     };
     class napalmEnabled
     {
-        title = "Enable Napalm Bombing for AI";
+        title = "Enable Napalm Bombing";
         values[] = {9999,0,1};
         texts[] = {"Load From Save (Default - No)","No","Yes"};
         default = 9999;

@@ -4948,12 +4948,6 @@
             <English>You can't garage vehicles while enemies are near you</English>
             <Chinesesimp>当敌人在你附近时, 你不能存储汽车</Chinesesimp>
         </Key>
-        <!--%1 is faction name-->
-        <Key ID="STR_HR_GRG_Feedback_addVehicle_airBlocked">
-            <Original>You can't garage a aircraft while you are not near an Aiport which belongs to %1. Please move your aircraft to an Airport to garage it</Original>
-            <English>You can't garage a aircraft while you are not near an Aiport which belongs to %1. Please move your aircraft to an Airport to garage it</English>
-            <Chinesesimp>当您不在属于%1的机场附近时, 您不能停放飞机。请将您的飞机移至机场停放</Chinesesimp>
-        </Key>
         <Key ID="STR_HR_GRG_Feedback_addVehicle_GenericFail">
             <Original>You can't garage this</Original>
             <English>You can't garage this</English>

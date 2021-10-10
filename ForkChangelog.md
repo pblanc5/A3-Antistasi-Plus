@@ -36,6 +36,9 @@
 - Deliver Supplies timer will no longer reset
 - Ability to override Demolitionist loadout in Rebel Loadouts
 - Arsenal action icon (Arsenal backport)  
+- Raw position for precision placing mode (SHIFT hotkey while placing something)
+- Vehicles can be put into garage near Arms Dealer
+- Slightly lowered chance to pop smoke grenade by enemy in some circumstances (40%->35% for general AI reactions, 60%->50% for medics)
 - (GM, SOGPF) Items from Global Mobilization may appear in loot boxes when SOGPF DLC is used and "Allow items from Global Mobilization" option is turned on
 - (RHS) Lowered recoil of Zu-23 when it is mounted on vehicle
 - (3CB Factions Cold War, Takistan) Fixed no tribal uniforms issue 
@@ -45,6 +48,7 @@
 - (GM Cold War Mode) Removed HK69 grenade launcher from Bundeswehr weapon pool
 - (Cold War mode) removed unintentional modern variants of AS VAL from Arms Dealer store  
 - Removed Interrogate action on enemy surrendered units
+- Removed inability to put aircrafts on non-airport markers
 - Removed Post Log Messages to systemChat (Debug) mission parameter
 
 ## 1.7.5
