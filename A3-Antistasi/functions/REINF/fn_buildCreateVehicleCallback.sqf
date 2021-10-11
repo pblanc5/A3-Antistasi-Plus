@@ -79,21 +79,7 @@ if (!_isPlayer) then {{construction_selectedEngineer enableAI _x} forEach ["ANIM
 if (time <= _timeOut) exitWith {["Build Info", "Construction cancelled."] call A3A_fnc_customHint;};
 if (!_isPlayer) then {construction_selectedEngineer doFollow (leader construction_selectedEngineer)};
 
-private _veh = createVehicle [_structureType, _positionX, [], 0, "CAN_COLLIDE"];
-_veh setDir _dir;
-
-constructionsToSave pushBackUnique _veh;
-publicVariable "constructionsToSave";
-
-//removing previous
-private _excessiveConstructions = maxConstructions - (count constructionsToSave);
-if(_excessiveConstructions < 0) then {
-	private _top = abs _excessiveConstructions;
-	for "_i" from 0 to _top do {
-		deleteVehicle (constructionsToSave select _i);
-		constructionsToSave deleteAt _i;
-	};
-};
+[_structureType, _positionX] remoteExecCall ["SCRT_fnc_build_addConstruction", 2];
 
 construction_nearestFriendlyMarker = nil;
 construction_selectedEngineer = nil;
