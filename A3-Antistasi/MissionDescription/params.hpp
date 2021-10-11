@@ -348,6 +348,13 @@ class Params
           texts[] =  {"Load From Save (Default - 30%)", "15%", "30%", "50%", "75%", "100%"};
           default = 9999;
      };
+     class saveZeusBuildings
+     {
+          title = "Persistent Save for Zeus-placed Constructions";
+          values[] = {9999, 1, 0};
+          texts[] =  {"Load From Save (Default - Yes)", "Yes", "No"};
+          default = 9999;
+     };
 
      class Spacer359
      {

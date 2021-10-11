@@ -9,6 +9,7 @@
 - RHSPKL (Prei Khmaoch Luong) terrain support
 - Chernarus 2020 terrain newest update support
 - Unsung Redux (SOGPF complement mod) support
+- Persistent Save for Zeus-placed Constructions mission parameter
 - Load to Vehicle action (Arsenal backport, replaces Vehicle Arsenal action)
 
 ### Changes
@@ -44,6 +45,7 @@
 - (RHS) Lowered recoil of Zu-23 when it is mounted on vehicle
 - (3CB Factions Cold War, Takistan) Fixed no tribal uniforms issue 
 - (CUP) Adjustments of faction templates with the usage of new CUP Vehicles/Units/Weapons mod items
+- (SOGPF) CDLC napalm usage instead of Antistasi implementation
 
 ### Removals
 - (GM Cold War Mode) Removed HK69 grenade launcher from Bundeswehr weapon pool

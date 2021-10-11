@@ -223,6 +223,26 @@ if (!loadLastSave) then {
 
 savingServer = false;
 
+if (saveZeusBuildings) then {
+	[2,"Initializing Curator Persistent Save.",_fileName] call A3A_fnc_log;
+	private _curator = allCurators select 0;
+	_curator addEventHandler ["CuratorObjectPlaced", {
+		params ["_curator", "_entity"];
+		if !(_entity isKindOf "Building") exitWith {};
+		[_entity] remoteExecCall ["SCRT_fnc_build_saveConstruction", 2];
+	}];
+	_curator addEventHandler ["CuratorObjectEdited", {
+		params ["_curator", "_entity"];
+		if !(_entity isKindOf "Building") exitWith {};
+		[_entity] remoteExecCall ["SCRT_fnc_build_updateConstruction", 2];
+	}];
+	_curator addEventHandler ["CuratorObjectDeleted", {
+		params ["_curator", "_entity"];
+		if !(_entity isKindOf "Building") exitWith {};
+		[_entity] remoteExecCall ["SCRT_fnc_build_removeConstruction", 2];
+	}];
+};
+
 // Autosave loop. Save if there were any players on the server since the last save.
 [] spawn {
 	private _lastPlayerCount = count (call A3A_fnc_playableUnits);
