@@ -57,7 +57,7 @@ if(hasInterface)then{
 				if(isnull _objectSelected)exitWith{hint localize "STR_JNA_ACT_CONTAINER_SELECTERROR1"; };
 
 				//check if object is in range
-				if(_object distance cursorObject > 10)exitWith{hint localize "STR_JNA_ACT_CONTAINER_SELECTERROR2";};
+				if(_object distance cursorObject > 50) exitWith {hint localize "STR_JNA_ACT_CONTAINER_SELECTERROR2";};
 
 				//check if object has inventory
 				private _className = typeOf _objectSelected;
@@ -138,11 +138,7 @@ if(hasInterface)then{
                 };
                 case (_type isEqualTo "containerArsenal"): {
                     ["CustomInit", [uiNamespace getVariable "arsenalDisplay"]] call jn_fnc_vehicleArsenal;
-                    UINamespace setVariable ["jn_type","vehicleArsenal"];
-                };
-                case (_veh != player && {driver _veh == player}): {
-                    ["CustomInit", [uiNamespace getVariable "arsenalDisplay"]] call jn_fnc_vehicleArsenal;
-                    UINamespace setVariable ["jn_type","vehicleArsenal"];
+                    UINamespace setVariable ["jn_type","containerArsenal"];
                 };
                 default {
                     ["CustomInit", [uiNamespace getVariable "arsenalDisplay"]] call jn_fnc_arsenal;
@@ -162,7 +158,7 @@ if(hasInterface)then{
         };
 
         if(_type isEqualTo "containerArsenal")then{
-            ["Close"] call jn_fnc_arsenal_container;
+            ["Close"] call jn_fnc_vehicleArsenal;
             [clientOwner] remoteExecCall ["jn_fnc_arsenal_requestClose",2];
             UINamespace setVariable ["jn_type",""];
         };

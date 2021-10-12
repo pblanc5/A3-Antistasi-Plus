@@ -123,9 +123,10 @@ while {true} do
 			private _owner = owner _x;
             _x setVariable ["moneyX", _playerMoney, _owner];
             private _paycheckText = format [
-                "<t size='0.6'>%1 got paid <t color='#00FF00'>%2 €</t> for fighting for the freedom!</t>",
+                "<t size='0.6'>%1 got paid <t color='#00FF00'>%2%3</t> for fighting for the freedom!</t>",
                 name _x,
-                _incomePerPlayer
+                _incomePerPlayer, 
+				currencySymbol
             ];
 
             [petros, "income", _paycheckText] remoteExec ["A3A_fnc_commsMP", _x];
@@ -159,7 +160,7 @@ while {true} do
 
 	publicVariable "supportPoints";
 
-	private _textX = format ["<t size='0.6' color='#C1C0BB'>Taxes Income.<br/> <t size='0.5' color='#C1C0BB'><br/>Manpower: +%1<br/>Money: +%2 €", _hrAdd, _resAdd];
+	private _textX = format ["<t size='0.6' color='#C1C0BB'>Taxes Income.<br/> <t size='0.5' color='#C1C0BB'><br/>Manpower: +%1<br/>Money: +%2%3", _hrAdd, _resAdd, currencySymbol];
 	private _textArsenal = [] call A3A_fnc_arsenalManage;
 	if (_textArsenal != "") then {_textX = format ["%1<br/>Arsenal Updated<br/><br/>%2", _textX, _textArsenal]};
 	[petros, "taxRep", _textX] remoteExec ["A3A_fnc_commsMP", [teamPlayer, civilian]];

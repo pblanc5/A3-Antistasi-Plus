@@ -21,6 +21,7 @@
 - Fixed overlapping annoucement text
 - Fixed Rescue Prisoners _houseX error
 - Fixed inability to garage vehicles on milbases
+- Fixed exploit that allowed to sell unlocked items to Arms Dealer 
 - Fixed unintended ability to get second Find the Arms Dealer task if task was persistently saved but not completed
 - Enemy support call timeout increased to 20 minutes
 - Increased Arms Dealer stocks - rifle stock (15->20), pistol stock (20-50), launcher stock (10->15)

@@ -331,6 +331,8 @@ flaresPool = switch (true) do {
 	};
 };
 
+currencySymbol = if (A3A_hasVN) then {"đ"} else {"€"};
+
 flareSounds = ["A3\Sounds_F\weapons\Flare_Gun\flaregun_1.wss", "A3\Sounds_F\weapons\Flare_Gun\flaregun_2.wss"];
 
 medicAnims = ["AinvPknlMstpSnonWnonDnon_medic_1","AinvPknlMstpSnonWnonDnon_medic0","AinvPknlMstpSnonWnonDnon_medic1","AinvPknlMstpSnonWnonDnon_medic2"];

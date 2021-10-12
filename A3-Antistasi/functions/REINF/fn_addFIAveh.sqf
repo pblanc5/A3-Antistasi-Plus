@@ -23,12 +23,12 @@ if (player != theBoss) then {
 	};
 };
 
-if (_resourcesFIA < vehiclePurchase_cost) exitWith {["Add Vehicle", format ["You do not have enough money for this vehicle: %1 € required.",vehiclePurchase_cost]] call A3A_fnc_customHint;};
+if (_resourcesFIA < vehiclePurchase_cost) exitWith {["Add Vehicle", format ["You do not have enough money for this vehicle: %1%2 required.",vehiclePurchase_cost, currencySymbol]] call A3A_fnc_customHint;};
 vehiclePurchase_nearestMarker = [markersX select {sidesX getVariable [_x,sideUnknown] == teamPlayer},player] call BIS_fnc_nearestPosition;
 
 if (!(player inArea vehiclePurchase_nearestMarker)) exitWith {["Add Vehicle", "You need to be close to the flag to be able to purchase a vehicle."] call A3A_fnc_customHint;};
 
-private _extraMessage =	format ["Buying vehicle for $%1.", vehiclePurchase_cost];
+private _extraMessage =	format ["Buying vehicle for %1%2.", vehiclePurchase_cost, currencySymbol];
 
 [["UpdateState", "Buys vehicle at HQ"]] call SCRT_fnc_misc_updateRichPresence;
 

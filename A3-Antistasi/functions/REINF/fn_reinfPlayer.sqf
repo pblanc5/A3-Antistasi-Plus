@@ -32,7 +32,7 @@ if (_typeUnit == SDKATman && {tierWar < 4}) exitWith {
 	["Recruit Squad", "You can not recruit this type of unit at war level 3 or less."] call SCRT_fnc_misc_showDeniedActionHint;
 };
 
-if (_costs > _resourcesFIA) exitWith {["AI Recruitment", format ["You do not have enough money for this kind of unit (%1 € needed).",_costs]] call A3A_fnc_customHint;};
+if (_costs > _resourcesFIA) exitWith {["AI Recruitment", format ["You do not have enough money for this kind of unit (%1%2 needed).", _costs, currencySymbol]] call A3A_fnc_customHint;};
 
 if ((count units group player) + (count units stragglers) > 9) exitWith {["AI Recruitment", "Your squad is full or you have too many scattered units with no radio contact."] call A3A_fnc_customHint;};
 

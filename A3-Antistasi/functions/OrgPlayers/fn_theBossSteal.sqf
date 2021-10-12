@@ -17,6 +17,6 @@ server setvariable ["resourcesFIA", _resourcesFIA - MONEY_AMOUNT, true];
 [
     "SUCCESS",
     "Money Grab",
-    parseText format ["You grabbed %1 € from the %2 Money Pool.<br/><br/>This will affect your prestige and status among %2 forces.", str MONEY_AMOUNT, nameTeamPlayer],
+    parseText format ["You grabbed %1%3 from the %2 Money Pool.<br/><br/>This will affect your prestige and status among %2 forces.", str MONEY_AMOUNT, nameTeamPlayer, currencySymbol],
     15
 ] spawn SCRT_fnc_ui_showMessage;

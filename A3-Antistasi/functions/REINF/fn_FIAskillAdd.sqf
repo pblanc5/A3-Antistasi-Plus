@@ -23,7 +23,7 @@ if (_resourcesFIA < _costs) exitWith {
     [
         "FAIL",
         "Skill Add",
-        parseText format ["%1 do not have enough money to afford additional training. %2 € needed.", nameTeamPlayer, _costs],
+        parseText format ["%1 do not have enough money to afford additional training. %2%3 needed.", nameTeamPlayer, _costs, currencySymbol],
         30
     ] spawn SCRT_fnc_ui_showMessage;
 };
