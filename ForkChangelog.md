@@ -10,6 +10,7 @@
 - Chernarus 2020 terrain newest update support
 - Unsung Redux (SOGPF complement mod) support
 - Persistent Save for Zeus-placed Constructions mission parameter
+- Enemy AI Maximum Accuracy mission parameter
 - Load to Vehicle action (Arsenal backport, replaces Vehicle Arsenal action)
 
 ### Changes

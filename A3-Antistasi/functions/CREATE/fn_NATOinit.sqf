@@ -75,10 +75,6 @@ else
 	_unit setVariable ["spawner",true,true]
 };
 
-private _accuracy = _unit skill "aimingAccuracy";
-private _shake = _unit skill "aimingShake";
-private _aimingSpeed = _unit skill "aimingSpeed";
-
 //Calculates the skill of the given unit
 private _skill = (0.15 * skillMult) + (0.04 * difficultyCoef) + (0.02 * tierWar);
 if ("militia_" in (_unit getVariable "unitType")) then
@@ -101,18 +97,16 @@ if (_type in squadLeaders) then
     [_unit, "Intel_Small"] remoteExec ["A3A_fnc_flagaction",[teamPlayer,civilian], _unit];
 };
 
-//Prevents units from being eagle-eyed god-like terminators,
-//basically caps their aiming capabilities no more than it specified on server difficulty settings
-if((_unit skill "aimingAccuracy") > _accuracy) then {
-    _unit setSkill ["aimingAccuracy", _accuracy];
+if((_unit skill "aimingAccuracy") > aiAccuracyCeiling) then {
+    _unit setSkill ["aimingAccuracy", aiAccuracyCeiling];
 };
 
-if((_unit skill "aimingShake") > _shake) then {
-    _unit setSkill ["aimingShake", _shake];
+if((_unit skill "aimingShake") > aiAccuracyCeiling) then {
+    _unit setSkill ["aimingShake", aiAccuracyCeiling];
 };
 
-if((_unit skill "aimingSpeed") > _aimingSpeed) then {
-    _unit setSkill ["aimingSpeed", _aimingSpeed];
+if((_unit skill "aimingSpeed") > aiAccuracyCeiling) then {
+    _unit setSkill ["aimingSpeed", aiAccuracyCeiling];
 };
 
 //Sets NVGs, lights, lasers, radios and spotting skills for the night

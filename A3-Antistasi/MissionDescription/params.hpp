@@ -355,6 +355,13 @@ class Params
           texts[] =  {"Load From Save (Default - Yes)", "Yes", "No"};
           default = 9999;
      };
+     class aiAccuracyCeiling
+     {
+          title = "Enemy AI Maximum Accuracy";
+          values[] = {9999, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1};
+          texts[] =  {"Load From Save (Default - 0.5)", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9", "1"};
+          default = 9999;
+     };
 
      class Spacer359
      {
