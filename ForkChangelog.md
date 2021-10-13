@@ -8,7 +8,7 @@
 - Khe Sanh terrain support
 - RHSPKL (Prei Khmaoch Luong) terrain support
 - Chernarus 2020 terrain newest update support
-- Unsung Redux (SOGPF complement mod) support (use Unsung Redux Dev until content from it will be released in Unsung Redux Stable)
+- Unsung Redux (SOGPF complement mod) support
 - Persistent Save for Zeus-placed Constructions mission parameter
 - Enemy AI Maximum Accuracy mission parameter
 - Load to Vehicle action (Arsenal backport, replaces Vehicle Arsenal action)
