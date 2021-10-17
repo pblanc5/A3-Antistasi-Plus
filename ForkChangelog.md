@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.8.1
+
+### Changes
+- Fixed missing direction on built constructions
+- (SOGPF, SOGPF + Unsung Redux) Fixed missing civilian helicopters on rebel template
+- (SOGPF, SOGPF + Unsung Redux) Fixed non-working Loot Helicopter commander ability
+- Fixed non-persistent Zeus-placed constructions on dedicated server
+
+### Removals
+- Removed "Allow Items and Vehicles from S.O.G. PRAIRIE FIRE DLC?" and "Allow Items and Vehicles from Global Mobilization DLC?" parameters (CDLC content presence will depend on which CDLCs are enabled in A3 Launcher)
+
 ## 1.8
 
 ## Additions

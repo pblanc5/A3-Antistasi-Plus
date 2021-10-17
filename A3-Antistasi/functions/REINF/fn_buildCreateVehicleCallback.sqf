@@ -79,7 +79,7 @@ if (!_isPlayer) then {{construction_selectedEngineer enableAI _x} forEach ["ANIM
 if (time <= _timeOut) exitWith {["Build Info", "Construction cancelled."] call A3A_fnc_customHint;};
 if (!_isPlayer) then {construction_selectedEngineer doFollow (leader construction_selectedEngineer)};
 
-[_structureType, _positionX] remoteExecCall ["SCRT_fnc_build_addConstruction", 2];
+[_structureType, _positionX, _dir] remoteExecCall ["SCRT_fnc_build_addConstruction", 2];
 
 construction_nearestFriendlyMarker = nil;
 construction_selectedEngineer = nil;

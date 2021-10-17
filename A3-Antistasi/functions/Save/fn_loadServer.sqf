@@ -252,7 +252,6 @@ if (isServer) then {
 		} forEach milbases;
 	};
 
-	statsLoaded = 0; publicVariable "statsLoaded";
 	placementDone = true; publicVariable "placementDone";
 	petros allowdamage true;
 };

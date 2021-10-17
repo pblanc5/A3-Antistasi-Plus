@@ -20,13 +20,13 @@
      
     Example: [_type, _position] remoteExecCall ["SCRT_fnc_build_addConstruction", 2];
 */
-params ["_type", "_position"];
+params ["_type", "_position", "_direction"];
 
 private _filename = "SCRT_fnc_build_addConstruction";
 
 if (!isServer) exitWith {
     [1, "Function miscalled locally, rerouting execution on server...", _filename, true] call A3A_fnc_log;
-    [_type, _position] remoteExecCall ["SCRT_fnc_build_addConstruction", 2];
+    [_type, _position, _direction] remoteExecCall ["SCRT_fnc_build_addConstruction", 2];
 };
 
 if (isNil "constructionsToSave") exitWith {
@@ -34,7 +34,7 @@ if (isNil "constructionsToSave") exitWith {
 };
 
 private _construction = createVehicle [_type, _position, [], 0, "CAN_COLLIDE"];
-_construction setDir _dir;
+_construction setDir _direction;
 
 constructionsToSave pushBackUnique _construction;
 publicVariable "constructionsToSave";

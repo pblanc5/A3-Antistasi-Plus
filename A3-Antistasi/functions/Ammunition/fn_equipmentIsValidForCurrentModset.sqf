@@ -101,9 +101,6 @@ if (A3A_hasVN && {(_itemIsVanilla || _itemMod in _acemods || _itemMod in _TFARmo
 	};
 };
 
-//exclude Global Mobilization items if GM CDLC is not turned on
-if (toLower _itemMod isEqualTo "gm" && {!allowDLCGlobMob}) exitWith {false};
-
 //exclude CSLA items as they are not supported
 if (toLower _itemMod isEqualTo "csla") exitWith {false};
 

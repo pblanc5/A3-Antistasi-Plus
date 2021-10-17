@@ -363,28 +363,6 @@ class Params
           default = 9999;
      };
 
-     class Spacer359
-     {
-          title = "";
-          values[] = {""};
-          texts[] = {""};
-          default = "";
-     };
-     class VN
-     {
-        title = "Allow S.O.G. PRAIRIE FIRE DLC?";
-        values[] = {9999,1,0};
-        texts[] =  {"Load From Save (Default - No)","Yes","No"};
-        default = 9999;
-     };
-     class GlobMob
-     {
-        title = "Allow Items and Vehicles from Global Mobilization DLC?";
-        values[] = {9999,1,0};
-        texts[] = {"Load From Save (Default - No)","Yes","No"};
-        default = 9999;
-     };
-
     class Spacer0
     {
         title = "";

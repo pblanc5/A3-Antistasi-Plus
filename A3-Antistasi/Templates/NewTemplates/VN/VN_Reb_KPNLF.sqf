@@ -42,7 +42,7 @@
 
 ["vehicleCivCar", "vn_c_car_02_01"] call _fnc_saveToTemplate;
 ["vehicleCivTruck", "vn_b_wheeled_m54_01_airport"] call _fnc_saveToTemplate;
-["vehicleCivHeli", "not_supported"] call _fnc_saveToTemplate;
+["vehicleCivHeli", "C_Heli_Light_01_civil_F"] call _fnc_saveToTemplate;
 ["vehicleCivBoat", "vn_c_boat_08_01"] call _fnc_saveToTemplate;
 ["vehicleCivSupply", "vn_b_wheeled_m54_repair_airport"] call _fnc_saveToTemplate;
 

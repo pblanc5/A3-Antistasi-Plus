@@ -50,8 +50,8 @@ if (!isServer) then {
 	waitUntil {!isNil "initParamsDone"};
 	call A3A_fnc_initFuncs;
 	call A3A_fnc_initVar;
-	[2,format ["MP client version: %1",localize "STR_antistasi_credits_generic_version_text"],_fileName] call A3A_fnc_log;
-	[2,format ["MP client version: %1",localize "STR_antistasi_plus_credits_generic_version_text"],_fileName] call A3A_fnc_log;
+	[2,format ["MP client Antistasi version: %1",localize "STR_antistasi_credits_generic_version_text"],_fileName] call A3A_fnc_log;
+	[2,format ["MP client Antistasi Plus version: %1",localize "STR_antistasi_plus_credits_generic_version_text"],_fileName] call A3A_fnc_log;
 }
 else {
 	// SP or hosted, initFuncs/var run in serverInit
@@ -607,6 +607,27 @@ if (magRepack) then {
 	private _uid = getPlayerUID player;
 	_paradropAttendants pushBackUnique _uid;
 	[missionNamespace, "paradropAttendants", _paradropAttendants] call BIS_fnc_setServerVariable;
+};
+
+if (saveZeusBuildings) then {
+	"Adding EH" remoteExecCall ["systemChat", 0];
+	[2,"Initializing Curator Persistent Save.",_fileName, true] call A3A_fnc_log;
+	private _curator = allCurators select 0;
+	_curator addEventHandler ["CuratorObjectPlaced", {
+		params ["_curator", "_entity"];
+		if !(_entity isKindOf "Building") exitWith {};
+		[_entity] remoteExecCall ["SCRT_fnc_build_saveConstruction", 2];
+	}];
+	_curator addEventHandler ["CuratorObjectEdited", {
+		params ["_curator", "_entity"];
+		if !(_entity isKindOf "Building") exitWith {};
+		[_entity] remoteExecCall ["SCRT_fnc_build_updateConstruction", 2];
+	}];
+	_curator addEventHandler ["CuratorObjectDeleted", {
+		params ["_curator", "_entity"];
+		if !(_entity isKindOf "Building") exitWith {};
+		[_entity] remoteExecCall ["SCRT_fnc_build_removeConstruction", 2];
+	}];
 };
 
 [2,"initClient completed",_fileName] call A3A_fnc_log;

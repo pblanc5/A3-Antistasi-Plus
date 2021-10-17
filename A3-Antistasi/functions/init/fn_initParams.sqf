@@ -98,9 +98,7 @@ A3A_paramTable = [
     ["aiControlTime", "aiControlTime", [], 60],
     ["deathPenalty", "deathPenalty", [], 0.3],
     ["saveZeusBuildings", "saveZeusBuildings", [], true],
-    ["aiAccuracyCeiling", "aiAccuracyCeiling", [], 0.5],
-    ["allowDLCGlobMob", "GlobMob", [], false],
-    ["allowDLCVN", "VN", [], false]
+    ["aiAccuracyCeiling", "aiAccuracyCeiling", [], 0.5]
     // beware of the comma
 ];
 
