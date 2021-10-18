@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.8.2
+### Changes
+- Multiple fixes and improvements to Salvage Helicrash mission
+- Fixed non-invincible airdroppable autoloot crate
+- (Khe Sanh) Moved seaport that doesn't allow to buy vehicles, crates and place rally point to another area thus fixing those issues
+- (Altis) additional outpost and radio tower
+
+### Removals
+- Removed leftover debug system chat posting
+
 ## 1.8.1
 
 ### Changes

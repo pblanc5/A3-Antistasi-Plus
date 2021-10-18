@@ -610,7 +610,6 @@ if (magRepack) then {
 };
 
 if (saveZeusBuildings) then {
-	"Adding EH" remoteExecCall ["systemChat", 0];
 	[2,"Initializing Curator Persistent Save.",_fileName, true] call A3A_fnc_log;
 	private _curator = allCurators select 0;
 	_curator addEventHandler ["CuratorObjectPlaced", {
