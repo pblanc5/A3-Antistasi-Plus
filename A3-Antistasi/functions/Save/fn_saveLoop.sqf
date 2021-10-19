@@ -183,8 +183,19 @@ _prestigeBLUFOR = [];
 {
 	_city = _x;
 	_dataX = server getVariable _city;
-	_prestigeOPFOR = _prestigeOPFOR + [_dataX select 2];
-	_prestigeBLUFOR = _prestigeBLUFOR + [_dataX select 3];
+	_opfor = _dataX select 2;
+	_blufor = _dataX select 3;
+
+	if (isNil "_opfor") then {
+		_opfor = 50;
+	};
+
+	if (isNil "_blufor") then {
+		_blufor = 0;
+	};
+
+	_prestigeOPFOR pushBack _opfor;
+	_prestigeBLUFOR pushBack _blufor;
 } forEach citiesX;
 
 ["prestigeOPFOR", _prestigeOPFOR] call A3A_fnc_setStatVariable;

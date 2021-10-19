@@ -292,6 +292,15 @@ if (_varName in _specialVarLoads) then {
 			_numVeh = _dataX select 1;
 			_prestigeOPFOR = _varvalue select _i;
 			_prestigeBLUFOR = _dataX select 3;
+
+			if (isNil "_prestigeOPFOR") then {
+				_prestigeOPFOR = 50;
+			};
+
+			if (isNil "_prestigeBLUFOR") then {
+				_prestigeBLUFOR = 50;
+			};
+
 			_dataX = [_numCiv,_numVeh,_prestigeOPFOR,_prestigeBLUFOR];
 			server setVariable [_city,_dataX,true];
 		};
@@ -304,6 +313,15 @@ if (_varName in _specialVarLoads) then {
 			_numVeh = _dataX select 1;
 			_prestigeOPFOR = _dataX select 2;
 			_prestigeBLUFOR = _varvalue select _i;
+
+			if (isNil "_prestigeOPFOR") then {
+				_prestigeOPFOR = 50;
+			};
+
+			if (isNil "_prestigeBLUFOR") then {
+				_prestigeBLUFOR = 50;
+			};
+
 			_dataX = [_numCiv,_numVeh,_prestigeOPFOR,_prestigeBLUFOR];
 			server setVariable [_city,_dataX,true];
 		};

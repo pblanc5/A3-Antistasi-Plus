@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.8.2.1 
+- (Cam Lao Nam) save corruption fix
+
 ## 1.8.2
 ### Changes
 - Multiple fixes and improvements to Salvage Helicrash mission
