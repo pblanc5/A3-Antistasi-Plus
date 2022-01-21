@@ -1,9 +1,11 @@
-<div align="center">
-  <h1>Antistasi Plus</h1>
-  <p>
-        Antistasi Plus is a fork version of Antistasi mission by Official Antistasi Community.
-  </p>
-</div>
+# Learning Antistasi
+
+This repository is for personal learning/exploring custom features for friends
+
+## Orignal Repositories
+
+* [Antistasi Plus](https://github.com/igorkis-scrts/A3-Antistasi-Plus)
+* [Antistasi](https://github.com/official-antistasi-community/A3-Antistasi)
 
 ### Credits
 - Original Mission by barbolani
