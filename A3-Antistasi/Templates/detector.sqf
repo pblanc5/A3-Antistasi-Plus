@@ -25,6 +25,7 @@ A3A_hasCup = false;
 A3A_hasAegis = false;
 A3A_hasGlobMob = false;
 A3A_hasGlobMobAaf = false;
+A3A_hasTIOW = false;
 
 //Aegis submods
 private _activeAegis = false;
@@ -128,6 +129,12 @@ if (_activeAfrf || _activeUsaf || _activeGref || _activeSaf) then {
 	} else {
     A3A_hasRHS = true;
   };
+};
+
+// Arma 3 TIOW deleteCollection
+if (isClass(configFile >> "CfgFactionClasses" >> "Cad667")) then {
+  A3A_hasTIOW = true;
+  diag_log format ["%1: [Antistasi] | INFO | initVar | TIOW Detected.", servertime];
 };
 
 //Arma 3 Aegis detection
