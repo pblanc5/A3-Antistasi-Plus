@@ -24,7 +24,7 @@ private _terrainName = toLower worldName;
 //Reb Templates
 A3A_Reb_template = switch(true) do {
     case (A3A_hasTIOW): {
-        ["Templates\NewTemplates\TIOW\Renegades.sqf"] call A3A_fnc_compatibilityLoadFaction;
+        ["Templates\NewTemplates\TIOW\Renegades.sqf", independent] call A3A_fnc_compatibilityLoadFaction;
         systemChat "Load Renegades";
         [2, "Using TIOW Renegades Template", _filename] call A3A_fnc_log;
         "TIOW_Ren_G_B"
