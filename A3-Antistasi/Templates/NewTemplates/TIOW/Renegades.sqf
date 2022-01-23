@@ -99,7 +99,7 @@ rallyPoint = "B_RadioBag_01_wdl_F";
 //black market stuff
 shop_UAV = [];
 shop_AA = [];
-shop_MRAP = ["Sentinel_AC_Possessed_2_G","Sentinel_CS_Possessed_2_G","Sentinel_HB_Possessed_2_G","Sentinel_LC_Possessed_2_G","Sentinel_MLA_Possessed_2_G","Sentinel_ML_Possessed_2_G","Sentinel_PC_Possessed_2_G",];
+shop_MRAP = ["Sentinel_AC_Possessed_2_G","Sentinel_CS_Possessed_2_G","Sentinel_HB_Possessed_2_G","Sentinel_LC_Possessed_2_G","Sentinel_MLA_Possessed_2_G","Sentinel_ML_Possessed_2_G","Sentinel_PC_Possessed_2_G"];
 shop_wheel_apc = [];
 shop_track_apc = ["_RenegadeChimAuto_Green_Indep","TIOW_RenegadeHydra_Green_Indep","TIOW_RenegadeWyvern_Green_Indep"];
 shop_heli = [];
