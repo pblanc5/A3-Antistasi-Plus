@@ -4,7 +4,7 @@
 
 ["name", "Renegades"] call _fnc_saveToTemplate;
 
-["flag", "836th_flag"] call _fnc_saveToTemplate;
+["flag", "Flag_FIA_F"] call _fnc_saveToTemplate;
 ["flagTexture", "\A3\Data_F\Flags\flag_FIA_CO.paa"] call _fnc_saveToTemplate;
 ["flagMarkerType", "flag_FIA"] call _fnc_saveToTemplate;
 
@@ -99,7 +99,7 @@ rallyPoint = "B_RadioBag_01_wdl_F";
 //black market stuff
 shop_UAV = [];
 shop_AA = [];
-shop_MRAP = ["Sentinel_AC_Possessed_2_G","Sentinel_CS_Possessed_2_G","Sentinel_HB_Possessed_2_G","Sentinel_LC_Possessed_2_G","Sentinel_MLA_Possessed_2_G","Sentinel_ML_Possessed_2_G","Sentinel_PC_Possessed_2_G",];
+shop_MRAP = ["Sentinel_AC_Possessed_2_G","Sentinel_CS_Possessed_2_G","Sentinel_HB_Possessed_2_G","Sentinel_LC_Possessed_2_G","Sentinel_MLA_Possessed_2_G","Sentinel_ML_Possessed_2_G","Sentinel_PC_Possessed_2_G"];
 shop_wheel_apc = [];
 shop_track_apc = ["_RenegadeChimAuto_Green_Indep","TIOW_RenegadeHydra_Green_Indep","TIOW_RenegadeWyvern_Green_Indep"];
 shop_heli = [];
@@ -159,9 +159,13 @@ _loadoutData setVariable ["NVGs", []];
 _loadoutData setVariable ["binoculars", ["Binocular"]];
 
 _loadoutData setVariable ["uniforms", [
-    "Ren_Uniform_01_green",
-    "Ren_Uniform_01_green",
-    "U_TIOW_Cultist_green"
+    "U_IG_Guerilla1_1",
+    "U_IG_Guerilla2_1",
+    "U_IG_Guerilla2_2",
+    "U_IG_Guerilla2_3",
+    "U_IG_Guerilla3_1",
+    "U_IG_leader",
+    "U_IG_Guerrilla_6_1"
 ]];
 _loadoutData setVariable ["vests", []];
 _loadoutData setVariable ["backpacks", []];

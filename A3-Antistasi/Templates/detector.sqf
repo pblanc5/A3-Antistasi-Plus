@@ -25,6 +25,7 @@ A3A_hasCup = false;
 A3A_hasAegis = false;
 A3A_hasGlobMob = false;
 A3A_hasGlobMobAaf = false;
+A3A_hasTIOW = false;
 
 //Aegis submods
 private _activeAegis = false;
@@ -130,6 +131,12 @@ if (_activeAfrf || _activeUsaf || _activeGref || _activeSaf) then {
   };
 };
 
+// Arma 3 TIOW deleteCollection
+if (isClass(configFile >> "CfgFactionClasses" >> "Cad667")) then {
+  A3A_hasTIOW = true;
+  diag_log format ["%1: [Antistasi] | INFO | initVar | TIOW Detected.", servertime];
+};
+
 //Arma 3 Aegis detection
 if(isClass (configFile >> "CfgFactionClasses" >> "BLU_A_F")) then {
   _activeAegis = true;
@@ -213,5 +220,5 @@ if((_activeAfrf || _activeUsaf || _activeGref || _activeSaf) && (_activeCupUnits
 };
 
 //No Mods found logging
-if (!A3A_hasRHS && !A3A_hasCup && !A3A_hasAegis) then {[2,"No Side Replacement Mods Detected.",_fileName] call A3A_fnc_log;};
+if (!A3A_hasRHS && !A3A_hasCup && !A3A_hasAegis && !A3A_hasTIOW) then {[2,"No Side Replacement Mods Detected.",_fileName] call A3A_fnc_log;};
 if (!A3A_hasIvory && !A3A_hasTCGM && !A3A_hasADV) then {[2,"No Addon Mods Detected.",_fileName] call A3A_fnc_log;};
