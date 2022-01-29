@@ -23,6 +23,12 @@ private _terrainName = toLower worldName;
 
 //Reb Templates
 A3A_Reb_template = switch(true) do {
+    case (A3A_hasTIOW): {
+        ["Templates\NewTemplates\TIOW\Renegades.sqf", independent] call A3A_fnc_compatibilityLoadFaction;
+        [2, "Using TIOW Renegades Template", _filename] call A3A_fnc_log;
+        "TIOW_Ren_G_B"
+    };
+
     case (A3A_has3CBFactions && {A3A_hasGlobMob}): {
         ["Templates\NewTemplates\3CBF\3CBF_Reb_CHDZZ_CW.sqf", independent] call A3A_fnc_compatibilityLoadFaction;
         [2, "Using 3CBF CW Template", _filename] call A3A_fnc_log;
@@ -270,6 +276,13 @@ A3A_Occ_template = switch(true) do {
 
 //Inv Templates
 A3A_Inv_template = switch(true) do{
+
+    case (A3A_hasTIOW): {
+        ["Templates\NewTemplates\TIOW\TIOW_Orks.sqf", east] call A3A_fnc_compatibilityLoadFaction;
+        [2, "Using TIOW Renegades Template", _filename] call A3A_fnc_log;
+        "TIOW_Orks"
+    };
+
     case (A3A_has3CBFactions && {A3A_hasGlobMob}): {
         ["Templates\NewTemplates\GM_3CBF\GM_3CBF_AI_PACT.sqf", east] call A3A_fnc_compatibilityLoadFaction;
         [2, "Using GM_3CBF Warsaw Pact Cold War Template", _filename] call A3A_fnc_log;
